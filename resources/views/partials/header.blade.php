@@ -48,7 +48,7 @@
                     <!-- Beidzas: Galvenais horiz menu -->
 
                     <!-- Sākas: Login horiz menu -->
-                    <ul class="nav navbar-nav navbar-right">
+                   {{-- <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
 
@@ -81,11 +81,11 @@
                                             </form>
                                         </li>
 
-                                    <li><a href="{{ route('logout') }}"><i class="fa fa-btn fa-sign-out"></i> Atteikties</a></li>
+                                    --}}{{--<li><a href="{{ route('logout') }}"><i class="fa fa-btn fa-sign-out"></i> Atteikties</a></li>--}}{{--
                                 </ul>
                             </li>
                             @endguest
-                    </ul>
+                    </ul>--}}
                     {{--<!-- Sakas: valoda -->
                     <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
                         <li class="dropdown navbar-right">

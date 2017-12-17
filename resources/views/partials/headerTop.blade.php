@@ -21,19 +21,19 @@
                         </li>
                     </ul>
                 </span>
-                <nav class="top-header-menu">
-                    <ul class="top-menu">
+                <nav class=" top-header-menu">
+                    <ul class="nav navbar-nav top-menu">
                         @guest
 
                         <li><a href="{{ url('/login') }}">Pieteikties</a></li>
-                        <li><a href="{{ url('/register') }}">Reģistrēties</a></li>
+                       {{-- <li><a href="{{ url('/register') }}">Reģistrēties</a></li>--}}
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     <span>{{ Auth::user()->name }} </span>
                                 </a>
 
-                                <ul class="dropdown-menu sub-menu" role="menu">
+                                <ul class="top-menu dropdown-menu sub-menu" role="menu">
 
                                     @if (Auth::user()->irAdmin())
                                         <li>
@@ -53,12 +53,10 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-
-                                    <li><a href="{{ route('logout') }}"><i class="fa fa-btn fa-sign-out"></i> Atteikties</a></li>
                                 </ul>
                             </li>
                             @endguest
-                        <li class="aux-languages dropdown navbar-right">
+                        <li class=" dropdown navbar-right aux-languages">
                             <a href="#">
                                 <i class="fa fa-flag"></i>
                     <span>
@@ -67,7 +65,7 @@
                             </a>
                             <ul id="auxLanguages" class="sub-menu language-menu dropdown-menu">
                                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                    <li class="{{ App::getLocale() == $localeCode ? 'active' : '' }}">
+                                    <li class="{{ App::getLocale() == $localeCode ? 'language-active' : '' }}">
                                         <a rel="alternate" lang="{{$localeCode}}" href="{{LaravelLocalization::getLocalizedURL($localeCode) }}">
                                             {!! $properties['native'] !!}
                                         </a>

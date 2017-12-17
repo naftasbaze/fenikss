@@ -15,6 +15,7 @@ class ViewComposerServiceProvider extends ServiceProvider
     {
         //
         view()->composer('partials.megamenu', 'App\Http\Composers\NavigationComposer@compose');
+        view()->composer('partials.headerTop', 'App\Http\Composers\TopHeaderComposer@compose');
     }
 
     /**

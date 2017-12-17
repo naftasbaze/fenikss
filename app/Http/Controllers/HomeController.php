@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\kontakt;
+use App\galerija;
 use App\lapa;
 use Illuminate\Http\Request;
 
@@ -16,8 +16,9 @@ class HomeController extends Controller
     public function index()
     {
 
-        $adrese=kontakt::firstOrFail(); //->get();
-       // dd($adrese);
+        $galerijas=galerija::with(['foto'])->get();
+
+       dd($galerijas);
         $lapas=lapa::with(['rinda'])
             ->where('aktivs',1)
             ->orderBy('vietaLimeni', 'asc')

@@ -11,6 +11,8 @@
 |
 */
 
+Auth::routes();
+
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
@@ -23,14 +25,11 @@ Route::group(
         Route::get('/', 'HomeController@index');
         Route::get('/home', 'HomeController@index');
 
-        Route::get('/wel', function()
+        Route::get('/test', function()
         {
-            return View::make('welcome');
+            return View::make('test');
         });
 
-        Route::get('test',function(){
-            return View::make('welcome');
-        });
     });
 
 /** OTHER PAGES THAT SHOULD NOT BE LOCALIZED **/
@@ -39,7 +38,7 @@ Route::get('/welc', function () {
     return view('welcome');
 });
 
-Auth::routes();
+
 
 /*Route::get('/panel', 'PanelController@index')->name('home');*/
 
