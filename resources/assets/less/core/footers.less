@@ -1,0 +1,121 @@
+/* FOOTER */
+footer{padding-top: 30px; padding-bottom: 20px;}
+
+/* DARK FOOTERS */
+footer.style-1{background: @footerBg-1;}
+footer.style-1.bt,
+footer.style-1.bb{border-color: @footerBorderColor-1 !important;}
+
+footer.style-2{background: lighten(@footerBg-1, 3%);}
+footer.style-2.bt,
+footer.style-2.bb{border-color: @footerBorderColor-1 !important;}
+
+/* LIGHT FOOTERS */
+footer.style-3{background: @footerBg-2;}
+footer.style-3.bt,
+footer.style-3.bb{border-color: @footerBorderColor-2 !important;}
+
+footer.style-4{background: lighten(@footerBg-2, 1%);}
+footer.style-4.bt,
+footer.style-4.bb{border-color: @footerBorderColor-2 !important;}
+
+/* IMAGE BG FOOTERS */
+footer.style-5{background: url(@footerBg-3);}
+
+/* GENERAL STYLING */
+footer:before, footer:after {display: table; content: " ";}
+footer:after{clear: both;}
+footer .col.reset{margin: 0;}
+footer hr{border-color: lighten(@footerBg-1, 10%)}
+footer h4{margin-top: 20px; margin-bottom: 10px; text-transform: @headingTextTransform; font-size: @fontSize-md; font-weight: 500;}
+footer.style-1 h4,
+footer.style-2 h4{color: @footerHeadingColor-1;}
+footer.style-3 h4,
+footer.style-4 h4{color: @footerHeadingColor-2;}
+footer.style-5 h4{color: @footerHeadingColor-3;}
+
+footer .col p{font-size: @footerFontSize-1; margin-bottom: 10px;}
+footer.style-1 .col p,
+footer.style-2 .col p{color: @footerTextColor-1;}
+footer.style-3 .col p,
+footer.style-4 .col p{color: @footerTextColor-2;}
+footer.style-5 .col p{color: @footerTextColor-3;}
+
+footer a{text-decoration: none; font-size: @footerFontSize-1;}
+footer.style-1 a,
+footer.style-2 a{color: @footerLinkColor-1 !important;}
+footer.style-3 a,
+footer.style-4 a{color: @footerLinkColor-2 !important;}
+footer.style-5 a{color: @footerLinkColor-3 !important;}
+
+footer a:hover{text-decoration: none;}
+footer.style-1 a:hover,
+footer.style-2 a:hover{color: @footerLinkColorHover-1 !important;}
+footer.style-3 a:hover,
+footer.style-4 a:hover{color: @footerLinkColorHover-2 !important;}
+footer.style-5 a:hover{color: @footerLinkColorHover-3 !important;}
+
+footer .col{padding: 0 0 15px 0;}
+footer .col ul{margin: 0; padding: 0; list-style: none;}
+footer .col ul li{padding: 4px 0;}
+footer .col.style-1 ul li,
+footer .col.style-2 ul li{color: @footerTextColor-1;}
+
+footer .col.style-3 ul li,
+footer .col.style-4 ul li{color: @footerTextColor-2;}
+
+footer .col.style-5 ul li{color: @footerTextColor-3;}
+
+footer .col.col-social-icons i{width: 40px; height: 40px; display: inline-block; padding: 10px; margin-right: 10px; margin-bottom: 10px; text-align: center; font-size: 18px; background: #fff; color: #333; border-radius: 2px;}
+footer form{margin-top: 20px;}
+
+footer .copyright{font-size: @fontSize-sm;}
+
+footer .form-footer .form-control{color: darken(@footerBg-1, 30%); background-color: darken(@footerBg-1, 10%); border: 1px solid darken(@footerBg-1, 15%); border-radius: @blockRadius; -webkit-box-shadow: none; box-shadow: none;}
+footer .form-footer .form-control:-moz-placeholder,
+footer .form-footer .form-control::-moz-placeholder, 
+footer .form-footer .form-control:-ms-input-placeholder,
+footer .form-footer .form-control::-webkit-input-placeholder,
+footer .form-footer .form-control[placeholder]{color: lighten(@footerBg-1, 10%);}
+
+
+footer .col-contact{background-image: url(../../images/elements/contact-map-2.png); background-position: center; background-repeat: no-repeat; background-size: 100%;}
+footer ul li.link{border-bottom: 1px dotted;}
+footer ul li.news{
+	hr{
+		border-bottom: 1px solid;
+	    height: 1px;
+	    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	};
+}
+
+footer .link a{color: #fff; }
+footer .link a:hover{border-bottom: 2px solid @colorBase-2; padding-bottom: 2px; border-radius: 30%; color: @colorBaseText-2}
+footer .news a{display:block; color: #fff; }
+footer .news a:hover{color: #fff; }
+footer .news span{font-size: 10px; color: #333;}
+
+/* COPYRIGHT SECTION */
+.copyright{font-size: @footerFontSize-1; padding: 20px 0;} 
+.copyright.style-1{background: @footerBg-1; color: @footerTextColor-1;} 
+.copyright.style-2{background: lighten(@footerBg-1, 5%); color: @footerTextColor-1;} 
+.copyright.style-1 a,
+.copyright.style-2 a{color: @footerLinkColor-1; text-decoration: none; font-size: @footerFontSize-1;}
+.copyright.style-1 a:hover,
+.copyright.style-2 a:hover{text-decoration: none; color: @footerLinkColorHover-1;}
+
+.copyright.style-3{background: darken(@footerBg-2, 5%); color: @footerTextColor-2;} 
+.copyright.style-4{background: darken(@footerBg-2, 5%); color: @footerTextColor-2;} 
+.copyright.style-3 a,
+.copyright.style-4 a{color: @footerLinkColor-2; text-decoration: none; font-size: @footerFontSize-2;}
+.copyright.style-3 a:hover,
+.copyright.style-4 a:hover{text-decoration: none; color: @footerLinkColorHover-2;}
+
+.copyright.style-5{background: transparent; color: @footerTextColor-3;} 
+.copyright.style-5 a{color: @footerLinkColor-3;}
+.copyright.style-5 a:hover{text-decoration: none; color: @footerLinkColorHover-3;}
+
+.copyright .company-rights{color: @colorBase-2; font-weight: 600;}

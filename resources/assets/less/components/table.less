@@ -1,0 +1,45 @@
+.table>tbody>tr>td, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>td, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>thead>tr>th{border-color: @borderColor-2;}
+
+/* COMPONENTS TABLE */
+.table-components > tbody > tr > td{vertical-align: middle; padding-top: 15px; padding-bottom: 15px;}
+.table-components > tbody > tr:first-child > td{border: 0;}
+.table-components tr td:first-child{text-align: right; font-weight: 600; padding-right: 20px;}
+.table-components tr td:last-child{padding-right: 0;}
+
+/* CART TABLE */
+.table-cart > thead > tr > th {padding: 12px 0; border: 0; font-weight: 400; font-size: @fontSize-sm;}
+.table-cart>tbody>tr>td, 
+.table-cart>tbody>tr>th, 
+.table-cart>tfoot>tr>td, 
+.table-cart>tfoot>tr>th, 
+.table-cart>thead>tr>td, 
+.table-cart>thead>tr>th{border-color: @borderColor-2;}
+
+.table-cart .cart-item-img{width: 120px;}
+.table-cart .cart-item-img img{width: 100%;}
+.table-cart .cart-item-content{vertical-align: middle; width: 40%;}
+.table-cart .cart-item-content .cart-item-title{font-weight: 500; font-size: @dropdownCartItemTitleFontSize;}
+.table-cart .cart-item-content .label-quantity{color: @colorLightGray;}
+.table-cart .cart-item-content .label-value{font-weight: 600;}
+.table-cart .cart-item-unit-price{width: 20%; vertical-align: middle; font-size: @fontSize-lg;}
+.table-cart .cart-item-price{width: 20%; vertical-align: middle; text-align: right;}
+.table-cart .cart-item-price > span{font-weight: 600; font-size: @fontSize-lg;}
+.table-cart .cart-item-count{vertical-align: middle;}
+
+.table-cart .label-subtotal{padding-top: 15px; text-align: center; font-size: @fontSize-md; text-transform: uppercase;}
+
+.table-cart .table-cart-footer{padding: 15px; background: @dropdownCartFooterBg; border-top: 1px solid #ccc;}
+.table-cart .cart-items{display: block; padding: 15px; font-size: 14px; font-weight: 500; background: #eee; color: #ccc; border-bottom: 1px solid #ccc;}
+
+/* TABLE INNER WELL */
+.table-inner-well{padding: 15px;}
+.table-inner-well > thead > tr > th {padding-left: 0; padding-right: 0; border: 0; font-weight: 600;}
+.table-inner-well > tbody > tr > td {padding: 15px 0; border-bottom: 1px solid @borderColor-2;}
+.table-inner-well > tbody > tr:last-child > td{border: 0;}
+.table-inner-well > tbody > tr.row-sm > td {padding: 10px 0;}
+.table-inner-well .label-count{color: @colorBase-1; font-weight: 600;}

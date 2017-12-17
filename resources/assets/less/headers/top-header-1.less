@@ -1,0 +1,47 @@
+/* TOP HEADER */
+.top-header{border-bottom: 1px solid @topNavBorderColor-1; background: @topNavBg-1; position: relative;}
+
+.top-header .aux-text{padding: 14px 0; color: @topNavTextColor-1; font-size: 11px; float: left;}
+.top-header .aux-text ul li a,
+.top-header .aux-text ul li a span{font-size: @topNavFontSize-1 !important; font-family: @fontFamily-2 !important;}
+.top-header .top-header-menu{float: right;}
+.top-header .top-header-menu > ul.top-menu{list-style: none; margin: 0; padding: 0;}
+.top-header .top-header-menu > ul.top-menu > li{position: relative; float: left; display: inline-block; border-right: 1px solid @topNavItemDelimiterColor-1;}
+.top-header .top-header-menu > ul.top-menu > li:last-child{border:0;}
+.top-header .top-header-menu > ul.top-menu > li > a{display: block; padding: 14px 15px; color: @topNavLinkColor-1; text-transform: @topNavTextTextTransform-1; font-size: @topNavFontSize-1; font-weight: @topNavFontWeight-1;}
+.top-header .top-header-menu > ul.top-menu > li > a:hover{color: @topNavLinkColorHover-1;}
+.top-header .top-header-menu > ul.top-menu > li.dropdown > a:after{content: "\f107"; margin-left: 6px; font-family: "FontAwesome"; position: relative; float: right;}
+.top-header .top-header-menu ul.top-menu > li > a > i{margin-right:6px;}
+.top-header .top-header-menu ul.top-menu > li ul.sub-menu{display: none; min-width: 160px; position: absolute; right: -1px; z-index: 1500; margin: 0; padding:0; list-style:none; background: @topNavDropdownBg; border: 0; opacity: 0; -moz-opacity: 0; filter: alpha(opacity=0);
+	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+	-moz-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+	box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+
+    -webkit-transition: all 100ms linear;
+	transition: all 100ms linear;
+
+	border-radius: @navbarDropdownBorderRadius;
+}
+ 
+.top-header .top-header-menu ul.top-menu  > li:hover ul.sub-menu{opacity: 1; display: block;}
+.top-header .top-header-menu ul.top-menu  > li ul.sub-menu > li{border-bottom:1px solid @topNavDropdownItemBorderColor;}
+.top-header .top-header-menu ul.top-menu  > li ul.sub-menu > li:last-child{border:0;}
+.top-header .top-header-menu ul.top-menu  > li ul.sub-menu > li > a{display:block; padding: 6px 15px; color: @topNavDropdownItemColor;}
+.top-header .top-header-menu ul.top-menu  > li ul.sub-menu > li:last-child{border:0;}
+.top-header .top-header-menu ul.top-menu  > li ul.sub-menu > li > a:hover{background: @topNavDropdownItemBgHover; color: @topNavDropdownItemColorHover;}
+.top-header .top-header-menu ul.top-menu  > li ul.sub-menu > li > .language-active{display: block; padding: 6px 15px; background: @colorBase-1; color: @colorBaseText-1; cursor: default;}
+.top-header .top-header-menu ul.top-menu  > li.dropdown:hover .sub-menu{display:block;}
+
+@media(max-width: 991px){
+	.top-header .top-header-menu{float: none;}
+	.top-header .top-header-menu > ul.top-menu{display: table; width: 100%;}
+	.top-header .top-header-menu > ul.top-menu > li{float: none; display: table-cell;}
+
+}
+
+/* TOP HEADER INVERSE */
+.top-header-inverse{border-bottom: 1px solid @topNavBorderColor-2; background: @topNavBg-2;}
+.top-header-inverse .aux-text{color: @topNavTextColor-2;}
+.top-header-inverse .top-header-menu > ul.top-menu > li{border-right: 1px solid darken(@topNavBg-2, 2%);}
+.top-header-inverse .top-header-menu > ul.top-menu > li > a{color: @topNavLinkColor-2;}
+.top-header-inverse .top-header-menu > ul.top-menu > li > a:hover{color: @topNavLinkColorHover-2;}

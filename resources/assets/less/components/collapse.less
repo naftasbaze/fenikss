@@ -1,0 +1,25 @@
+/* COLLAPSE */
+.panel{-webkit-box-shadow: none; box-shadow: none;}
+.panel-group{margin-bottom: 30px;}
+.panel-group .panel{border-color: @collapseBorderColor;}
+
+.panel-group .panel-heading{padding: 14px 15px; position: relative; background: @collapseHeadingBg;}
+.panel-group .panel-heading:after{content: @collapseHeadingIcon; font-family: FontAwesome; font-size: @collapseHeadingFontSize; font-weight: @collapseHeadingFontWeight; line-height: @collapseHeadingFontSize; position: absolute; right: 15px; top: 50%; margin-top: -(@collapseHeadingFontSize/2); color: @collapseHeadingTextColor;}
+.panel-group .panel.open .panel-heading:after{content: @collapseHeadingIconOpen;}
+.panel-group .panel-heading .panel-title{font-size: @collapseHeadingFontSize + 2;}
+.panel-group .panel-heading a{font-weight: @collapseHeadingFontWeight; color: @collapseHeadingTextColor; font-size: @collapseHeadingFontSize;}
+.panel-group .panel-heading a i{margin-right: 5px; color: @collapseHeadingTextColor;}
+.panel-default > .panel-heading + .panel-collapse > .panel-body{border-color: @collapseBorderColor; color: @collapseContentTextColor;}
+
+.panel-group .panel-heading+.panel-collapse>.panel-body, 
+.panel-group .panel-heading+.panel-collapse>.list-group{border-color: @collapseBorderColor;}
+
+/* COLLAPSE STACKED */
+.panel-group.panel-stacked .panel{border-radius: 0;}
+.panel-group.panel-stacked .panel:first-child{border-top-left-radius: @borderRadius; border-top-right-radius: @borderRadius;}
+.panel-group.panel-stacked .panel:last-child{border-bottom-left-radius: @borderRadius; border-bottom-right-radius: @borderRadius;}
+.panel-group.panel-stacked .panel+.panel{margin-top: 0; border-top: 0;}
+
+/* COLLAPSE SPACED */
+.panel-group.panel-spaced .panel{border-radius: @borderRadius;}
+.panel-group.panel-spaced .panel+.panel{margin-top: 15px; border-top: 1px solid @collapseBorderColor;}

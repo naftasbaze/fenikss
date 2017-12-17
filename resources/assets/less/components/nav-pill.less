@@ -1,0 +1,23 @@
+/* NAV PILLS */
+.nav-pills{margin-bottom: 15px; border: 1px solid @navPillsBorderColor; border-radius: @borderRadius;}
+.nav-pills > li > a {border-radius: 0; border-right:1px solid @navPillDelimiterColor; background-color: @navPillBg;}
+.nav-pills > li:first-child > a{border-top-left-radius: @borderRadius; border-bottom-left-radius: @borderRadius;}
+.nav-pills > li:last-child > a {border-top-right-radius: @borderRadius; border-bottom-right-radius: @borderRadius; border-right: 0;}
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus{background:#f5f5f5;}
+.nav-pills > li + li {margin-left: 2px;}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {color: @navPillActiveTextColor-1; background: @navPillActiveBg;}
+
+
+.nav-pills.style-2{margin-bottom: 15px; border: 1px solid @navPillsBorderColor; border-radius: @borderRadius;}
+.nav-pills.style-2 > li > a {padding: 26px; border-radius: 0; border-right: 0; background-color: @navPillBg; font-size: @fontSize-md; text-transform: uppercase;}
+.nav-pills.style-2 > li:first-child > a{border-top-left-radius: @borderRadius;}
+.nav-pills.style-2 > li:last-child > a {border-top-right-radius: @borderRadius; border-right: 0;}
+.nav-pills.style-2 > li > a:hover,
+.nav-pills.style-2 > li > a:focus{background: #f5f5f5;}
+.nav-pills.style-2 > li + li {margin-left: 2px;}
+.nav-pills.style-2 > li.active > a,
+.nav-pills.style-2 > li.active > a:hover,
+.nav-pills.style-2 > li.active > a:focus {background: transparent; color: inherit;}

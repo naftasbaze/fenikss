@@ -1,0 +1,939 @@
+//== Fonts
+
+//## Imported fonts from Google fonts or any other supported service
+
+//** Font 1 - Used for headings, navbar or special titles. <br><br> Make sure you have imported the fonts first: www.google.com/fonts. <br><br> For more details follow the steps from the documentation
+@fontFamily-1: "Raleway", sans-serif; 		
+//** Font 2 - Used for large contents, paragraphs			
+@fontFamily-2: "Open Sans", sans-serif;						
+
+//##  General font sizes
+
+//** Default font size applied on the body tag
+@bodyFontSize: 		13px;
+
+//** Default font size
+@fontSize: 	  1em;
+//** Extra small font size
+@fontSize-xs: 10px;
+//** Small font size
+@fontSize-sm: 12px;
+//** Medium font size
+@fontSize-md: 14px; 
+//** Large font size
+@fontSize-lg: 18px;
+//** Extra large font size
+@fontSize-xl: 24px;
+
+//----------------------------------------------------
+
+//== Headings
+
+//##  General heading styles
+
+//** Default heading color
+@headingColor:			#282d33;
+@headingColor-1:		#111;
+@headingColor-2:		#FFF;
+//** Default heading font size
+@headingFontSize:		16px;		
+//** Default heading font weight. Options: 400, 500, 600, 700
+@headingFontWeight:		600;		
+//** Default heading font family. Options: @fontFamily-1 or @fontFamily-2	
+@headingFontFamily:		@fontFamily-1; 
+//** Default heading text transform. Options: none, capitalize, uppercase, lowercase
+@headingTextTransform:	none;
+//** Optional: set a value for letter spacing. Replace with 0 for no spacing
+@headingLetterSpacing: 	1px;
+
+//##  Heading font sizes. Check the "Typography" section from the documentation to learn more
+
+//** Extra small heading font size
+@headingFontSize-xs:	14px;
+//** Small heading font size
+@headingFontSize-sm:	16px;
+//** Medium heading font size
+@headingFontSize-md:	18px;
+//** Large heading font size
+@headingFontSize-lg:	22px;
+
+//-- Hide
+@heading-1:		2.3em; 
+@heading-2:		1.5em;
+@heading-3:		1.25em;
+@heading-4:		1.125em;
+@heading-5:		0.875em;
+@heading-6:		0.75em;
+
+//----------------------------------------------------
+
+//== Text and links
+
+//## You have 3 link options: base (default), light or dark
+
+//** Default link color
+@linkColorDefault: 		#333;
+//** Default link color on hover state
+@linkColorDefaultHover: @colorBase-1;
+
+//** Light link color
+@linkColorLight: 		#999;
+//** Light link color on hover state
+@linkColorLightHover: 	@colorBase-1;
+
+//** Dark link color
+@linkColorDark: 		#333;
+//** Dark link color on hover state
+@linkColorDarkHover: 	@colorBase-1;
+
+//## Default body text colors
+@colorText: 		#666666; 
+@colorTextLight:	lighten(@colorText, 20%);
+@colorTextDark:		darken(@colorText, 20%);
+
+//----------------------------------------------------
+
+//== Colors
+
+//## Base colors are used to define the website's color scheme. You can have a one, two or three color website.
+
+//** Base color 1: is the website's main color. Choose what color would you want your website to have
+@colorBase-1:		#5D67DD;	
+//** This is used for the content inside elements using base color 1	
+@colorBaseText-1:	#FFF;			
+
+//** Base color 1: the second main color. Choose what color would you want your website to have
+@colorBase-2:		#FF005D;
+//** This is used for the content inside elements using base color 1	
+@colorBaseText-2:	#FFF;
+
+//** Base color 1: the third main color. Choose what color would you want your website to have
+@colorBase-3:		#7E007B;
+//** This is used for the content inside elements using base color 3
+@colorBaseText-3:	#FFF;
+
+//** Base color 4: Choose a dark color
+@colorBase-4:		#0A0814;
+//** This is used for the content inside elements using base color 4
+@colorBaseText-4:	#FFF;
+
+//** Base color 5: Choose a light color
+@colorBase-5:		#FFF;
+//** This is used for the content inside elements using base color 5
+@colorBaseText-5:	#0A0814;
+
+
+//## The variables below are some pre-defined colors. Each one has a unique class so you can easily use it on any element. Open the colors page (shortcode-colors.php) to see more.
+
+//** Light color
+@colorLight:		#c1c0c0;
+//** Text color for backgrounds using @colorLight
+@colorLightText:	#333;
+
+//** Dark color
+@colorDark:			#333;
+//** Text color for backgrounds using @colorDark
+@colorDarkText:		#FFF;
+
+//** White
+@colorWhite:		#FFF;
+//** Text color for backgrounds using @colorWhite
+@colorWhiteText:	#555;
+
+//** Black
+@colorBlack:		#0f0f0f;
+//** Text color for backgrounds using @colorBlack
+@colorBlackText:	#FFF;
+
+//** Gray
+@colorGray:			#444;
+//** Text color for backgrounds using @colorGray
+@colorGrayText:		#FFF;
+
+//** Light gray
+@colorLightGray:	#ABB7B7;
+//** Text color for backgrounds using @colorLightGray
+@colorLightGrayText:#FFF;
+
+//** Blue
+@colorBlue:			#4183D7;
+//** Text color for backgrounds using @colorBlue
+@colorBlueText:		#FFF;
+
+//** Green
+@colorGreen:		#26A65B;
+//** Text color for backgrounds using @colorGreen
+@colorGreenText:	#FFF;
+
+//** Red
+@colorRed:			#CF000F;
+//** Text color for backgrounds using @colorRed
+@colorRedText:		#FFF;
+
+//** Pink
+@colorPink:			#F62459;
+//** Text color for backgrounds using @colorPink
+@colorPinkText:		#FFF;
+
+//** Orange
+@colorOrange:		#D35400;
+//** Text color for backgrounds using @colorOrange
+@colorOrangeText:	#FFF;
+
+//** Gold/Yellow
+@colorGold:			#F5AB35;
+//** Text color for backgrounds using @colorGold
+@colorGoldText:		#FFF;
+
+//** Purple
+@colorPurple:		#663399;
+//** Text color for backgrounds using @colorPurple
+@colorPurpleText:	#FFF;
+
+//## Social media colors
+
+//** Custom color
+@socialButtonBg:			@colorBase-1;
+@socialButtonTextColor:		@colorBaseText-1;
+
+//** Facebook color
+@colorFacebook:			#3b5998;
+//** Twitter color
+@colorTwitter:			#00aced;
+//** Instagram color
+@colorInstagram:		#517fa4;
+//** Linkedin color
+@colorLinkedin:			#007bb6;
+//** Pinterest color
+@colorPinterest:		#cb2027;
+//** Dribbble color
+@colorDribbble:			#3b5998;
+//** Google Plus color
+@colorGoogleplus:		#dd4b39;
+
+//----------------------------------------------------
+
+//== Navbar	
+
+//## Main navbar properties
+
+//** Navbar font family
+@navbarFontFamily:			@fontFamily-1;
+//** Add a 1px border between main navbar items. Replace with the color value you wan: hex or rgb
+@navbarItemDelimiter:		transparent;		
+//** Default main nav background color	
+@navbarBg-1: 				#FFF;
+//** Add a border at the bottom of the main navigation. Set a new value in [px] (ex: 5px)
+@navbarBorderBottomHeight:	0;
+//** Set the navigation bottom border color: hex or rgb
+@navbarBorderBottomColor:	transparent;
+
+//## Navbar item properties
+
+//** Set a background color on the navbar's items: hex or rgb
+@navbarItemBg:				transparent;
+//** Set a background color on the navbar's items for hover state: hex or rgb
+@navbarItemBgHover:			transparent;
+//** Make the navbar item corners rounded. Set a value in [px]
+@navbarItemBorderRadius:	0;
+//** Default navbar item text color: hex or rgb
+@navbarItemTextColor-1:				#333;
+//** Default navbar item text color for hover state: hex or rgb
+@navbarItemTextColorHover:			@colorBase-1;
+//** Default navbar item text color for active items: hex or rgb
+@navbarItemTextColorActive:			@colorBase-1;
+//** Default navbar item text color for active items on hover state: hex or rgb
+@navbarItemTextColorActiveHover:	@colorBase-1;
+//** Set the default navbar item font size
+@navbarItemFontSize:				14px;
+//** Set the default navbar item font weight
+@navbarItemFontWeight:				500;
+//** Set the default navbar item text transform.<br><br>Options: capitalize, uppercase, lowercase
+@navbarItemTextTransform:			none;
+//** Navbar items that have drodown items automatically are displaying a dropown arrow icon. Edit this value so it looks ok depending on what font size you chose
+@navbarItemArrowFontSize:			8px;
+
+//## Inverse navbar properties (Optional)
+
+//** Navbar background color user for the inverse versions of the main nav (ex: .navbar-main-inverse)
+@navbarBg-2: 				#232323;
+//** Navbar item text color for the inverse version of the main nav: hex or rgb
+@navbarItemTextColor-2:		#FFF;
+
+//## Navbar dropdown
+
+//** Navbar dropdown background color
+@navbarDropdownBg: 				#07060C;
+//** Add a border on top of the navbar dropdown (ex: 3px solid @colorBase-1). Else, replace it with the value 0
+@navbarDropdownTopBorder:		0;
+//** Add a border around the navbar dropdown.
+@navbarDropdownBorderColor: 	transparent;
+//** Set a border radius to make the dropdown's corners rounded in [px] (ex: 3px;)
+@navbarDropdownBorderRadius: 	3px;		
+//** Background color for items inside the dropdown on hover state				
+@navbarDropdownItemHover:		#0A0811;
+//** Border color for items inside the dropdown
+@navbarDropdownItemBorder: 		#0A0811;
+//** Text color for items inside the dropdown 
+@navbarDropdownTextColor: 		#CCCCCC;
+//** Text color for items inside the dropdown on hover state
+@navbarDropdownTextColorHover: 	@colorBase-1;
+//** Font size for items inside the dropdown 
+@navbarDropdownFontSize:		13px;
+//** Font weight value from 300 to 900 (if the font type allows it) for items inside the dropdown 
+@navbarDropdownFontWeight:		500;
+//** Text transform for items inside the dropdown.<br><br>Options: capitalize, uppercase, lowercase, none
+@navbarDropdownTextTransform:	none;
+//** Increase or decrease padding for items inside the dropdown in [px]. First value is for vertical spacing and the second one for horizontal spacing
+@navbarDropdownItemPadding:		12px 20px;
+//** Color for dividers inside dropdowns
+@navbarDropdownDividerBg:		#0A0811;
+
+//## Dopdown cart
+
+//** Set the cart's wrapper background color
+@dropdownCartBg: @navbarDropdownBg;
+//** Set the main text color inside the cart
+@dropdownCartTextColor: 		#333;
+@dropdownCartItemTitleFontSize: 15px;
+@dropdownCartFooterBg: 			darken(@dropdownCartBg, 8%);
+@dropdownCartFooterBorderColor:	transparent;
+
+//## Meganav
+
+//** Set the main font size inside the mega-nav dropdown
+@megaNavFontSize:				@navbarDropdownFontSize;
+//** Set the main font weight inside the mega-nav dropdown		
+@megaNavFontWeight:				@navbarDropdownFontWeight;
+//** Set the main text color inside the mega-nav dropdown
+@meganavDropdownTextColor: 		@navbarDropdownTextColor;
+//** Set the main text color on hover state inside the mega-nav dropdown
+@meganavDropdownTextColorHover: @colorBase-1;
+//** Transform the text inside the mega-nav dropdown in one of the options: lowercase, uppercase, capitalize, none
+@meganavDropdownTextTransform:	@navbarDropdownTextTransform;
+
+
+@meganavDropdownItemPadding:	6px 20px 6px 0;
+@meganavSectionHeaderPadding:	15px 0;
+
+@meganavSectionTitleColor: 		@navbarDropdownTextColor;
+@meganavSectionFontSize: 		13px;
+@meganavSectionFontWeight: 		600;
+@meganavSectionTextTransform:	uppercase;
+@meganavSectionTitleTransform:	uppercase;
+@meganavSectionLetterSpacing:	1px;
+
+//## Global search
+@navbarGlobalSearchBtnBg:				#07060C;
+@navbarGlobalSearchBtnTextColor:		#CCCCCC;
+@navbarGlobalSearchBtnTextColorHover:	#FFF;
+@navbarGlobalSearchBtnBorderColor:		darken(@navbarGlobalSearchBtnBg, 5%);
+@navbarGlobalSearchBtnFontSize:			20px;
+
+//## Navbar opaque
+@navbarOpaqueItemDelimiter:	transparent;
+//** Default opaque navbar background color
+@navbarOpaqueBg-1:			#fff;
+//** Navbar inverse
+@navbarOpaqueBg-2:			#333;
+
+//----------------------------------------------------
+
+//== Top navbar
+
+//## Top navbar
+@topNavBg-1:					#FFF;
+@topNavItemDelimiterColor-1:	#eee;
+@topNavBorderColor-1:			#f5f5f5;
+@topNavTextColor-1:				#999;
+@topNavLinkColor-1:				#999;
+@topNavLinkColorHover-1:		@colorBase-1;
+@topNavFontSize-1:				11px;
+@topNavFontWeight-1:			400;
+@topNavTextTextTransform-1:		uppercase;
+
+
+@topNavBg-2:					#232323;
+@topNavItemDelimiterColor-2:	#222;
+@topNavBorderColor-2:			#222;
+@topNavTextColor-2:				#f4f4f4;
+@topNavLinkColor-2:				#f4f4f4;
+@topNavLinkColorHover-2:		@colorBase-1;
+
+@topNavDropdownBg:				#07060C;
+@topNavDropdownItemBgHover:		#0A0811;
+@topNavDropdownItemBorderColor:	#0A0811;
+@topNavDropdownItemColor:		#CCC;
+@topNavDropdownItemColorHover:	@colorBase-1;
+
+//----------------------------------------------------
+
+//== Mobile navbar
+
+//## Navbar toggle
+@navbarToggleBg:			@colorBase-1;
+@navbarToggleBgHover:		@colorBase-3;
+@navbarToggleBorder:		transparent;
+@navbarToggleBorderHover:	transparent;
+@navbarToggleRadius:		0;
+
+@navbarToggleTextColor:		@colorBaseText-1;
+@navbarToggleTextColorHover:@colorBaseText-3;
+
+//## Other toggle buttons
+@btnToggleBg:			transparent;
+@btnToggleBgHover:		transparent;
+@btnToggleBorder:		transparent;
+@btnToggleBorderHover:	transparent;
+@btnToggleRadius:		2px;
+
+@btnToggleTextColor:		#333;
+@btnToggleTextColorHover:	@colorBase-1;
+
+//## Navbar slidemenu (alternative for the conventional Bootstrap collapse navbar for small resolutions)
+@navbarSlideMenuBg:					@navbarDropdownBg;
+@navbarSlideMenuItemBg:				transparent;
+@navbarSlideMenuItemBgHover:		@navbarDropdownItemHover;
+@navbarSlideMenuItemBorderColor:	@navbarDropdownItemBorder;
+@navbarSlideMenuTextColor: 			@navbarDropdownTextColor;
+@navbarSlideMenuTextColorHover:		@colorBase-2;
+
+//## Slidenav/Collapse form styles
+@formMobileNavControlBg:	darken(@navbarSlideMenuBg, 10%);
+@formMobileNavBorderColor:	transparent;
+@formMobileNavTextColor:	#FFF;
+
+//----------------------------------------------------
+
+//== Sections
+
+//** Default section padding for .slice element
+@sectionSlicePadding: 			46px;	
+//** Large section padding for .slice element		
+@sectionSliceLgPadding: 		86px;
+//** Top padding for adjusting one page sections (.one-page-slice)
+@sectionSlicePaddingOnePage:	50px;
+
+//## Section colors used to emphasize the website's sections. Each color has its own class (ex: sct-color-x -> where x is the color's id). Check out the docs for more info
+
+//** Section color 1
+@sectionColor-1:		#FFF;
+//** Text color for backgrounds using @sectionColor-1
+@sectionColorText-1:	#666666;
+
+@sectionColor-2:		#f6f5f2;
+@sectionColorText-2:	#666666;
+
+@sectionColor-3:		#282d33;
+@sectionColorText-3:	#666666;
+
+@sectionColor-4:		#7f8c8d;
+@sectionColorText-4:	#333;
+
+@sectionColor-5:		@colorBase-1;
+@sectionColorText-5:	@colorBaseText-1;
+
+//----------------------------------------------------
+
+//== Section titles
+
+//## Section titles. You can use these variables to customize section title styles. 
+
+//** Section title default font size
+@sectionTitleFontSize:		20px;		
+//** Small Section title font size. It is used for sidebar or places where a smaller version is needed
+@sectionTitleFontSize-sm:	16px;	
+//** Large Section title font size. It is used for centered section titles	
+@sectionTitleFontSize-lg:	28px;
+
+//** Set the space wanted uner the section title
+@sectionTitleMarginBottom:			20px;
+//** Set a padding value
+@sectionTitlePaddingBottom:			4px;
+
+//** Section title text transform style.<br><br>Options: capitalize, uppercase, lowercase, none
+@sectionTitleTextTransform: capitalize;
+//** Choose a value in px (ex: 1px) if you want to add spacing between letters
+@sectionTitleLetterSpacing:	0;
+//** Default font weight: 300, 400, 500, 600, 700
+@sectionTitleFontWeight:	500;
+//** Default section title text color
+@sectionTitleColor-1:			@headingColor;
+//** Default section title for sections using a background color
+@sectionTitleColor-2:			#FFF;
+
+//## Advanced section title styling. You can edit/remove the border (style, color, width), margins, paddings
+
+//## Section title can have 2 type of borders: to emphasize (to underline the title) and to delimite (to draw a continous line under the title)
+
+//** Emphasize bottom border height **/
+@sectionTitleSpanBorderHeight:		1px;
+//** Emphasize bottom border width: [px] or [%] -> ex: 100px or 100%
+@sectionTitleSpanBorderWidth:		100%;
+//** Emphasize bottom border width for centered section title: [px] or [%]
+@sectionTitleCenterSpanBorderWidth:	150px;
+//** Depending on the emphasize border height you can set a border radius to make it rounded: [px] - ex: 3px
+@sectionTitleSpanBorderRadius:		0;
+//** Set a padding value for the emphasize border to correctly align it with the other border
+@sectionTitleSpanPaddingBottom:	    -5px;
+//** Set the default emphasize border color
+@sectionTitleSpanBorderColor-1:		@colorBase-1;
+//** Set the second emphasize border color for sections using a background color
+@sectionTitleSpanBorderColor-2:		#FFF;
+
+//** Continous border (delimiter) border style. <br><br> Options: solid, dashed, dotted
+@sectionTitleBorderStyle:		solid;
+//** Continous border default color
+@sectionTitleBorderColor-1:		#ddd;
+//** Continous border color for sections using a background color
+@sectionTitleBorderColor-2:		rgba(255, 255, 255, 0.3);
+
+//** Section titles can have subtitles. Choose a default font size
+@sectionSubtitleFontSize:	15px;
+//** Subtitle default text color
+@sectionSubtitleColor-1:	#999;
+//** Subtitle second text color for sections using a background color
+@sectionSubtitleColor-2:	#f3f3f3;
+
+//** You can add a paragraph under section title for promo text. Choose a default color
+@sectionTitleTextColor-1:	@colorTextLight;
+//** Paragraph text color for sections using a background color
+@sectionTitleTextColor-2:	#FFF;
+
+//----------------------------------------------------
+
+//-- Layout modes
+
+//## Section titles
+@blockCardBg:			#FFF;
+@blockCardBorderRadius:	@borderRadius;
+
+//----------------------------------------------------
+
+//== Body
+
+//** Body background color
+@layoutBg: 		#FFF;
+
+//** Body backgrounds. Check the documentation to see the CSS classes attributed to each variable
+@bodyBg-1:		#f3f3f3;		// Background color 1
+@bodyBg-2:		#232323;		// Background color 2
+@bodyBg-3:		#FFF;			// Background color 3
+
+@bodyPattern-1:		"@{cssRelativePath-1}/images/patterns/diagmonds.png";		// Background image pattern 1
+@bodyPattern-2:		"@{cssRelativePath-1}/images/patterns/purty-wood.png";		// Background image pattern 2
+@bodyPattern-3:		"@{cssRelativePath-1}/images/patterns/brickwall.png";		// Background image pattern 3
+
+@bodyImg-1:			"@{cssRelativePath-1}/images/backgrounds/body-bg-1.jpg";	// Image source 1 - change the variable value to change the image or simply replace the image file from the "backgrounds" folder
+@bodyImg-2:			"@{cssRelativePath-1}/images/backgrounds/body-bg-2.jpg";	// Image source 2
+@bodyImg-3:			"@{cssRelativePath-1}/images/backgrounds/body-bg-3.jpg";	// Image source 3
+
+//----------------------------------------------------
+
+//-- Header
+@headerBg:		#FFF;		// Header background color (not needed all the time, depends on the navbar style)
+
+//== Footer
+@footerBg-1:				#07060C;					// Footer background color 1 (use a DARKER color)
+@footerBorderColor-1:		lighten(@footerBg-1, 5%);
+@footerLinkColor-1:			#818181;
+@footerLinkColorHover-1:	#fff;
+@footerHeadingColor-1:		#FFF;
+@footerTextColor-1:			#ddd;
+@footerFontSize-1:			13px;
+
+@footerBg-2:				#f3f3f3;					// Footer background color 1 (use a LIGHTER color)
+@footerBorderColor-2:		darken(@footerBg-2, 5%);
+@footerLinkColor-2:			#333;
+@footerLinkColorHover-2:	@colorBase-1;
+@footerHeadingColor-2:		#333;
+@footerTextColor-2:			#555;
+@footerFontSize-2:			13px;
+
+@footerBg-3:	"@{cssRelativePath-1}/images/patterns/blue-diamonds.png";	// Footer with image background
+@footerLinkColor-3:			#FFF;
+@footerLinkColorHover-3:	#FFF;
+@footerHeadingColor-3:		#FFF;
+@footerTextColor-3:			#FFF;
+
+//== Slidebar
+@stSidebarBg:						#0d0b16;
+@stSidebarHeadingColor:				#FFF;
+@stSidebarLinkColor:				#ccc;
+@stSidebarLinkColorHover:			#FFF;
+@stSidebarFormControlBg:			darken(@colorBase-2, 5%);
+@stSidebarFormControlTextColor:		@colorBaseText-2;
+@stSidebarFormControlBorderColor:	darken(@colorBase-2, 10%);
+
+
+//----------------------------------------------------
+
+//== Blocks
+
+//## Default block border color and radius
+@blockBg-1:				#FFF;
+@blockBorderColor-1:	#dfddda;
+
+@blockBg-2:				#eee;
+@blockBorderColor-2:	#e0eded;
+
+@blockBorderColor:		@borderColor-2;
+@blockRadius: 			@borderRadius;
+
+@blockWrapperBg:			#f3f3f3;
+@blockWrapperBorderColor:	#eee;
+
+//----------------------------------------------------
+
+//==Border and Radiuses
+
+//## Default border color
+
+//** Set the border thickness in [px]
+@borderWidth: 	1px;
+//** Color used for all section borders including navbar. It can be set to "transparent" if you don't need it
+@borderColor: 	#f1f1f1;
+//** Border color used for elements that permanently need a visible border color
+@borderColor-2:	#f1f1f1;
+
+//## General border radiuses
+
+//**Value of the general border radiuses used for template elements/components. Set it to "0" if you want unrounded corners
+@borderRadius: 6px;
+
+//## Border radius sizes
+
+//** Default border radius value used for helper class .rounded. Don't make any of the following values "0" so the helper classes could work
+@borderRadius-default:	3px;
+//** Extra small border radius .rounded-xs
+@borderRadius-xs: 1px;
+//** Small border radius .rounded-sm
+@borderRadius-sm: 2px;
+//** Medium border radius .rounded-md			
+@borderRadius-md: 5px;
+//** Large border radius .rounded-lg	
+@borderRadius-lg: 8px;	
+
+//## HR border color
+@hrBorderColor:	darken(@layoutBg, 10%);	
+
+//----------------------------------------------------
+
+
+//== Shadows 
+
+//## Default box shadows
+
+//** Shadow color 1: used for helper class .has-shadow-1 (can be applied on any element you need to add a shadow on)
+@shadowColor-1:		rgba(161,161,161,1);
+
+//== Sort list
+
+//## Sort list items
+@sortListItemBg:				rgba(red(@colorBase-2), green(@colorBase-2), blue(@colorBase-2), 0.8);
+@sortListItemColor:				@colorBaseText-2;
+@sortListItemFontSize:			15px;
+@sortListItemFontFamily:		@fontFamily-1;
+@sortListItemFontWeight:		400;
+@sortListItemTitleTransform:	uppercase;
+
+//## Sort list filter bar
+@sortListBarBg-1:				url('@{cssRelativePath-1}/images/patterns/crossword.png');
+@sortListBarTitleColor-1:		#333;
+@sortListBarTextColor-1:		#CCC;
+@sortListBarButtonColor-1:		#999;
+@sortListBarButtonColorHover-1:	#333;
+
+@sortListBarBg-2:				darken(#2C3E50, 15%);
+@sortListBartTitleColor-2:		#DDD;
+@sortListBarTextColor-2:		#fff;
+@sortListBarButtonColor-2:		#999;
+@sortListBarButtonColorHover-2:	#FFF;
+
+//----------------------------------------------------
+
+//== Buttons
+
+@btnFontSize:			11px;
+@btnFontSize-xs:		8px;
+@btnFontSize-sm:		10px;
+@btnFontSize-lg:		12px;
+@btnFontSize-xl:		14px;
+
+@btnLetterSpacing:		2px;
+@btnFontWeight:  		600;
+@btnTextTransform:  	uppercase;
+@btnOuterBorderWidth:	1px;
+
+//## Button radiuses
+@btnRadius:		4px;
+@btnRadiusXS:	2;
+@btnRadiusMD:	5;
+@btnRadiusLG:	6px;
+
+//## Button colors
+@btnColorBase-1:		@colorBase-1;
+@btnColorBaseText-1:	@colorBaseText-1;
+
+@btnColorBase-2:		@colorBase-2;
+@btnColorBaseText-2:	@colorBaseText-2;
+
+@btnColorBase-3:		darken(@colorBase-3, 10%);
+@btnColorBaseText-3:	@colorBaseText-3;
+
+@btnColorBase-4:		@colorBase-4;
+@btnColorBaseText-4:	@colorBaseText-4;
+
+@btnColorBase-5:		@colorBase-5;
+@btnColorBaseText-5:	@colorBaseText-5;
+
+@btnColorWhite:			@colorWhite;
+@btnColorWhiteText:		@colorWhiteText;
+
+@btnColorBlack:			@colorBlack;
+@btnColorBlackText:		@colorBlackText;
+
+@btnColorGray:			@colorGray;
+@btnColorGrayText:		@colorGrayText;
+
+@btnColorLightGray:		@colorLightGray;
+@btnColorLightGrayText:	@colorLightGrayText;
+
+@btnColorBlue:			@colorBlue;
+@btnColorBlueText:		@colorBlueText;
+
+@btnColorGreen:			@colorGreen;
+@btnColorGreenText:		@colorGreenText;
+
+@btnColorRed:			@colorRed;
+@btnColorRedText:		@colorRedText;
+
+@btnColorPink:			@colorPink;
+@btnColorPinkText:		@colorPinkText;
+
+@btnColorOrange:		@colorOrange;
+@btnColorOrangeText:	@colorOrangeText;
+
+@btnColorGold:			@colorGold;
+@btnColorGoldText:		@colorGoldText;
+
+@btnColorPurple:		@colorPurple;
+@btnColorPurpleText:	@colorPurpleText;
+
+//== Images and patterns
+
+//## Images
+@img-1: "../images/backgrounds/full-bg-10.jpg";
+@img-2: "../images/backgrounds/full-bg-3.jpg";
+
+//## Patterns
+@patt-1: "../images/patterns/binding-dark.png";
+@patt-2: "../images/patterns/squairy-light.png";
+@patt-3: "../images/patterns/dark-dotted.png";
+@patt-4: "../images/patterns/skulls.png";
+@patt-5: "../images/patterns/grey-wash-wall.png";
+
+//----------------------------------------------------
+
+//== Forms
+
+//## General
+@formControlPadding:				8px 12px;
+@formControlBg:						#FFF;
+@formControlBgFocus:				#fafafa;
+@formControlTextColor:				#555;
+@formControlTextColorFocus:			#333;
+@formControlPlaceholderColor:		rgba(0, 0, 0, 0.4);
+@formControlPlaceholderColorFocus:	rgba(0, 0, 0, 0.8);
+@formControlBorderWidth:			1px;
+@formControlBorderColor:			#bdc3c7;
+@formControlBorderColorFocus:		@colorBase-1;
+@formControlBorderRadius:			@borderRadius;
+@formControlFontSize:				12px;
+@formControlFontWeight:				400;
+
+//## Disabled
+@formControlDisabledBg:				#FFF;
+@formControlDisabledTextColor:		#555;
+
+//## Error state
+@formControlErrorBg:					#fff0f0;
+@formControlErrorBorderColor:			#dbb1b1;
+@formControlErrorTextColor:				#d95c5c;
+@formControlErrorPlaceholderColor:		rgba(255, 80, 80, 0.4);
+@formControlErrorPlaceholderColorFocus:	rgba(255, 80, 80, 0.7);
+
+//## Labels
+@formLabelFontSize:			@bodyFontSize;
+@formLabelFontWeight:		600;
+@formLabelTextTransform:	capitalize;		// Options: none, capitalize, uppercase, lowercase
+
+//## User form - Wrapper
+@formUserBg:				#FFF;
+@formUserTextColor:			#333;
+@formUserHeadingColor:		@headingColor;
+@formUserBorderColor:		#ECF0F1;
+@formUserHeaderBorderWidth:	1px;
+@formUserFooterBorderWidth:	1px;
+
+@formUserBodyBg:			#FFF;
+@formUserHeaderBg:			#ECF0F1;
+@formUserHeaderTextColor:	#ECF0F1;
+@formUserFooterBg:			#ECF0F1;
+
+//## Light Form 	
+@formLightControlBg:		#ecf0f1;
+@formLightControlBgHover:	lighten(@formLightControlBg, 5%);
+@formLightBorderColor:		darken(@formLightControlBg, 5%);
+@formLightTextColor:		#333;
+@formLightPlaceholderColor:	#999;
+
+//## Dark Form 
+@formDarkControlBg:			#141028;
+@formDarkControlBgHover:	lighten(@formDarkControlBg, 5%);
+@formDarkBorderColor:		#141028;
+@formDarkTextColor:			#eee;
+@formDarkPlaceholderColor:	#999;
+
+//----------------------------------------------------
+
+//== Components
+
+//## General
+
+//** Used for the interactive area from a component (ex: tab button, collapse heading)
+@componentBg:					#fafafa;
+@componentBgHover:				#fff;
+@componentBgActive:				#fff;
+@componentBgDisabled:			#fff;
+@componentTextColor:			#333;	
+@componentTextColorActive:		@colorBase-1;
+@componentTextColorDisabled:	#777;
+@componentBorderColor:			darken(@componentBg, 10%);
+@componentBorderColorDisabled:	#ddd;
+@componentFontSize:				14px;
+@componentFontWeight:			500;
+@componentTextTransform: 		capitalize;
+
+//* Used for the inner content area from a component
+@componentInnerBg:			#FFF;
+@componentInnerTextColor:	#777;
+@componentInnerBorderColor:	@componentBorderColor;
+
+//## Progress bar
+@progressBg:	 		#f5f5f5;
+@progressRadius: 		@borderRadius;
+@progressTextColor:		#333;
+@progressFontSize:		13px;
+@progressFontWeight:	500;
+
+//## Collapse - Accordion
+@collapseHeadingBg:				@componentBg;
+@collapseHeadingTextColor:		@componentTextColor;
+@collapseContentTextColor:		@componentInnerTextColor;
+@collapseBorderColor:			@componentBorderColor;
+@collapseHeadingFontSize:		@componentFontSize;
+@collapseHeadingFontWeight:		@componentFontWeight;
+@collapseHeadingIcon:			"+";
+@collapseHeadingIconOpen:		"-";
+
+//## Tabs
+@tabContentBg-1:			@componentInnerBg;
+@tabContentBorderColor-1:	@componentInnerBorderColor;
+
+@tabBtnBg-1:				@componentBg;
+@tabBtnBgHover-1:			@componentBgHover;
+@tabBtnBgActive-1:			@componentBgActive;
+@tabBtnBorderColor-1:		@componentBorderColor;
+@tabBtnTextColor-1:			@componentTextColor;
+@tabBtnFontSize:			@componentFontSize;
+@tabBtnFontWeight:			@componentFontWeight;
+@tabBtnTextTransfrom:		@componentTextTransform;
+
+//## Nav Pills
+@navPillsBorderColor:		transparent;
+@navPillBg:					#eee;
+@navPillTextColor-1:		#333;
+@navPillTextColor-2:		#999;
+@navPillActiveBg:			@colorBase-2;
+@navPillActiveTextColor-1:	@colorBaseText-2;
+@navPillActiveTextColor-2:	@colorBaseText-2;
+@navPillDelimiterColor:		#ddd;
+
+//## Breadcrumb
+@breadcrumbBg:				#f6f6f6;
+@breadcrumbTextColor:		#333;
+@breadcrumbFontSize:		20px;
+@breadcrumbFontWeight:		500;
+@breadcrumbLinkColor1:		#333;
+@breadcrumbLinkColor2:		@colorBase-1;
+@breadcrumbBorderColor:		@borderColor;
+
+//## Carousels
+@carouselControlBg:					rgba(37, 37, 37, 0.8);
+@carouselControlBgHover:			@colorBase-2;
+@carouselControlTextColor:			#fff;
+@carouselControlTextColorHover:		@colorBaseText-2;
+@carouselCaptionBg:					rgba(37, 37, 37, 0.8);
+@carouselCaptionTextColor:			#fff;
+
+//## Pagination
+@paginationBg:					@componentBg;
+@paginationBgHover:				@colorBase-1;
+@paginationBgActive:			@colorBase-1;
+@paginationTextColor:			@componentTextColor;
+@paginationTextColorHover:		@colorBaseText-1;
+@paginationTextColorActive:		@colorBaseText-1;
+@paginationBorderColor:			@componentBorderColor;
+@paginationBorderColorHover:	@colorBase-1;
+@paginationBorderColorActive:	@colorBase-1;
+
+@paginationBgDisabled:			@componentBgDisabled;
+@paginationTextColorDisabled:	@componentTextColorDisabled;
+@paginationBorderColorDisabled:	@componentBorderColorDisabled;
+
+@paginationBorderRadius: 		@borderRadius;
+
+//## Modal
+@modalBg:			#FFF;
+@modalBorderColor:	#999;
+@modalBorderRadius:	@borderRadius;
+
+//## Star rating
+@starRatingActiveBg:	@colorGold;
+@starRatingBg:			@componentBg;
+
+//## Wells
+@wellBg:			#f7f7f7;
+@wellBorderColor:	transparent;
+@wellBorderRadius:	@borderRadius;
+
+//## No UI slider
+@nouiSliderBg:					#FAFAFA;
+@nouiSliderConnectBg:			@colorBase-1;
+@nouiSliderConnectDisabledBg:	#b2b2b2;
+
+@nouiHandleBg:					#fff;
+@nouiHandleActiveBg:			#E8E7E6;
+@nouiHandleBorderColor:			#d9d9d9;
+@nouiHandleShadowColor:			#bbb;
+@nouiHandleActiveShadowColor:	rgba(153,153,153,1);
+
+@nouiHandleBorderRadius:	2px;
+@nouiOriginBorderRadius:	2px;
+@nouiTargetBorderRadius:	4px;
+
+@nouiTargetBorderColor:		darken(@borderColor-2, 3%);
+
+//----------------------------------------------------
+
+//== Pages
+
+//## Blog
+@blogContentFontSize:			14px;
+@blogCommentItemBg:				#f3f3f3;
+@blogCommentItemTextColor:		#FFF;
+@blogCommentItemBorderColor:	#ddd;
+
+//== PATHS 
+@cssRelativePath-1:		"../"; 	// For dev/production mode (LESS: ../../; CSS: ../;) - Switch to CSS mode before LESS compilation

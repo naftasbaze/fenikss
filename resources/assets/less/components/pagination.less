@@ -1,0 +1,38 @@
+/* PAGINATION */
+.pagination-wrapper{padding: 30px 0;}
+
+/* PAGINATION - STYLE 1 (Default) */
+.pagination > li > a,
+.pagination > li > span {color: @paginationTextColor; background-color: @paginationBg; border: 1px solid @paginationBorderColor;}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {margin-left: 0; border-top-left-radius: @paginationBorderRadius; border-bottom-left-radius: @paginationBorderRadius;}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {border-top-right-radius: @paginationBorderRadius; border-bottom-right-radius: @paginationBorderRadius;}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {color: @paginationTextColorHover; background-color: @paginationBgHover; border-color: @paginationBorderColorHover;}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {color: @paginationTextColorActive; background-color: @paginationBgActive; border-color: @paginationBorderColorActive;}
+
+.pagination > .disabled > span, 
+.pagination > .disabled > span:hover, 
+.pagination > .disabled > span:focus, 
+.pagination > .disabled > a, 
+.pagination > .disabled > a:hover, 
+.pagination > .disabled > a:focus {color: @paginationTextColorDisabled; background-color: @paginationBgDisabled; border-color: @paginationBorderColorDisabled;}
+
+/* PAGINATION - STYLE 2 (Rounded) */
+.pagination.style-2 > li > a, 
+.pagination.style-2 > li > span {border-radius: 50% !important; margin: 0 5px;}
+
+/* PAGER */
+.pager li > a, 
+.pager li > span {background-color: @paginationBg; border: 1px solid @paginationBorderColor; border-radius: @paginationBorderRadius;}
+.pager li > a:hover,
+.pager li > a:focus {background-color: @paginationBgHover; color: @paginationTextColorHover;}
+.pager li.pager-count.v1 span{background: transparent; font-style: italic;}

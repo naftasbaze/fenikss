@@ -1,0 +1,87 @@
+/* SECTION TITLE */
+.section-title-wrapper{display: table; width: 100%; margin-bottom: 15px;}
+.section-title-wrapper .aux-nav{display: table-cell; width: 30%; padding: 8px 0; text-align: right;}
+
+.section-title{margin: 0; padding: 0; font-family: @fontFamily-1; font-size: @fontSize-md; font-weight: @sectionTitleFontWeight; text-transform: @sectionTitleTextTransform; letter-spacing: @sectionTitleLetterSpacing; position: relative;}
+.section-title.left small{display: block; margin-top: 4px; color: @sectionSubtitleColor-1}
+.section-title.left{font-size: @sectionTitleFontSize;}
+.sidebar .section-title.left,
+.section-title-sm.left{font-size: @sectionTitleFontSize-sm;}
+
+.section-title.center{margin-bottom: 20px; display: block; text-align: center; font-size: @sectionTitleFontSize-lg; color: @colorTextDark;}
+.section-title.center small{display: block; margin-top: 8px; font-size: @fontSize; color: @colorTextLight;}
+.section-title-sm.center{font-size: @sectionTitleFontSize-sm;}
+
+.section-title-wrapper .aux-nav{position: relative;}
+
+/* SECTION TITLE - STYLE 1 */
+.section-title-wrapper.style-1{margin-bottom: @sectionTitleMarginBottom;}
+.section-title-wrapper.style-1 .aux-nav a{color: @colorBase-1;}
+.section-title-wrapper.style-1 .section-title.left{border-bottom: 1px @sectionTitleBorderStyle; padding-bottom: @sectionTitlePaddingBottom;}
+
+.section-title-wrapper.style-1.v1 .section-title.left{display: table-cell;}
+.section-title-wrapper.style-1.v2 .section-title.left{display: table-cell;}
+
+.section-title-wrapper.style-1.v1 .section-title.left{border-color: @sectionTitleBorderColor-1;}
+.section-title-wrapper.style-1.v2 .section-title.left{border-color: @sectionTitleBorderColor-2;}
+
+.section-title-wrapper.style-1 .section-title.left span:before{content: ""; position: absolute; left: 0; bottom: @sectionTitleSpanPaddingBottom; width: @sectionTitleSpanBorderWidth; height: @sectionTitleSpanBorderHeight; border-radius: @sectionTitleSpanBorderRadius;}
+.section-title-wrapper.style-1 .section-title.left span{padding-bottom: 6px; display: inline-block; position: relative;}
+.section-title-wrapper.style-1 .section-title-sm.left span,
+.sidebar .section-title-wrapper.style-1 .section-title span{padding-bottom: 0;}
+.section-title-wrapper.style-1 .section-title.left .section-subtitle{position: absolute; display: block; padding: 10px 0 20px;}
+
+.section-title-wrapper.style-1 .section-title.center{padding-bottom: 15px;  font-weight: @sectionTitleFontWeight; text-transform: @sectionTitleTextTransform;}
+.section-title-wrapper.style-1 .section-title.center span:before{content: ""; position: absolute; bottom: 0; left: 50%; margin-left: -65px; width: @sectionTitleCenterSpanBorderWidth; height: @sectionTitleSpanBorderHeight; border-radius: @sectionTitleSpanBorderRadius;}
+.section-title-wrapper.style-1 .section-title.center .section-subtitle{display: block; font-size: @sectionSubtitleFontSize; font-weight: 500; text-transform: none; margin: 0 0 10px 0;}
+
+.section-title-wrapper.style-1.v1 .section-title .section-subtitle{color: @sectionSubtitleColor-1;}
+.section-title-wrapper.style-1.v2 .section-title .section-subtitle{color: @sectionSubtitleColor-2;}
+
+.section-title-text{width: 780px; margin: 0 auto; font-size: @fontSize-md;}
+.section-title-wrapper.style-1.v1 .section-title-text{color: @sectionTitleTextColor-1;}
+.section-title-wrapper.style-1.v2 .section-title-text{color: @sectionTitleTextColor-2;}
+
+@media(max-width: 767px) {
+	.section-title-text{width: 100%; padding: 0 25px;}
+}
+
+.section-title-wrapper.style-1.v1 .section-title span:before{background: @sectionTitleSpanBorderColor-1;}
+.section-title-wrapper.style-1.v2 .section-title span:before{background: @sectionTitleSpanBorderColor-2;}
+
+/* SECTION TITLE - STYLE 2 */
+.section-title-wrapper.style-2{margin-bottom: 25px;}
+.section-title-wrapper.style-2 .section-title.left span:before{content: ""; position: absolute; left: 0; bottom: -1px; width: 22px; height: @sectionTitleSpanBorderHeight;}
+.section-title-wrapper.style-2 .section-title-sm.left span:before{width: 10px;}
+.section-title-wrapper.style-2.v1 .section-title span:before{background: @sectionTitleSpanBorderColor-1;}
+.section-title-wrapper.style-2.v2 .section-title span:before{background: @sectionTitleSpanBorderColor-2;}
+
+.section-title-wrapper.style-2 .section-title.center{padding-bottom: 15px;  font-weight: sectionTitleFontWeight; text-transform: @sectionTitleTextTransform;}
+.section-title-wrapper.style-2 .section-title.center span:before{content: ""; position: absolute; bottom: 0; left: 50%; margin-left: -15px; width: 30px; height: @sectionTitleSpanBorderHeight; border-radius: 2px;}
+.section-title-wrapper.style-2.v1 .section-title span:before{background: @sectionTitleSpanBorderColor-1;}
+.section-title-wrapper.style-2.v2 .section-title span:before{background: @sectionTitleSpanBorderColor-2;}
+
+.section-title-wrapper.style-2 .section-subtitle{display: block; font-size: @sectionSubtitleFontSize; font-weight: 400; text-transform: none; margin: 0 0 10px 0; padding-bottom: 10px;}
+.section-title-wrapper.style-2.v1 .section-title .section-subtitle{color: @sectionSubtitleColor-1;}
+.section-title-wrapper.style-2.v2 .section-title .section-subtitle{color: @sectionSubtitleColor-2;}
+
+/* SECTION TITLE - STYLE 3 */
+.section-title-wrapper.style-3 .section-title{font-family: 'Sue Ellen Francisco', sans-serif; font-size: 30px;}
+
+.section-title-wrapper.style-3 .section-title.center .section-subtitle{font-family: @fontFamily-1; display: block; font-size: @sectionSubtitleFontSize; font-weight: 400; text-transform: none; margin: 0 0 10px 0;}
+.section-title-wrapper.style-3.v1 .section-title .section-subtitle{color: @sectionSubtitleColor-1;}
+.section-title-wrapper.style-3.v2 .section-title .section-subtitle{color: @sectionSubtitleColor-2;}
+
+.section-title-wrapper.style-3 .section-title-text{font-family: @fontFamily-2;}
+
+/* COMMON SECTION TITLE STYLES */
+.section-title-wrapper.v1 .section-title{color: @sectionTitleColor-1;}
+.section-title-wrapper.v2 .section-title{color: @sectionTitleColor-2;}
+
+/* CAROUSEL CONTROLS */
+.section-title-wrapper .aux-nav .carousel-control {position: absolute; top: 50%; bottom: auto; left: 0; width: 28px; height: 28px; line-height: 28px; margin-top: -14px; font-size: 14px; background: @colorBase-1; color: @colorBaseText-1 !important; text-align: center; text-shadow: none; filter: alpha(opacity=100); opacity: 1; -webkit-transition: all 100ms linear;
+transition: all 100ms linear; border-radius: @borderRadius;}
+.section-title-wrapper .aux-nav .carousel-control.right{right: 0; left: auto;}
+.section-title-wrapper .aux-nav .carousel-control.left{right: 32px; left: auto;}
+.section-title-wrapper .aux-nav .carousel-control:hover{background: @colorBase-2; color: @colorBaseText-2; filter: alpha(opacity=100); opacity: 1;}
+.section-title-wrapper .aux-nav .carousel-inner .item img{width: 100%;}

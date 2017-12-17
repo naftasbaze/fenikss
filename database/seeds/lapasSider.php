@@ -1,0 +1,121 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class lapasSider extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        if(DB::table('lapas')->get()->count() == 0){
+
+            DB::table('lapas')->insert([
+
+                [
+                    'nosaukums_lv' => 'Par mums',
+                    'nosaukums_en' => 'About us',
+                    'nosaukums_ru' => 'Про нас',
+                    'slug' => str_slug('Par mums'),
+                    'aktivs' => 1,
+                    'tips' => 0,
+                    'vietaLimeni' => 1,
+                    'virsraksts_lv' => 'Par mums',
+                    'virsraksts_en' => 'About us',
+                    'virsraksts_ru' => 'Про нас',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'nosaukums_lv' => 'Pakalpojumi',
+                    'nosaukums_en' => 'Service',
+                    'nosaukums_ru' => 'Услуги',
+                    'slug' => str_slug('Pakalpojumi'),
+                    'aktivs' => 1,
+                    'tips' => 0,
+                    'vietaLimeni' => 3,
+                    'virsraksts_lv' => 'Pakalpojumi',
+                    'virsraksts_en' => 'Service',
+                    'virsraksts_ru' => 'Услуги',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'nosaukums_lv' => 'Fotogalerija',
+                    'nosaukums_en' => 'Gallery',
+                    'nosaukums_ru' => 'Фотогалерея',
+                    'slug' => str_slug('Fotogalerija'),
+                    'aktivs' => 1,
+                    'tips' => 0,
+                    'vietaLimeni' => 9,
+                    'virsraksts_lv' => 'Fotogalerija',
+                    'virsraksts_en' => 'Gallery',
+                    'virsraksts_ru' => 'Фотогалерея',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'nosaukums_lv' => 'Jautājumi',
+                    'nosaukums_en' => 'Questions',
+                    'nosaukums_ru' => 'Вопросы',
+                    'slug' => str_slug('Jautājumi'),
+                    'aktivs' => 1,
+                    'tips' => 0,
+                    'vietaLimeni' => 5,
+                    'virsraksts_lv' => 'Jautājumi',
+                    'virsraksts_en' => 'Questions',
+                    'virsraksts_ru' => 'Questions',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'nosaukums_lv' => 'Kontakti',
+                    'nosaukums_en' => 'Contacts',
+                    'nosaukums_ru' => 'Контакты',
+                    'slug' => str_slug('Kontakti'),
+                    'aktivs' => 1,
+                    'tips' => 0,
+                    'vietaLimeni' => 6,
+                    'virsraksts_lv' => 'Kontakti',
+                    'virsraksts_en' => 'Contacts',
+                    'virsraksts_ru' => 'Контакты',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'nosaukums_lv' => 'Galerija',
+                    'nosaukums_en' => 'Gallery',
+                    'nosaukums_ru' => 'Галерея',
+                    'slug' => str_slug('galerija'),
+                    'aktivs' => 1,
+                    'tips' => 1,
+                    'vietaLimeni' => 2,
+                    'virsraksts_lv' => 'Galerija',
+                    'virsraksts_en' => 'Gallery',
+                    'virsraksts_ru' => 'Галерея',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'nosaukums_lv' => 'Parallax',
+                    'nosaukums_en' => 'Parallax',
+                    'nosaukums_ru' => 'параллакс',
+                    'slug' => str_slug('Parallax'),
+                    'aktivs' => 1,
+                    'tips' => 2,
+                    'vietaLimeni' => 4,
+                    'virsraksts_lv' => 'Parallax',
+                    'virsraksts_en' => 'Parallax',
+                    'virsraksts_ru' => 'параллакс',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ]
+
+            ]);
+
+        } else { echo "\e[31mTable is not empty, therefore NOT "; }
+    }
+}

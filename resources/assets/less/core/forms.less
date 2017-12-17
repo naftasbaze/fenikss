@@ -1,0 +1,223 @@
+/* GENERAL STYLING */
+.form-shadow{box-shadow: 0 0 20px rgba(0,0,0,.3);}
+.form-bottom-fixed{position: fixed; width: inherit; bottom: 0;}
+
+@media(max-width: 991px) {
+	.form-bottom-fixed{position: static;}
+}
+
+.form-user-links-aux.style-1{color: @colorTextLight;}
+.form-user-links-aux.style-1 a{}
+.form-user-links-aux.style-1 a:hover{text-decoration: underline;}
+
+/* LABELS */
+label{font-weight: @formLabelFontWeight; font-size: @formLabelFontSize; text-transform: @formLabelTextTransform;}
+
+/* BOOTSTRAP FORMS - GENERAL STYLING */
+.form-control {height: auto; padding: @formControlPadding; font-size: @formControlFontSize; font-weight: @formControlFontWeight; color: @formControlTextColor; background-color: @formControlBg; background-image: none; outline: 0; border: @formControlBorderWidth solid @formControlBorderColor; border-radius: @formControlBorderRadius; -webkit-box-shadow: none; box-shadow: none;}
+.form-control.input-lg{height: 50px; font-size: @formControlFontSize + 2;}
+.form-control.input-sm{height: 30px;}
+.form-control:focus {border-color: @formControlBorderColorFocus; outline: 0; -webkit-box-shadow: none; box-shadow: none;}
+.form-control::-moz-placeholder {color: @formControlPlaceholderColor; opacity: 1;}
+.form-control:-ms-input-placeholder {color: @formControlPlaceholderColor;}
+.form-control::-webkit-input-placeholder {color: @formControlPlaceholderColor;}
+
+.form-group-lg .form-control{border-radius: @formControlBorderRadius;}
+.form-group-lg .control-label{font-weight: @formLabelFontWeight !important; font-size: @formLabelFontSize !important; text-transform: @formLabelTextTransform !important;}
+
+/* FORM CONTROL ICON */
+.form-control-icon {color: @formControlPlaceholderColor; position: absolute; top: 0; left: 0; z-index: 2; display: block; width: 36px; height: 36px; line-height: 36px; text-align: center; pointer-events: none;}
+.form-control:focus .form-control-icon{color: @formControlTextColorFocus;}
+
+.input-lg + .form-control-icon {width: 46px; height: 51px; line-height: 51px;}
+.input-sm + .form-control-icon {width: 30px; height: 30px; line-height: 30px;}
+
+.has-icon{position: relative;}
+.has-icon label ~ .form-control-icon {top: 25px;}
+.has-icon label.sr-only ~ .form-control-icon {top: 0;}
+
+.has-icon .form-control{padding-left: 30px;}
+.has-icon .form-control.input-lg{padding-left: 40px;}
+
+/* USER FORM - GENERAL STYLING */
+.form-user .form-header .form-header-icon img{width: 64px;}
+.form-user .form-header .form-header-icon i{font-size: 64px;}
+.form-user .form-header{border-top-left-radius: @borderRadius; border-top-right-radius: @borderRadius;}
+.form-user .form-footer{border-bottom-left-radius: @borderRadius; border-bottom-right-radius: @borderRadius;}
+
+/* USER FORM - STYLE 1 */
+.form-user.style-1{background-color: @formUserBg; color: @formUserTextColor; border: 1px solid @formUserBorderColor;}
+.form-user.style-1 .form-header{padding: 24px 0; background-color: @formUserHeaderBg; border-bottom: @formUserHeaderBorderWidth solid @formUserBorderColor;}
+.form-user.style-1 .form-header .form-header-title{margin: 0; padding: 0; color: @formUserHeadingColor;}
+.form-user.style-1 .form-body{padding: 30px; background-color: @formUserBodyBg;}
+.form-user.style-1 .form-footer{padding: 20px 0; background-color: @formUserFooterBg; border-top: @formUserFooterBorderWidth solid @formUserBorderColor;}
+
+.form-user.style-2{color: @formUserTextColor;}
+.form-user.style-2 .form-header{position: relative; padding: 20px 0; background-color: @colorBase-1;}
+.form-user.style-2 .form-header .form-header-title{margin: 0; padding: 0; color: @formUserTextColor;}
+.form-user.style-2 .form-header:after{border: solid transparent; content:" "; height: 0; width: 0; position: absolute; pointer-events: none; border-width: 14px; top: 100%; left: 50%; border-top-color: @colorBase-1; margin-left: -14px;} 
+.form-user.style-2 .form-header .form-header-icon i{color: @colorBaseText-1;}
+.form-user.style-2 .form-body{padding: 30px; background-color: @formUserBg;}
+.form-user.style-2 .form-footer{padding: 15px 0; background-color: @formUserBg;}
+
+/* FORM OPAQUE - DEFAULT */
+.form-opaque-wrapper.style-1{background-color: rgba(red(@formUserBg), blue(@formUserBg), green(@formUserBg), 0.5); border-color: transparent;}
+.form-opaque-wrapper.style-1 .form-header{background-color: rgba(red(@formUserHeaderBg), blue(@formUserHeaderBg), green(@formUserHeaderBg), 0.5); border-color: transparent;}
+.form-opaque-wrapper.style-1 .form-body{background-color: rgba(red(@formUserBodyBg), blue(@formUserBodyBg), green(@formUserBodyBg), 0.5);}
+.form-opaque-wrapper.style-1 .form-footer{background-color: rgba(red(@formUserFooterBg), blue(@formUserFooterBg), green(@formUserFooterBg), 0.5); border-color: transparent;}
+
+.form-opaque.style-1 .form-control {color: @formControlTextColor; background-color: fade(@formControlBg, 80%); border: 1px solid transparent;}
+.form-opaque.style-1 .form-control:focus {background-color: fade(@formControlBg, 90%)}
+
+.form-opaque.style-1 .or .or_r{border-color: fade(@borderColor-2, 80%);}
+
+/* FORM LIGHT */
+.form-light .form-control{outline: none; box-shadow: none !important; -webkit-box-shadow: none !important; background: @formLightControlBg; border:1px solid @formLightBorderColor; color: @formLightTextColor; font-size: @fontSize !important;}
+.form-light .form-control:focus{outline: none !important; box-shadow: none !important; -webkit-box-shadow: none !important; background: @formLightControlBgHover;}
+.form-light label.checkbox{font-size:12px; font-weight:normal; cursor:pointer;}
+.form-light .form-control:-moz-placeholder{color: @formLightPlaceholderColor;}
+.form-light .form-control::-moz-placeholder, 
+.form-light .form-control[placeholder]{color: @formLightPlaceholderColor;}
+.form-light .form-control:-ms-input-placeholder{color: @formLightPlaceholderColor;}
+.form-light .form-control::-webkit-input-placeholder{color: @formLightPlaceholderColor;} 
+.form-light .input-group .form-control.left{border-right: 0 !important;}
+
+/* FORM DARK */
+.form-dark .form-control{outline: none; box-shadow: none !important; -webkit-box-shadow: none !important; background: @formDarkControlBg; border: 1px solid @formDarkBorderColor; color: @formDarkTextColor; font-size: @fontSize !important;}
+.form-dark .form-control:focus{outline: none !important; box-shadow: none !important; -webkit-box-shadow: none !important; background: @formDarkControlBgHover;}
+.form-dark label.checkbox{font-size: 12px; font-weight: normal; cursor: pointer;}
+.form-dark .form-control-icon{color: @formDarkTextColor; font-size: @fontSize;}
+.form-dark .form-control:-moz-placeholder{color: @formLightPlaceholderColor;}
+.form-dark .form-control::-moz-placeholder, 
+.form-dark .form-control[placeholder]{color: @formDarkPlaceholderColor;}
+.form-dark .form-control:-ms-input-placeholder{color: @formDarkPlaceholderColor;}
+.form-dark .form-control::-webkit-input-placeholder{color: @formDarkPlaceholderColor;} 
+.form-dark .input-group .form-control.left{border-right: 0 !important;}
+
+/* FORM BASE 1 */
+.form-base-1 .form-control{outline: none; box-shadow: none; -webkit-box-shadow: none; background: @colorBase-1; border: 1px solid darken(@colorBase-1, 5%); color: @colorBaseText-1; font-size: @fontSize;}
+.form-base-1.form-opaque .form-control{background: fade(@colorBase-1, 75%); border: 1px solid darken(@colorBase-1, 5%);}
+.form-base-1 .form-control:focus{background: lighten(@colorBase-1, 10%); outline: none; box-shadow: none; -webkit-box-shadow: none;}
+.form-base-1.form-opaque .form-control:focus{background: fade(lighten(@colorBase-1, 10%), 75%); outline: none; box-shadow: none; -webkit-box-shadow: none;}
+.form-base-1 label.checkbox{font-size: 12px; font-weight: normal; cursor: pointer;}
+.form-base-1 .form-control-icon{color: @colorBaseText-1; font-size: @fontSize;}
+.form-base-1 .form-control:-moz-placeholder{color: @colorBaseText-1;}
+.form-base-1 .form-control::-moz-placeholder, .form-light .form-control[placeholder]{color: @colorBaseText-1;}
+.form-base-1 .form-control:-ms-input-placeholder{color: @colorBaseText-1;}
+.form-base-1 .form-control::-webkit-input-placeholder{color: @colorBaseText-1;} 
+.form-base-1 .input-group .form-control.left{border-right: 0 !important;}
+
+/* CUSTOM PRODUCT SIZE INPUT */
+.product-size input {left: -9999px; position: absolute;}
+.product-size label {width: 36px; height: 36px; float: right; padding: 6px 0; display: block; color: @colorTextLight; font-size: 14px; font-weight: 400; text-align: center; background: transparent; text-transform: uppercase; border: 1px solid @borderColor-2;}
+.product-size label {
+  -ms-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+}
+.product-size label:hover {color: @colorBase-1; cursor: pointer; border-color: @colorBase-1;}
+.product-size input:checked ~ label {color: @colorBase-1; border-color: @colorBase-1; font-weight: 600;}
+
+/* CUSTOM PRODUCT COLOR INPUT */
+.product-color input {left: -9999px; position: absolute;}
+.product-color label {width: 36px; height: 36px; float: right; padding: 5px; display: block; font-size: 14px; text-align: center; opacity: 0.7;}
+.product-color label {
+  -ms-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+}
+
+.product-color label:hover {cursor: pointer; border: 1px solid @colorBase-1; opacity: 1;}
+.product-color input:checked ~ label {border: 1px solid @colorBase-1; opacity: 1;}
+
+.product-color label.color-one {background: #614d35;}
+.product-color label.color-two {background: #282828;}
+.product-color label.color-three {background: #a29e90;}
+.product-color label.color-four {background: #292446;}
+.product-color label.color-five {background: #d3877a;}
+
+/* CUSTOM CHECKBOXES AND RADIOS */
+.checkbox {padding-left: 20px; outline: none;}
+.checkbox label {display: inline-block; vertical-align: middle; position: relative; padding-left: 5px;}
+.checkbox label::before {content: ""; display: inline-block; position: absolute; width: 17px; height: 17px; left: 0; margin-left: -20px; border: @formControlBorderWidth solid @formControlBorderColor; border-radius: @formControlBorderRadius; background-color: @formControlBg;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.checkbox label::after {display: inline-block; position: absolute; width: 16px; height: 16px; left: 0; top: 0; margin-left: -20px; padding-left: 3px; padding-top: 1px; font-size: 12px; color: transparent;}
+.checkbox input[type="checkbox"],
+.checkbox input[type="radio"] {opacity: 0; z-index: 1;}
+
+.checkbox input[type="checkbox"]:checked + label::after,
+.checkbox input[type="radio"]:checked + label::after {color: @formControlTextColorFocus; font-family: "FontAwesome"; content: "\f00c";}
+
+.checkbox input[type="checkbox"]:disabled + label,
+.checkbox input[type="radio"]:disabled + label {opacity: 0.65;}
+.checkbox input[type="checkbox"]:disabled + label::before,
+.checkbox input[type="radio"]:disabled + label::before {background-color: @formControlDisabledBg; cursor: not-allowed;}
+
+.checkbox.checkbox-circle label::before {border-radius: 50%;}
+.checkbox.checkbox-inline {margin-top: 0;}
+
+.checkbox-success input[type="checkbox"]:checked + label::before,
+.checkbox-success input[type="radio"]:checked + label::before {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+.checkbox-success input[type="checkbox"]:checked + label::after,
+.checkbox-success input[type="radio"]:checked + label::after {
+  color: #fff;
+}
+
+.radio {padding-left: 20px;}
+.radio label {display: inline-block; vertical-align: middle; position: relative; padding-left: 5px;}
+.radio label::before {content: ""; display: inline-block; position: absolute; width: 17px; height: 17px; left: 0; margin-left: -20px; border: @formControlBorderWidth solid @formControlBorderColor; border-radius: 50%; background-color: @formControlBg;
+  -webkit-transition: border 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out;
+}
+.radio label::after {display: inline-block; position: absolute; content: " "; width: 11px; height: 11px; left: 3px; top: 3px; margin-left: -20px; border-radius: 50%;
+  background-color: @formControlBgFocus;
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+}
+.radio input[type="radio"] {opacity: 0; z-index: 1;}
+.radio input[type="radio"]:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.radio input[type="radio"]:checked + label::after {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.radio input[type="radio"]:disabled + label {opacity: 0.65;}
+.radio input[type="radio"]:disabled + label::before {cursor: not-allowed;}
+.radio.radio-inline {margin-top: 0;}
+
+.radio-success input[type="radio"] + label::after {
+  background-color: #5cb85c;
+}
+.radio-success input[type="radio"]:checked + label::before {
+  border-color: #5cb85c;
+}
+.radio-success input[type="radio"]:checked + label::after {
+  background-color: #5cb85c;
+}
+
+// input[type="checkbox"].styled:checked + label:after,
+// input[type="radio"].styled:checked + label:after { font-family: 'FontAwesome'; content: "\f00c";}
+
+// input[type="checkbox"] .styled:checked + label::before,
+// input[type="radio"] .styled:checked + label::before {color: @formControlTextColorFocus;}
+
+// input[type="checkbox"] .styled:checked + label::after,
+// input[type="radio"] .styled:checked + label::after {color: @formControlTextColorFocus;}

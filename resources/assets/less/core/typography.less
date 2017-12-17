@@ -1,0 +1,74 @@
+/* DEFAULT TIPOGRAPHY STYLES */
+body {font-size: @bodyFontSize; font-family: @fontFamily-2;} 
+
+h1, h2, h3, h4, h5, h6, p{line-height: 1.65;}
+h1, h2, h3, h4, h5, h6{font-family: @headingFontFamily; text-transform: @headingTextTransform;}
+
+h1, .h1{font-size: @heading-1;}
+h1 a {font-size: 1em;}
+h2, .h2, h2 a {font-size: @heading-2;}
+
+h3, .h3, h3 a {font-size: @heading-3;}
+h3 a{font-size: 1em !important;}
+h4, .h4, h4 a {font-size: @heading-4;}
+h5, .h5, h5 a {font-size: @heading-5;}
+h6, .h6, h6 a {font-size: @heading-6;}
+
+em {font-style: italic;}
+strong {font-weight: 700;}
+small {font-size: 75%}
+
+/* LINKS */
+a{color: @linkColorDefault; cursor: pointer;}
+a:hover{color: @linkColorDefaultHover; text-decoration: none; }	
+a.ease:hover{-o-transition: .3s; -ms-transition: .3s; -moz-transition: .3s; -webkit-transition: .3s; transition: .35s;}
+
+/* DELIMTIERS */
+hr{margin: 15px 0; border-color: @borderColor;}
+hr.delimiter{background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent); background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent); border: 0; height: 1px; margin: 22px 0 22px 0;}
+hr.hr-sm{margin: 5px 0;}
+
+/* OR - DELIMITER */
+.or {overflow: hidden; text-align: center; padding: 30px 0 0 0;}
+.or .or_l, 
+.or .or_r {width: 40%; border-bottom: solid 1px @borderColor-2; display: inline-block; position: relative; left: 0px; top: -4px;}
+
+/* HEADINGS */
+.heading{margin: 0; margin-bottom: 6px; padding: 0; font-size: @headingFontSize; text-transform: @headingTextTransform; font-family: @fontFamily-2; font-weight: @headingFontWeight; letter-spacing: @headingLetterSpacing;}
+.heading.style-1{color: @headingColor-1;}
+.heading.style-2{color: @headingColor-2;}
+.heading-xs{font-size: @headingFontSize-xs}
+.heading-sm{font-size: @headingFontSize-sm;}
+.heading-md{font-size: @headingFontSize-md;}
+.heading-lg{font-size: @headingFontSize-lg;}
+
+/* PARAGRAPHS */
+.fluid-paragraph{width: 760px; font-size: 1.5rem; line-height: 2rem; margin: auto; padding: 0 20px;}
+
+@media (max-width: 767px) {
+	.fluid-paragraph{width: 100%;}  
+} 
+
+/* FONT SIZES */
+.font-normal{font-size: @fontSize;}
+.font-xs{font-size: @fontSize-xs;}
+.font-sm{font-size: @fontSize-sm;}
+.font-md{font-size: @fontSize-md;}
+.font-xl{font-size: 100px;}
+
+/* FONT WEIGHT */
+.font-400{font-weight: 400;}
+.font-500{font-weight: 500;}
+.font-600{font-weight: 600;}
+.font-700{font-weight: 700;}
+
+/* PRIMARY LETTER STYLES */
+.dropcap{float: left; padding: 6px 0; font-size: 44px; font-weight: 400; line-height: 30px; margin: 0px 5px 0 0; font-family: @fontFamily-1;}
+.dropcap.style-1{padding: 0 12px; margin-top: 6px; font-size: 52px; text-align: center;}
+.dropcap.style-2{padding: 16px; margin: 6px 18px 5px 0; text-align: center;}
+.dropcap.style-3{padding: 16px; margin: 6px 18px 5px 0; text-align: center; border-radius: @blockRadius;}
+.dropcap.style-4{padding: 16px; margin: 6px 18px 5px 0; border-radius: 100%; text-align: center;}
+
+/* DELIMITERS - GENERAL STYLING */
+hr{border-color: @hrBorderColor;}
+.hr-lg {margin: 40px 0;}

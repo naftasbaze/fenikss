@@ -1,0 +1,130 @@
+/* GENERAL STYLING */
+.a-grid {position: relative; text-align: center;}
+.a-grid:before, 
+.a-grid:after{content: ""; display: table;}
+.a-grid:after{clear: both;}
+
+.a-grid figure {width: 100%; overflow: hidden; position: relative;}
+.a-grid figure:after{content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #171A1F; opacity: 0.45; z-index: 400;}
+.a-grid figure:hover:after{opacity: 0.1;}
+.a-grid figure img {position: relative; display: block; opacity: 0.8; width: auto !important; max-width: 100%;}
+.a-grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	z-index: 800;
+}
+
+.a-grid figure figcaption::before,
+.a-grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.a-grid figure figcaption,
+.a-grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.a-grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.a-grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.a-grid figure h2 span {
+	font-weight: 800;
+}
+
+.a-grid figure h2,
+.a-grid figure p {
+	margin: 0;
+}
+
+.a-grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/* CHICO EFFECT*/
+figure.effect-chico img {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(1.12);
+	transform: scale(1.12);
+}
+
+figure.effect-chico:hover img {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+figure.effect-chico figcaption {
+	padding: 3em;
+}
+
+figure.effect-chico figcaption::before {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	border: 1px solid #fff;
+	content: '';
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+figure.effect-chico figcaption::before,
+figure.effect-chico p {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-chico h2 {
+	padding: 20% 0 20px 0;
+}
+
+figure.effect-chico p {
+	margin: 0 auto;
+	max-width: 200px;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+}
+
+figure.effect-chico:hover figcaption::before,
+figure.effect-chico:hover p {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+@media screen and (max-width: 50em) {
+	.content {
+		padding: 0 10px;
+		text-align: center;
+	}
+	.a-grid figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}
+}

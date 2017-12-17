@@ -1,0 +1,55 @@
+/* GENERAL STYLING */
+.tab-body{padding: 15px;}
+.tabbable-panel {border:1px solid @tabContentBorderColor-1; padding: 10px;}
+
+/* TABS - STYLE 1 */
+.tabs-style-1 .tab-content{background-color: @tabContentBg-1; border: 1px solid @tabContentBorderColor-1;}
+.tabs-style-1 .tab-pane{border: 0;}
+.tabs-style-1 .nav-tabs {border: 0;}
+
+.tabs-style-1 .nav-tabs > li > a{border-radius: 0; padding: 15px 20px; margin: 0; text-align: center; font-size: @tabBtnFontSize; font-weight: @tabBtnFontWeight; background-color: @tabBtnBg-1; color: @tabBtnTextColor-1; border: 1px solid @tabBtnBorderColor-1; border-left: 0; border-top-width: 2px; -webkit-transition: all 100ms linear; transition: all 100ms linear;}
+.tabs-style-1 .nav-tabs > li > a:hover{background: @tabBtnBgHover-1;}
+.tabs-style-1 .nav-tabs > li.active > a{border: 1px solid @tabBtnBorderColor-1; border-left: 0;} 
+.tabs-style-1 .nav-tabs > li:first-child > a,
+.tabs-style-1 .nav-tabs > li.active:first-child > a{border-left: 1px solid @tabBtnBorderColor-1;}
+.tabs-style-1 .nav-tabs > li.active > a{border-top: 2px solid @colorBase-1; color: @componentTextColorActive;} 
+.tabs-style-1 .nav-tabs > li.active > a,
+.tabs-style-1 .nav-tabs > li.active > a:focus, 
+.tabs-style-1 .nav-tabs > li.active > a:hover{background: @tabBtnBgActive-1;}
+
+
+/* TABS - STYLE 2 */
+.tabs-style-2 > .nav-tabs {border-bottom: 0 !important; margin: 0px;}
+.tabs-style-2 > .nav-tabs > li {margin-right: 32px;}
+.tabs-style-2 > .nav-tabs > li:last-child {margin-right: 0;}
+.tabs-style-2 > .nav-tabs > li > a {border: 0; margin-right: 0; color: @tabBtnTextColor-1; padding: 0; font-size: @fontSize-lg; font-family: @fontFamily-1;}
+.tabs-style-2 > .nav-tabs > li > a > i {color: #a6a6a6;}
+.tabs-style-2 > .nav-tabs > li.open, 
+.tabs-style-2 > .nav-tabs > li:hover {}
+.tabs-style-2 > .nav-tabs > li.open > a, 
+.tabs-style-2 > .nav-tabs > li:hover > a {border: 0; border-bottom: 2px solid @tabBtnBorderColor-1; background: none !important; color: @colorBase-1;}
+.tabs-style-2 > .nav-tabs > li.open > a > i, 
+.tabs-style-2 > .nav-tabs > li:hover > a > i {color: #a6a6a6;}
+
+.tabs-style-2 > .nav-tabs > li.open .dropdown-menu, 
+.tabs-style-2 > .nav-tabs > li:hover .dropdown-menu {margin-top: 0px;}
+.tabs-style-2 > .nav-tabs > li.active {border-bottom: 2px solid @colorBase-1; position: relative;}
+.tabs-style-2 > .nav-tabs > li.active > a {border: 0; color: @colorBase-1; background: transparent;}
+.tabs-style-2 > .nav-tabs > li.active > a > i {color: @colorBase-1;}
+.tabs-style-2 > .tab-content {margin-top: 0; background-color: transparent; border: 0; border-top: 1px solid @tabContentBorderColor-1; padding: 15px 0;}
+
+/* TABS - STYLE 3 */
+.tabs-style-3 .tab-content{background-color: @tabContentBg-1; border: 1px solid @tabContentBorderColor-1;}
+.tabs-style-3 .tab-pane{border: 0;}
+.tabs-style-3 .nav-tabs {border: 0;}
+
+.tabs-style-3 .nav-tabs > li > a{border-radius: 0; padding: 8px 20px; margin: 0; top: 7px; text-align: center; font-size: 13px; font-weight: 600; text-transform: uppercase; font-family: @fontFamily-1; background-color: @tabBtnBg-1; color: darken(@colorLightGray, 5%); border: 1px solid @tabBtnBorderColor-1; border-bottom: 0; border-left: 0; border-top-width: 1px; -webkit-transition: all 100ms linear; transition: all 100ms linear;}
+.tabs-style-3 .nav-tabs > li > a:hover{background: @tabBtnBgHover-1;}
+.tabs-style-3 .nav-tabs > li.active > a{padding: 12px 20px; top: 0; border: 1px solid @tabBtnBorderColor-1; border-left: 0; border-bottom: 0; color: @colorGray;} 
+.tabs-style-3 .nav-tabs > li:first-child > a,
+.tabs-style-3 .nav-tabs > li.active:first-child > a{border-left: 1px solid @tabBtnBorderColor-1;}
+.tabs-style-3 .nav-tabs > li.active > a{border-top: 1px solid @colorBase-1;} 
+.tabs-style-3 .nav-tabs > li.active > a,
+.tabs-style-3 .nav-tabs > li.active > a:focus, 
+.tabs-style-3 .nav-tabs > li.active > a:hover{background: @tabBtnBgActive-1;}
+.tabs-style-3 .nav-tabs > li > a > span{color: @colorLightGray; font-size: 11px; padding-left: 5px;}

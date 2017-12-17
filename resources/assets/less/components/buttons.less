@@ -1,0 +1,462 @@
+/* GENERAL STYLING */
+.btn {font-size: @btnFontSize + 1; text-transform: @btnTextTransform; cursor: pointer; display: inline-block; letter-spacing: @btnLetterSpacing; font-weight: @btnFontWeight; outline: none; position: relative; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s;}
+.btn:hover, 
+.btn:focus, 
+.btn.focus {color: #fff;}
+.btn:after {content: ''; position: absolute; z-index: -1; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s;}
+.btn:active{top: 2px;}
+
+.btn{border-radius: @btnRadius;}
+.buttons-example .btn{margin-right: 10px; margin-bottom: 15px;}
+
+/* BUTTON SIZES */
+.btn {padding: 8px 16px;}
+.btn-xs {font-size: @btnFontSize-xs; padding: 3px 12px;}
+.btn-sm {font-size: @btnFontSize-sm; padding: 6px 14px;}
+.btn-lg {font-size: @btnFontSize-lg; padding: 16px 36px;}
+.btn-xl {font-size: @btnFontSize-xl; padding: 18px 38px;}
+
+/* BUTTON TYPES */
+.btn-circle{padding: 0; width: 46px; height: 46px; line-height: 46px; font-size: 16px; text-align: center; border-radius: 100%;}
+
+.btn-circle.btn-xs{width: 36px; height: 36px; line-height: 36px; font-size: 12px;}
+.btn-circle.btn-sm{width: 40px; height: 40px; line-height: 40px; font-size: 16px;}
+.btn-circle.btn-lg{width: 70px; height: 70px; line-height: 70px; font-size: 16px;}
+.btn-circle.btn-xl{width: 80px; height: 80px; line-height: 80px; font-size: 20px;}
+
+/* ## DEFAULT STANDARD BUTTONS ##  */
+
+/* SANDARD BUTTONS BASED ON THE BASE COLORS FROM variables.less */
+.generate-s-buttons(5);
+
+.generate-s-buttons(@n, @i: 1) when (@i =< @n) {
+    /* Create a variable which will iterate the values for each variable (1,2,3 etc) */
+    @colorBase:     'btnColorBase-@{i}';
+    @colorBaseText: 'btnColorBaseText-@{i}';
+
+    .btn-base-@{i} {background-color: @@colorBase; border: @btnOuterBorderWidth solid @@colorBase; color: @@colorBaseText;}
+    .btn-base-@{i}:hover,
+    .btn-base-@{i}:focus,
+    .btn-base-@{i}:active,
+    .btn-base-@{i}.active,
+    .open .dropdown-toggle.btn-base-@{i} {color: @@colorBaseText; background-color: darken(@@colorBase, 5%); border-color: @@colorBase;}
+    .btn-base-@{i}:active,
+    .btn-base-@{i}.active,
+    .open .dropdown-toggle.btn-base-@{i} {background-image: none;}
+    .btn-base-@{i}:active{top: 2px;}
+    .btn-base-@{i}.btn-icon{border: @btnOuterBorderWidth solid darken(@@colorBase, 0%)}
+    .btn-base-@{i}.btn-icon:hover{background: darken(@@colorBase, 10%)}
+    .btn-base-@{i}.btn-icon:before{border-right: @btnOuterBorderWidth solid darken(@@colorBase, 5%); color: @@colorBaseText;}
+    .btn-base-@{i}.btn-icon:hover:before{border-right: @btnOuterBorderWidth solid darken(@@colorBase, 15%);}
+    .btn-base-@{i}.btn-icon-right:before{border-right: 0; border-left: @btnOuterBorderWidth solid @@colorBase;}
+
+    .generate-s-buttons(@n, (@i + 1));
+}
+
+/* BUTTON COLORS */
+.btn-white{background: @btnColorWhite; color: @btnColorWhiteText;}
+.btn-white:hover, 
+.btn-white:focus, 
+.btn-white.focus {color: @btnColorWhiteText; background: darken(@btnColorWhite, 10%);}
+.btn-white.btn-icon{border: @btnOuterBorderWidth solid darken(@btnColorWhite, 10%)}
+.btn-white.btn-icon:hover{background: darken(@btnColorWhite, 10%)}
+.btn-white.btn-icon:before{border-right: @btnOuterBorderWidth solid darken(@btnColorWhite, 10%); color: @btnColorWhiteText;}
+.btn-white.btn-icon:hover:before{border-right: @btnOuterBorderWidth solid darken(@btnColorWhite, 20%);}
+
+.btn-black{background: @btnColorBlack; color: @btnColorBlackText;}
+.btn-black:hover, 
+.btn-black:focus, 
+.btn-black.focus {background: darken(@btnColorBlack, 10%);}
+.btn-black.btn-icon{border: @btnOuterBorderWidth solid darken(@btnColorBlack, 10%)}
+.btn-black.btn-icon:hover{background: darken(@btnColorBlack, 10%);}
+.btn-black.btn-icon:before{border-right: @btnOuterBorderWidth solid darken(@btnColorBlack, 10%); color: @btnColorBlackText;}
+.btn-black.btn-icon:hover:before{border-right: @btnOuterBorderWidth solid darken(@btnColorBlack, 20%);}
+
+.btn-gray{background: @btnColorGray; color: @btnColorGrayText;}
+.btn-gray:hover, 
+.btn-gray:focus, 
+.btn-gray.focus {background: darken(@btnColorGray, 10%);}
+
+.btn-light-gray{background: @btnColorLightGray; color: @btnColorLightGrayText;}
+.btn-light-gray:hover, 
+.btn-light-gray:focus, 
+.btn-light-gray.focus {background: darken(@btnColorLightGray, 10%);}
+
+.btn-blue{background: @btnColorBlue; color: @btnColorBlueText;}
+.btn-blue:hover, 
+.btn-blue:focus, 
+.btn-blue.focus {background: darken(@btnColorBlue, 10%);}
+.btn-blue.btn-icon{border: @btnOuterBorderWidth solid darken(@btnColorBlue, 10%)}
+.btn-blue.btn-icon:hover{background: darken(@btnColorBlue, 10%);}
+.btn-blue.btn-icon:before{border-right: @btnOuterBorderWidth solid darken(@btnColorBlue, 10%); color: @btnColorBlueText;}
+.btn-blue.btn-icon:hover:before{border-right: @btnOuterBorderWidth solid darken(@btnColorBlue, 20%);}
+
+.btn-green{background: @btnColorGreen; color: @btnColorGreenText;}
+.btn-green:hover, 
+.btn-green:focus, 
+.btn-green.focus {background: darken(@btnColorGreen, 10%);}
+
+.btn-red{background: @btnColorRed; color: @btnColorRedText;}
+.btn-red:hover, 
+.btn-red:focus, 
+.btn-red.focus {background: darken(@btnColorRed, 10%);}
+
+.btn-pink{background: @btnColorPink; color: @btnColorPinkText;}
+.btn-pink:hover, 
+.btn-pink:focus, 
+.btn-pink.focus {background: darken(@btnColorPink, 10%);}
+
+.btn-orange{background: @btnColorOrange; color: @btnColorOrangeText;}
+.btn-orange:hover, 
+.btn-orange:focus, 
+.btn-orange.focus {background: darken(@btnColorOrange, 10%);}
+
+.btn-gold{background: @btnColorGold; color: @btnColorGoldText;}
+.btn-gold:hover, 
+.btn-gold:focus, 
+.btn-gold.focus {background: darken(@btnColorGold, 10%);}
+
+.btn-purple{background: @btnColorPurple; color: @btnColorPurpleText;}
+.btn-purple:hover, 
+.btn-purple:focus, 
+.btn-purple.focus {background: darken(@btnColorPurple, 10%);}
+
+/* ## DEFAULT BORDERED BUTTONS ## */
+
+/* BORDERED BUTTONS BASED ON THE BASE COLORS FROM variables.less */
+.generate-b-buttons(5);
+
+.generate-b-buttons(@n, @i: 1) when (@i =< @n) {
+    /* Create a variable which will iterate the values for each variable (1,2,3 etc) */
+    @colorBase:     'colorBase-@{i}';
+    @colorBaseText: 'colorBaseText-@{i}';
+
+    .btn-b-base-@{i} {background-color: transparent; border: @btnOuterBorderWidth solid @@colorBase; color: @@colorBase;}
+    .btn-b-base-@{i}:hover,
+    .btn-b-base-@{i}:focus,
+    .btn-b-base-@{i}:active,
+    .btn-b-base-@{i}.active,
+    .open .dropdown-toggle.btn-b-base-@{i} {color: @@colorBaseText; background-color: @@colorBase; border-color: @@colorBase;}
+    .btn-b-base-@{i}:active,
+    .btn-b-base-@{i}.active,
+    .open .dropdown-toggle.btn-b-base-@{i} {background: @@colorBase;}
+    .btn-b-base-@{i}:active{top: 2px;}
+    .btn-b-base-@{i}.btn-icon:before{border-right: @btnOuterBorderWidth solid @@colorBase;}
+    .btn-b-base-@{i}.btn-icon-right:before{border-right: 0; border-left: @btnOuterBorderWidth solid @@colorBase;}
+
+    .generate-b-buttons(@n, (@i + 1));
+}
+
+/* BUTTON BORDER COLORS */
+.btn-b-white{border: @btnOuterBorderWidth solid @btnColorWhite; color: @btnColorWhite; background-color: transparent;}
+.btn-b-black{border: @btnOuterBorderWidth solid @btnColorBlack; color: @btnColorBlack; background-color: transparent;}
+.btn-b-gray{border: @btnOuterBorderWidth solid @btnColorGray; color: @btnColorGray; background-color: transparent;}
+.btn-b-light-gray{border-color: @btnColorLightGray; color: @btnColorLightGray; background-color: transparent;}
+.btn-b-blue{border: @btnOuterBorderWidth solid @btnColorBlue; color: @btnColorBlue; background-color: transparent;}
+.btn-b-green{border: @btnOuterBorderWidth solid @btnColorGreen; color: @btnColorGreen; background-color: transparent;}
+.btn-b-red{border: @btnOuterBorderWidth solid @btnColorRed; color: @btnColorRed; background-color: transparent;}
+.btn-b-pink{border: @btnOuterBorderWidth solid @btnColorPink; color: @btnColorPink; background-color: transparent;}
+.btn-b-orange{border: @btnOuterBorderWidth solid @btnColorOrange; color: @btnColorOrange; background-color: transparent;}
+.btn-b-gold{border: @btnOuterBorderWidth solid @btnColorGold; color: @btnColorGold; background-color: transparent;}
+.btn-b-purple{border: @btnOuterBorderWidth solid @btnColorPurple; color: @btnColorPurple; background-color: transparent;}
+.btn-b-orange{border: @btnOuterBorderWidth solid @btnColorOrange; color: @btnColorOrange; background-color: transparent;}
+
+.btn-b-white:hover,
+.btn-b-white:active{background: @btnColorWhite; color: @btnColorWhiteText;}
+.btn-b-white:after{background: @btnColorWhite;}
+
+.btn-b-black:hover,
+.btn-b-black:active,
+.btn-b-black.active{background: @btnColorBlack; color: @btnColorBlackText;}
+.btn-b-black:after{background: @btnColorBlack; color: @btnColorBlackText;}
+
+.btn-b-gray:hover,
+.btn-b-gray:active,
+.btn-b-gray.active{background: @btnColorGray; color: @btnColorGrayText;}
+.btn-b-gray:after{background: @btnColorGray;}
+
+.btn-b-light-gray:hover,
+.btn-b-light-gray:active,
+.btn-b-light-gray.active{background: @btnColorLightGray; color: @btnColorLightGrayText;}
+.btn-b-light-gray:after{background: @btnColorLightGray;}
+
+.btn-b-blue:hover,
+.btn-b-blue:active,
+.btn-b-blue.active{background: @btnColorBlue; color: @btnColorBlueText;}
+.btn-b-blue:after{background: @btnColorBlue;}
+
+.btn-b-green:hover,
+.btn-b-green:active,
+.btn-b-green.active{background: @btnColorGreen; color: @btnColorGreenText;}
+.btn-b-green:after{background: @btnColorGreen;}
+
+.btn-b-red:hover,
+.btn-b-red:active,
+.btn-b-red.active{background: @btnColorRed; color: @btnColorRedText;}
+.btn-b-red:after{background: @btnColorRed;}
+
+.btn-b-pink:hover,
+.btn-b-pink:active{background: @btnColorPink; color: @btnColorPinkText;}
+.btn-b-pink:after{background: @btnColorPink;}
+
+.btn-b-orange:hover,
+.btn-b-orange:active,
+.btn-b-orange.active{background: @btnColorOrange; color: @btnColorOrangeText;}
+.btn-b-orange:after{background: @btnColorOrange;}
+
+.btn-b-gold:hover,
+.btn-b-gold:active,
+.btn-b-gold.active{background: @btnColorGold; color: @btnColorGoldText;}
+.btn-b-gold:after{background: @btnColorGold; color: @btnColorGoldText;}
+
+.btn-b-purple:hover,
+.btn-b-purple:active,
+.btn-b-purple.active{background: @btnColorPurple; color: @btnColorPurpleText;}
+.btn-b-purple:after{background: @btnColorPurple;}
+
+/* ## BUTTONS WITH ICONS ## */
+
+/* STANDARD ICON BUTTONS */
+.btn-icon{position: relative;}
+.btn-icon span, .btn-icon input{padding-left: 40px;}
+.btn-icon-right span, .btn-icon-right input{padding-left: 15px; padding-right: 50px;}
+
+.btn-icon.btn-xl span, .btn-icon.btn-xl input{padding-left: 60px;}
+.btn-icon-right.btn-xl span, .btn-icon-right.btn-xl input{padding-left: 30px; padding-right: 70px;}
+
+.btn-icon.btn-lg span, .btn-icon.btn-lg input{padding-left: 50px;}
+.btn-icon-right.btn-lg span, .btn-icon-right.btn-lg input{padding-left: 15px; padding-right: 60px;}
+
+.btn-icon.btn-sm span, .btn-icon.btn-sm input{padding-left:35px;}
+.btn-icon-right.btn-sm span, .btn-icon-right.btn-sm input{padding-left: 15px; padding-right: 45px;}
+
+.btn-icon.btn-xs span, .btn-icon.btn-xs input{padding-left:30px;}
+.btn-icon-right.btn-xs span, .btn-icon-right.btn-xs input{padding-left: 15px; padding-right: 40px;}
+
+.btn-icon:before{position: absolute; top: 0; left: 0; bottom: 0; width: 36px; color: #ffffff; border-right: 0; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s;}
+.btn-icon.btn-icon-right:before{left: auto; right: 0;}
+.btn-icon:before{font-family: "FontAwesome"; line-height: 32px;}
+.btn-icon.btn-xl:before{width: 66px; line-height: 62px;}
+.btn-icon.btn-lg:before{width: 50px; line-height: 46px;}
+.btn-icon.btn-sm:before{width: 32px; line-height: 32px;}
+.btn-icon.btn-xs:before{width: 28px; line-height: 22px;}
+
+.btn-icon.btn:before{border-top-left-radius: @btnRadiusMD; border-bottom-left-radius: @btnRadiusMD;}
+.btn-icon.btn-xl:before{border-top-left-radius: @btnRadiusLG; border-bottom-left-radius: @btnRadiusLG;}
+.btn-icon.btn-lg:before{border-top-left-radius: @btnRadiusLG; border-bottom-left-radius: @btnRadiusLG;}
+.btn-icon.btn-xs:before{border-top-left-radius: @btnRadiusXS; border-bottom-left-radius: @btnRadiusXS;}
+
+/* ANIMATED ICON BUTTONS */
+.btn-icon-animate {padding-left: 38px; padding-right: 38px; border: 0; overflow: hidden;}
+.btn-icon-animate.btn-xs{padding-left: 28px; padding-right: 28px;}
+.btn-icon-animate.btn-sm{padding-left: 34px; padding-right: 34px;}
+.btn-icon-animate.btn-lg{padding-left: 52px; padding-right: 52px;}
+.btn-icon-animate.btn-xl{padding-left: 68px; padding-right: 68px;}
+.btn-icon-animate:before {position: absolute; height: 100%; font-size: 125%; line-height: 2.3; color: #fff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-icon-animate > span{padding-left: 0 !important;}
+
+.btn-icon-animate:hover{padding-right: 20px; padding-left: 56px;}
+.btn-icon-animate.btn-xs:hover{padding-right: 13px; padding-left: 43px;}
+.btn-icon-animate.btn-sm:hover{padding-right: 18px; padding-left: 50px;}
+.btn-icon-animate.btn-lg:hover{padding-right: 28px; padding-left: 76px;}
+.btn-icon-animate.btn-xl:hover{padding-right: 36px; padding-left: 100px;}
+
+.btn-icon-animate:before {left: -50%; top: 0;}
+.btn-icon-animate:hover:before {left: 0;}
+
+/* ADVANCED BUTTONS - GENERAL STYLING (instead of the default "btn" class use "btn-a" to make the buttons work with the advanced settings) */
+.btn-a {position: relative; z-index: 1; border: none; border-radius: @btnRadius; font-size: @btnFontSize; font-weight: @btnFontWeight; cursor: pointer; display: inline-block; outline: none; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s;}
+.btn-a{padding: 8px 20px; margin: 15px; letter-spacing: @btnLetterSpacing; font-weight: @btnFontWeight; text-transform: @btnTextTransform;}
+.btn-a.btn-lg{padding: 14px 20px; margin: 15px; letter-spacing: @btnLetterSpacing; font-weight: @btnFontWeight; text-transform: @btnTextTransform;}
+
+.btn-a:after {content: ''; position: absolute; z-index: -1; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s;}
+.btn-a[class*="fa-"]:before {font-family: FontAwesome;}
+.btn-a[class*="ion-"]:before {font-family: Ionicons;}
+
+/* BUTTON 1 */
+.btn-1 {background: transparent; padding-left: 36px; padding-right: 36px; border-radius: 50px; border: 3px solid #fff; color: #fff; overflow: hidden;}
+.btn-1.btn-lg{padding-left: 56px; padding-right: 56px;}
+.btn-1:active {border-color: #FFF; color: #FFF;}
+.btn-1:hover {background: transparent; color: #FFF}
+.btn-1:before {position: absolute; height: 100%; font-size: 125%; line-height: 2.3; color: #fff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-1.btn-lg:before {line-height: 3; color: #fff;}
+
+.btn-1:active:before {color: #FFF;}
+
+/* BUTTON 1a */
+.btn-1a:hover{padding-left: 20px; padding-right: 52px;}
+.btn-1a:before {left: 130%; top: 0;}
+.btn-1a:hover:before {left: 82%;}
+
+.btn-1a.btn-lg:hover{padding-left: 30px; padding-right: 82px;}
+.btn-1a.btn-lg:before {left: 130%; top: 0;}
+.btn-1a.btn-lg:hover:before {left: 82%;}
+
+/* BUTTON 1b */
+.btn-1b:hover{padding-right: 20px; padding-left: 52px;}
+.btn-1b:before {left: -50%; top: 0;}
+.btn-1b:hover:before {left: 10%;}
+
+/* BUTTON 2 */
+.btn-2 {background: #823aa0; color: #fff; overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.btn-2:active {background: #9053a9; top: 2px;}
+.btn-2 span {display: inline-block; width: 100%; height: 100%;
+  -webkit-transition: all 0.3s;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.3s;
+  -moz-backface-visibility: hidden;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+.btn-2:before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 2.2;
+  font-size: 130%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-2:active:before {color: #703b87;}
+
+/* BUTTON 2a */
+.btn-2a:hover span {
+  -webkit-transform: translateY(300%);
+  -moz-transform: translateY(300%);
+  -ms-transform: translateY(300%);
+  transform: translateY(300%);
+}
+
+.btn-2a:before {left: 0;top: -100%;}
+.btn-2a:hover:before {top: 0;}
+
+/* BUTTON 2b */
+.btn-2b:hover span {
+  -webkit-transform: translateX(200%);
+  -moz-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  transform: translateX(200%);
+}
+
+.btn-2b:before {left: -100%; top: 0;}
+.btn-2b:hover:before {left: 0;}
+
+/* BUTTON 3 */
+.btn-3 {-webkit-transition: none; -moz-transition: none; transition: none;}
+.btn-3:active {top: 2px;}
+
+/* Button 3a */
+.btn-3a {border: 4px solid;}
+.btn-3a:hover {background: transparent !important;}
+
+/* Button 3b */
+.btn-3b {border: 4px solid ; border-radius: 15px;}
+.btn-3b:hover {background: transparent !important;}
+
+/* Button 3c */
+.btn-3c {border: 4px solid ; border-radius: 60px; }
+.btn-3c:hover {background: transparent !important;}
+
+/* Button 3d */
+.btn-3d {border: 2px dashed;}
+.btn-3d:hover {background: transparent !important;}
+
+/* Button 3e */
+.btn-3e {border: 2px dashed; border-radius: 15px;}
+.btn-3e:hover {background: transparent !important;}
+
+/* Button 3f */
+.btn-3f {border: 2px dashed; border-radius: 60px;}
+.btn-3f:hover {background: transparent !important;}
+
+/* Button 3g */
+.btn-3g {border: 2px dotted;}
+.btn-3g:hover {background: transparent !important;}
+
+/* Button 3h */
+.btn-3h {border: 2px dotted; border-radius: 15px;}
+.btn-3h:hover {background: transparent !important;}
+
+/* Button 3i */
+.btn-3i {border: 2px dotted; border-radius: 60px;}
+.btn-3i:hover {background: transparent !important}
+
+/* Button 3j */
+.btn-3j {border: 4px double;}
+.btn-3j:hover {background: transparent !important}
+
+/* Button 3k */
+.btn-3k {border: 4px double; border-radius: 15px;}
+.btn-3k:hover {background: transparent !important}
+
+/* Button 3l */
+.btn-3l {border: 4px double; border-radius: 60px;}
+.btn-3l:hover {background: transparent !important}
+
+/* ADVANCED BORDERED BUTTON COLORS */
+.btn-b-white-a{border-color: @btnColorWhite; color: @btnColorWhite;}
+.btn-b-white-a:hover{background: @btnColorWhite; color: @btnColorWhiteText;}
+
+.btn-b-black-a{border-color: @btnColorBlack; color: @btnColorBlack;}
+.btn-b-black-a:hover{border-color: @btnColorBlack; color: @btnColorBlack;}
+.btn-b-black-a:before {color: @btnColorBlack !important;}
+
+.btn-b-gray-a{border-color: @btnColorGray; color: @btnColorGray;}
+.btn-b-light-gray-a{border-color: @btnColorLightGray; color: @btnColorLightGray;}
+.btn-b-blue-a{border-color: @btnColorBlue; color: @btnColorBlue;}
+.btn-b-green-a{border-color: @btnColorGreen; color: @btnColorGreen;}
+.btn-b-red-a{border-color: @btnColorRed; color: @btnColorRed;}
+.btn-b-pink-a{border-color: @btnColorPink; color: @btnColorPink;}
+.btn-b-orange-a{border-color: @btnColorOrange; color: @btnColorOrange;}
+.btn-b-gold-a{border-color: @btnColorGold; color: @btnColorGold;}
+.btn-b-purple-a{border-color: @btnColorPurple; color: @btnColorPurple;}
+.btn-b-orange-a{border-color: @btnColorOrange; color: @btnColorOrange;}
+
+/* ADVANCED BACKGROUND BUTTON COLORS */
+.btn-base-1-a{background: @colorBase-1; color: @colorBaseText-1;}
+.btn-base-2-a{background: @colorBase-2; color: @colorBaseText-2;}
+.btn-base-3-a{background: @colorBase-3; color: @colorBaseText-3;}
+.btn-base-4-a{background: @colorBase-4; color: @colorBaseText-4;}
+.btn-base-5-a{background: @colorBase-5; color: @colorBaseText-5;}
+
+.btn-white-a{background: @btnColorWhite; color: @btnColorWhiteText;}
+.btn-black-a{background: @btnColorBlack; color: @btnColorBlackText;}
+.btn-gray-a{background: @btnColorGray; color: @btnColorGrayText;}
+.btn-light-gray-a{background: @btnColorLightGray; color: @btnColorLightGrayText;}
+.btn-blue-a{background: @btnColorBlue; color: @btnColorBlueText;}
+.btn-green-a{background: @btnColorGreen; color: @btnColorGreenText;}
+.btn-red-a{background: @btnColorRed; color: @btnColorRedText;}
+.btn-pink-a{background: @btnColorPink; color: @btnColorPinkText;}
+.btn-orange-a{background: @btnColorOrange; color: @btnColorOrangeText;}
+.btn-gold-a{background: @btnColorGold; color: @btnColorGoldText;}
+.btn-purple-a{background: @btnColorPurple; color: @btnColorPurpleText;}
+.btn-orange-a{background: @btnColorOrange; color: @btnColorOrangeText;}
+
+/* COMBINED BORDERED AND BACKGROUND BUTTONS */
+.btn-b-white-a.btn-white-a:hover{color: @btnColorWhite;}
+.btn-b-black-a.btn-black-a:hover{color: @btnColorBlack;}
+.btn-b-gray-a.btn-gray-a:hover{color: @btnColorGray;}
+.btn-b-light-gray-a.btn-light-gray-a:hover{color: @btnColorLightGray;}
+.btn-b-blue-a.btn-blue-a:hover{color: @btnColorBlue;}
+.btn-b-green-a.btn-green-a:hover{color: @btnColorGreen;}
+.btn-b-red-a.btn-red-a:hover{color: @btnColorRed;}
+.btn-b-pink-a.btn-pink-a:hover{color: @btnColorPink;}
+.btn-b-orange-a.btn-orange-a:hover{color: @btnColorOrange;}
+.btn-b-gold-a.btn-gold-a:hover{color: @btnColorGold;}
+.btn-b-purple-a.btn-purple-a:hover{color: @btnColorPurple;}
+.btn-b-orange-a.btn-orange-a:hover{color: @btnColorOrange;}
