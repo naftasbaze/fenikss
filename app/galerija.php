@@ -11,4 +11,9 @@ class galerija extends Model
     {
         return $this->hasMany('App\foto')->orderBy('id', 'asc');
     }
+
+    public function pirmaisFoto()
+    {
+        return $this->foto()->first();
+    }
 }
