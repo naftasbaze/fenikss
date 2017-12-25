@@ -24,6 +24,7 @@ Route::group(
 
         Route::get('/', 'HomeController@index');
         Route::get('/home', 'HomeController@index');
+        Route::post('/','ContactController@getContactUsForm');        //Kotakti POST
 
         Route::get('/test', function()
         {

@@ -13,7 +13,7 @@ class TopHeaderComposer {
 
     public function iepilduAdresi()
     {
-        return $adrese=kontakt::firstOrFail();;
+        return $adrese=kontakt::firstOrFail();
 
     }
 }

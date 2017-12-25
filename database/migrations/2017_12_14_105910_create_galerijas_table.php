@@ -19,6 +19,8 @@ class CreateGalerijasTable extends Migration
             foreach (array_keys(LaravelLocalization::getSupportedLocales()) as $lang) {
                 //add here all you translatable attributes
                 $table->string('nosaukums_'.$lang)->nullable()->default(null);
+                $table->string('apaksnos_'.$lang)->nullable()->default(null);
+                $table->string('apraksts_'.$lang)->nullable()->default(null);
 
             }
             $table->string('languages',30)->default(json_encode(LaravelLocalization::getSupportedLanguagesKeys()));

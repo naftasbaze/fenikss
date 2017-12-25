@@ -16,4 +16,8 @@
 <!-- GLOBAL STYLE -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+
+<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
+<link rel="stylesheet" href="{{ asset('css/owl.theme.green.css') }}">
+
 @yield('csscits')

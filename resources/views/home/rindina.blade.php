@@ -14,13 +14,15 @@
                         <div class="block article list style-1">
 
                             @if($rinda->izkartojums==1) {{--bilde pa kreisi--}}
-                            <div class="article-image">
-                                <img src="{{ asset($rinda->fotoLinks) }}">
-                            </div>
+
+                            @if ($rinda->fotoLinks)
+                                <div class="article-image">
+                                    <img src="{{ asset($rinda->fotoLinks) }}">
+                                </div>
+                            @endif
 
                             <div class="block-body right">
                                 <h3 class="title">
-                                    {{--<a href="#">{{$rinda->nosaukums}}</a>--}}
                                     {{$rinda->nosaukums}}
                                 </h3>
 
@@ -33,7 +35,6 @@
 
                                 <div class="block-body left">
                                     <h3 class="title">
-                                        {{--<a href="#">React to the future with isomorphic apps</a>--}}
                                         {{$rinda->nosaukums}}
                                     </h3>
 
@@ -42,10 +43,12 @@
                                     </p>
 
                                 </div>
+                                @if ($rinda->fotoLinks)
 
-                                <div class="article-image">
-                                    <img src="{{ asset($rinda->fotoLinks) }}">
-                                </div>
+                                    <div class="article-image">
+                                        <img src="{{ asset($rinda->fotoLinks) }}">
+                                    </div>
+                                @endif
                             @endif
                         </div>
 

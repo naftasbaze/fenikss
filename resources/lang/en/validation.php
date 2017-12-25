@@ -116,6 +116,18 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => ['password' => 'Parole',
+        'name' => 'Vārds',
+        'email' => 'e-pasts',
+        'nosaukums' => 'Virsrksts',
+        'raksts' => 'Raksts',
+        'foto' => 'Foto',
+        'videocels' => 'Faila adrese',
+        'afisaLidz' => 'Afisas publicēšanas datums',
+        'sak' => 'Iestājās',
+        'inputName' => 'Vārds',
+        'inputUzva' => 'Uzvārds',
+        'inputEpasts' => 'e-pasts',
+        'inputTXT' => 'Ziņa'],
 
 ];

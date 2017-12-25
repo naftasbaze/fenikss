@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\galerija;
+use App\kontakt;
 use App\lapa;
 use Illuminate\Http\Request;
 
@@ -16,32 +17,12 @@ class HomeController extends Controller
     public function index()
     {
 
-        /*$galerijas=galerija::with(['foto'])->get();*/
+        $galerijas=galerija::has('foto')
+            ->with('foto')
+            ->get();
+        //dd($galerijas);
 
-        $galerijas=galerija::with(array('foto' => function($guery)
-        {
-            $guery->first();
-        }
-        ))
-        //->chunk();
-        ->get();
-
-        $cipars=floor($galerijas->count()/3)*3;
-       // dd($cipars);
-        $galerijas=$galerijas->take($cipars);
-
-        $i=0;
-        foreach ($galerijas as $galerija) {
-            if($i % 3 ==0){
-                $galerija['jauns']=true;
-            }else{
-                $galerija['jauns']=false;
-            }
-            $i++;
-        }
-
-
-       dd($galerijas);
+        $galerNos=lapa::where('tips',1)->first();
 
 
         $lapas=lapa::with(['rinda'])
@@ -49,6 +30,9 @@ class HomeController extends Controller
             ->orderBy('vietaLimeni', 'asc')
             ->get();
         //dd($lapas);
-        return view('home.home',compact(['lapas', 'galerijas']));
+
+        $adrese=kontakt::firstOrFail();
+
+        return view('home.home',compact(['lapas', 'galerijas', 'galerNos', 'adrese']));
     }
 }

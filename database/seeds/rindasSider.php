@@ -80,8 +80,8 @@ Franču vēstniecība Rīgā,  viesnīca “Ļatvija”, “Bergs”, uzņēmums
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'slug' => str_slug('Žogi, vārti, terases, '),
-                    'fotoLinks' => 'images/bildes/IMG_1833.png',
+                    'slug' => str_slug('musu pakalpojumi'),
+                    'fotoLinks' => 'images/bildes/IM000078.jpg',
                     'vietaLimeni' => 1,
                     'lapa_id' => 2,
                     'nosaukums_lv' => '',
@@ -115,6 +115,114 @@ Piedāvājam foto un skiču albumus,  reklāmas video filmu.',
                          В фирме работают квалифицированные художники по металлу, художники – дизайнеры и реставраторы с соответствующим образованием и с большим практическим опытом.
                          Работники нашей фирмы охотно проконсультируют Вас и помогут осуществить любой Ваш замысел – с эскизов проекта до монтажа готовой конструкции.
                          Предлагаем альбомы с фотографиями и эскизами, а также рекламный видеофильм.',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('buj '),
+                    'fotoLinks' => '',
+                    'vietaLimeni' => 1,
+                    'lapa_id' => 4,
+                    'nosaukums_lv' => 'Jūs jautājat',
+                    'nosaukums_en' => 'FAQ',
+                    'nosaukums_ru' => 'Interesno',
+                    'raksts_lv' => '
+J: Cik tas maksā?
+A: Pie katra pasūtījuma strādā mākslinieks- dizainris, inženieris un pats kalējs. Cenšamies reailzēt visas Jūsu idejas, lai JŪs būtu vairāk, kā apmierināts ar rezultātu. Tomēr cenu lielākoties nosaka Jūsu izvēlētais materiāls, izstrādājuma saražģītības pakāpe un pārklājums. Bet neskatoties uz roku darbu un sarežģīto izgatavošanas procesu mūsu pakalpojumu var atļauties jebkurš priātmājas īpašnieks.
+
+J: Cik ātrā laikā varat izgatavot pasūtījumu?
+A: Izgatavošanas laiks atkarīgs no apjoma un sarežģītības, bet izgatavošanu uzsāksim 2-3 dienu laikā pēc līguma noslēgšanas.
+
+J: Vai varat uzstādīt?
+A: Varam piegādāt un uzstādīt. Par izmaksām un termiņiem vienosimies pie līguma noslēgšanas.
+
+J: Vai Jūs dodat garantiju?
+A: Kā jebkuram produktam dodam garantiju 2 gadi privātpersonām un 1 gads uzņēmumiem. Pēc garantijas, ja nepieciešams, veicam apkopi un remontu.
+
+J: No kāda mteriāla izgatavojat?
+A: Varam izgatavot no jebkura Jūsu izvēlēta metāla - melnā, krāsainā, sakausējumiem. Jāņem vērā, ka tram materiālam isr savas specifiskās īpašības. Uzklausīsim Jūsu vēlmes un kopā izvēlēsimies piemērotāko. Jūs varat izmantot savu materiālu, bet mēs dodam priekšroku jau pārbaudītiem materiālu piegādātājiem.
+
+J: Vai Jūs varat apzeltīt?
+A: Piedāvājam visus pēcapstrādes un pārklājuma veidus: ar smišu strūklu, pulēšanu, niķelēšanu, hromēšanu, apzeltīšanu utt. Galvenais, lai pārklājums atbilsu produktam.
+
+J: Vai vārtus varat aprīkot ar automātiku?
+A: Protams uzstādām automātiku. Jūs varaat izvēlēties savu (atbilstošu esošai sistēmai) vai varam piedāvāt jaunu. Vārtus varam aprīkot ar piekļuves kontroli (atveramus ar pulti, ar ID karti vai ar mobilo telefonu).
+
+J: Kas man jādara lai veiktu pasūtījumu?
+A: Vieglākais veids ir aizpildīt formu. Mūsu menedžeris sazināsies ar jums un norunās tikšanos. Jūs varēsiet ierasties pie mums vai mūsu menedžeris apmeklēs Jūsu izvēlētā vietā. Pēc līgums noslēgšanas jāiemeksā 50% priekšapmaksa. Galīgais norēķins pirms uzstādīšanas dienas.',
+
+                    'raksts_en' => 'Q: How much?',
+
+                    'raksts_ru' => 'B: Skolko?',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('kontaktinfo '),
+                    'fotoLinks' => '',
+                    'vietaLimeni' => 1,
+                    'lapa_id' => 5,
+                    'nosaukums_lv' => 'Sazinieties ar mums',
+                    'nosaukums_en' => 'Contact us',
+                    'nosaukums_ru' => 'Zvonite',
+                    'raksts_lv' => 'Aizpildiet formu un mūsu menedžeris sazināsies ar Jums tuvākajā laikā.',
+
+                    'raksts_en' => 'Fill in the form',
+
+                    'raksts_ru' => 'Заполните форму',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('fotogalerija '),
+                    'fotoLinks' => '',
+                    'vietaLimeni' => 1,
+                    'lapa_id' => 3,
+                    'nosaukums_lv' => 'Mūsu darbi',
+                    'nosaukums_en' => 'Masterpieces',
+                    'nosaukums_ru' => 'Dostežeņija',
+                    'raksts_lv' => '',
+                    'raksts_en' => '',
+                    'raksts_ru' => '',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('video '),
+                    'fotoLinks' => '',
+                    'vietaLimeni' => 1,
+                    'lapa_id' => 6,
+                    'nosaukums_lv' => 'Realizējam Jūsu idejas metālā!',
+                    'nosaukums_en' => 'Realize your ideas from steel!',
+                    'nosaukums_ru' => 'Реализуйте свои идеи в сталь!',
+                    'raksts_lv' => 'Katrs mūsu izstrādājums ir mākslasdarbs <br>
+                        ja Jums tāds ir vajadzīgs:',
+                    'raksts_en' => 'Each of our products is an artwork',
+                    'raksts_ru' => 'Каждый из наших продуктов - это произведение искусства',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('parallax '),
+                    'fotoLinks' => 'images/bildes/parallax.jpg',
+                    'vietaLimeni' => 1,
+                    'lapa_id' => 7,
+                    'nosaukums_lv' => 'No Jūsu idejas līdz realizācijai ir tikai solis!',
+                    'nosaukums_en' => 'No Jūsu idejas līdz realizācijai ir tikai solis!',
+                    'nosaukums_ru' => 'No Jūsu idejas līdz realizācijai ir tikai solis!',
+                    'raksts_lv' => 'Izstāstiet savu ideju, mēs to realizēsim!',
+                    'raksts_en' => 'Izstāstiet savu ideju, mēs to realizēsim!',
+                    'raksts_ru' => 'Izstāstiet savu ideju, mēs to realizēsim!',
 
                     'ir_publisks' =>1,
                     'created_at' => date('Y-m-d H:i:s'),

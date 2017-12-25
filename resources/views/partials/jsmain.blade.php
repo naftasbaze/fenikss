@@ -30,7 +30,7 @@
 
 
 <!-- Owl carousel - Touch enabled carousel -->
-{{--<script src="{{ asset('owl-carousel/js/owl.carousel.min.js') }}"></script>--}}
+<script src="{{ asset('js/owl.carousel.js') }}"></script>
 
 <!-- Cross-browser responsivity scripts -->
 <!--[if lt IE 9]>

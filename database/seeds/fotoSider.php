@@ -17,8 +17,8 @@ class fotoSider extends Seeder
 
                 [
                     'galerija_id' => 1,
-                    'path' => 'galerijas/142.JPG',
-                    'thumbnail_path' => 'galerijas/142.JPG',
+                    'path' => 'galerijas/IM000018.jpg',
+                    'thumbnail_path' => 'galerijas/IM000018_m.jpg',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
@@ -32,7 +32,7 @@ class fotoSider extends Seeder
                 [
                     'galerija_id' => 1,
                     'path' => 'galerijas/IM000003.jpg',
-                    'thumbnail_path' => 'galerijas/IM000001_m.jpg',
+                    'thumbnail_path' => 'galerijas/IM000003_m.jpg',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
@@ -40,6 +40,48 @@ class fotoSider extends Seeder
                     'galerija_id' => 1,
                     'path' => 'galerijas/IM000004.jpg',
                     'thumbnail_path' => 'galerijas/IM000004_m.jpg',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'galerija_id' => 2,
+                    'path' => 'galerijas/IM000006.jpg',
+                    'thumbnail_path' => 'galerijas/IM000006_m.jpg',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'galerija_id' => 3,
+                    'path' => 'galerijas/IM000014.jpg',
+                    'thumbnail_path' => 'galerijas/IM000014.jpg',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'galerija_id' => 4,
+                    'path' => 'galerijas/IM000008.jpg',
+                    'thumbnail_path' => 'galerijas/IM000008_m.jpg',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'galerija_id' => 5,
+                    'path' => 'galerijas/IM000011.jpg',
+                    'thumbnail_path' => 'galerijas/IM000011_m.jpg',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'galerija_id' => 6,
+                    'path' => 'galerijas/IM000012.jpg',
+                    'thumbnail_path' => 'galerijas/IM000012_m.jpg',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'galerija_id' => 6,
+                    'path' => 'galerijas/IM000013.jpg',
+                    'thumbnail_path' => 'galerijas/IM000013_m.jpg',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                 ]

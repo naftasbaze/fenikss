@@ -19,17 +19,21 @@ class CreateKontaktsTable extends Migration
             $table->string('tel2');
             $table->string('tel3');
             $table->string('epasts');
-            $table->string('adrese');
             $table->string('registraNr');
             $table->string('pvnNr');
             $table->string('vienotaisNr');
             $table->string('kontaNr');
-            $table->string('banka');
             $table->string('www');
 
             foreach (array_keys(LaravelLocalization::getSupportedLocales()) as $lang) {
                 //add here all you translatable attributes
                 $table->string('nosaukums_'.$lang)->nullable()->default(null);
+                $table->string('adrese_'.$lang)->nullable()->default(null);
+                $table->string('adrnos_'.$lang)->nullable()->default(null);
+                $table->string('banka_'.$lang)->nullable()->default(null);
+                $table->string('banknos_'.$lang)->nullable()->default(null);
+                $table->string('dlaiks_'.$lang)->nullable()->default(null);
+                $table->string('dlaiknos_'.$lang)->nullable()->default(null);
 
             }
             $table->string('languages',30)->default(json_encode(LaravelLocalization::getSupportedLanguagesKeys()));

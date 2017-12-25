@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->call(galerijaSider::class);
         $this->call(fotoSider::class);
         $this->call(roleSider::class);
-        $this->call(useroleSider::class);
         $this->call(kontaktSider::class);
+        $this->call(useroleSider::class);
+
     }
 }
