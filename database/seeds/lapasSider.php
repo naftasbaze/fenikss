@@ -112,6 +112,20 @@ class lapasSider extends Seeder
                     'virsraksts_ru' => 'параллакс',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'nosaukums_lv' => 'Akcija',
+                    'nosaukums_en' => 'Action',
+                    'nosaukums_ru' => 'Akcija RU',
+                    'slug' => str_slug('Parallax'),
+                    'aktivs' => 1,
+                    'tips' => 2,
+                    'vietaLimeni' => 5,
+                    'virsraksts_lv' => 'Akcija virsr',
+                    'virsraksts_en' => 'Action',
+                    'virsraksts_ru' => 'Akcija RU',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
                 ]
 
             ]);

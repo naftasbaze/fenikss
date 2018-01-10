@@ -7,6 +7,7 @@
 
 <!-- Essential JSs -->
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+{{--<script src="{{ asset('js/util.js') }}"></script>--}}
 <script src="{{ asset('bootstrap/js/tooltip.js') }}"></script>
 <script src="{{ asset('bootstrap-extensions/bootstrap-dropdownhover.js') }}"></script>
 <script src="{{ asset('bootstrap-extensions/bootstrap.slide-menu.js') }}"></script>
@@ -19,6 +20,8 @@
 <!-- Assets - Required -->
 <script src="{{ asset('parallax/parallax.min.js') }}"></script>
 <script src="{{ asset('page-scroller/jquery.ui.totop.min.js') }}"></script>
+
+
 <script src="{{ asset('waypoints/waypoints.min.js') }}"></script>
 
 <!-- Assets - Optional (keep what you need) -->
@@ -31,6 +34,7 @@
 
 <!-- Owl carousel - Touch enabled carousel -->
 <script src="{{ asset('js/owl.carousel.js') }}"></script>
+<script type="text/javascript" src="{{ asset('fancybox/jquery.fancybox.js') }}"></script>
 
 <!-- Cross-browser responsivity scripts -->
 <!--[if lt IE 9]>

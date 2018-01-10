@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="col">
-                    <img src="{{ asset('images/Logo3.png') }}">
+                    <img src="{{ asset('images/favicon.svg') }}">
 
                     <p class="no-margin">
                         {{ config('app.name', 'Fenikss un KO') }}

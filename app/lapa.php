@@ -34,6 +34,15 @@ class lapa extends Model
         return $this->{"nosaukums_" . $this->translations[0]};
     }
 
+    public function getVirsrakstsAttribute()
+    {
+        if(in_array($this->current_locale, $this->translations))
+        {
+            return $this->{"virsraksts_" . $this->current_locale};
+        }
+        return $this->{"virsraksts_" . $this->translations[0]};
+    }
+
 
     /*Attiecības*/
     public function rinda()

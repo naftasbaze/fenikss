@@ -48,7 +48,6 @@ Route::group(['middleware'=>['admin']], function(){
 
     Route::get('/admin', 'AdminController@index');
 
-    Route::get('/admin/lapas', 'AdminController@lapas');
     Route::get('/admin/galerijas', 'AdminController@galerijas');
 
     /*Meņu labošana*/
@@ -59,6 +58,24 @@ Route::group(['middleware'=>['admin']], function(){
     Route::get('/admin/submenu/{id}/labot', 'AdminMenuController@editSub');        //Labot/apskatīt  vienu SUB
     Route::patch('/admin/submenu/{id}', 'AdminMenuController@updateSub');       //Saglabā izmaiņas SUB
 
+    /*Lapas visas*/
+    Route::get('/admin/lapas', 'AdminLapaController@lapas');
+    Route::get('/admin/lapas/{id}/rindas', 'AdminLapaController@rindas');       //Labot/apskatīt lapas rindas
+
+    /*Rinda viena*/
+    Route::get('/admin/rinda/{id}/labot', 'AdminLapaController@editRinda');       //Labot/apskatīt  vienu rindu
+    Route::patch('/admin/rinda/{id}', 'AdminLapaController@updateRinda');         //Saglabā izmaiņas
+
+    /*Kontakti*/
+    Route::patch('/admin/kontakti/{id}', 'AdminLapaController@updateKontakti');         //Saglabā izmaiņas
+
+    /*Jautājumi*/
+    Route::get('/admin/buj/{id}/labot', 'AdminLapaController@editBUJ');
+    Route::patch('/admin/buj/{id}', 'AdminLapaController@updateBUJ');         //Saglabā izmaiņas
+
+    /*Galerija*/
+    Route::get('/admin/galerija/{id}/labot', 'AdminLapaController@editGalerija');
+    Route::patch('/admin/galerija/{id}', 'AdminLapaController@updateGalerija');         //Saglabā izmaiņas
 
 
 

@@ -4,6 +4,9 @@
     <div class="container">   
             <div class="div-table v-middle">
                 <div class="cell">
+                    <img src="{{ asset('images/favicon.svg') }}">
+                </div>
+                <div class="cell">
                     <span class="company-rights"> © {{ config('app.name', 'Fenikss un KO') }} 2015 - {{ date('Y') }}</span>
                 </div>
 
@@ -25,19 +28,15 @@
 
                 <div class="cell hidden-xs">
                     <div class="social-media style-2 v4 text-right">
-                        <a href="https://www.facebook.com/RojasMMS" class="facebook">
+                        <a href="https://www.facebook.com/fenikssko.lv" class="facebook">
                             <i class="fa fa-facebook "></i>
                         </a>
-                        <a href="https://twitter.com/RojasMMS" class="twitter">
+                        <a href="https://twitter.com/fenikssko.lv" class="twitter">
                             <i class="fa fa-twitter "></i>
                         </a>
-                        <a href="https://www.youtube.com/user/RojasMMS" class="google-plus">
+                        <a href="https://www.youtube.com/user/fenikssko.lv" class="google-plus">
                             <i class="fa fa-youtube "></i>
                         </a>
-                        <a href="https://vimeo.com/user57351545" class="twitter">
-                            <i class="fa fa-vimeo "></i>
-                        </a>
-
                     </div>
                 </div>
 

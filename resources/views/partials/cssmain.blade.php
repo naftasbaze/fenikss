@@ -19,5 +19,6 @@
 
 <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
 <link rel="stylesheet" href="{{ asset('css/owl.theme.green.css') }}">
+<link rel="stylesheet" href="{{ asset('fancybox/jquery.fancybox.css') }}" type="text/css" media="screen">
 
 @yield('csscits')

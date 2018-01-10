@@ -1,10 +1,9 @@
 <section id="services" data-target="services" class="sct-color-2">
     <div class="one-page-slice">
         <div class="container">
-            <div class="section-title-wrapper style-1 v1">
+            <div class="section-title-wrapper style-1 v1" id="{{$lapa->slug}}">
                 <h3 class="section-title center">
                     <span>{{$lapa->nosaukums}}</span>
-                    {{--<span class="section-subtitle">Cum sociis natoque penatibus et magnis</span>--}}
                 </h3>
             </div>
             <!-- Rinda -->

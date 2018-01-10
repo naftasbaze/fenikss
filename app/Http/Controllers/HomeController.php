@@ -25,7 +25,9 @@ class HomeController extends Controller
         $galerNos=lapa::where('tips',1)->first();
 
 
-        $lapas=lapa::with(['rinda'])
+        $lapas=lapa::with(['rinda'=> function ($query){
+            $query->where('ir_publisks', 1);
+        }])
             ->where('aktivs',1)
             ->orderBy('vietaLimeni', 'asc')
             ->get();

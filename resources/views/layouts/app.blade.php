@@ -13,7 +13,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- FAVICON -->
-    <link href="{{ asset('images/favicon.png') }}" rel="icon" type="image/png">
+    <link href="{{ asset('images/favicon.svg') }}" rel="icon" type="image/png">
 
     <title>{{ config('app.name', 'Fenikss un KO') }}</title>
 
@@ -47,7 +47,7 @@
 
                     @yield('content')
 
-                      @include('partials.footer')
+                      {{--@include('partials.footer')--}}
                     @include('partials.copyright')
 
                 </div> <!-- 5. Beidzas: st-content-inner -->

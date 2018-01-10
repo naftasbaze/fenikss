@@ -1,3 +1,14 @@
+<!-- BREADCRUMB -->
+<div class="page-title style-1" id="{{$lapa->slug}}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{$lapa->virsraksts}}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
 <section>
 <!-- Map canvas -->
 <div id="map" class="map-canvas mb-30"></div>
@@ -100,8 +111,8 @@
 
 @section('jscits')
     <!-- PAGE RELATED SCRIPTS -->
-    <script type="text/javascript" src="{{ asset('js/google-maps-rmms.js') }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPJXnEpdTwqfXtdWA4gpjvy47lX5dSFTU&callback=initMap"
+    <script type="text/javascript" src="{{ asset('js/google-maps-fenikss.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9hsHSrqb0fGD0tlpva3h_yzMPzZwR2Zk&callback=initMap"
             async defer></script>
 
     <!-- sweetalert Js-->

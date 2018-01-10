@@ -41,7 +41,7 @@ class NavigationComposer {
 //dd($level1);
             Menu::addItem(array(
                 'text' => $level1->nosaukums,
-                'URL' => url($level1->slug),
+                'URL' => url('#' . $level1->slug),
                 'reference' => $level1->slug,
                 'weight' => $level1->vietaLimeni))->toMenu('galvenis');
             foreach ($level1->submenu as $level2) {

@@ -129,29 +129,29 @@ Piedāvājam foto un skiču albumus,  reklāmas video filmu.',
                     'nosaukums_en' => 'FAQ',
                     'nosaukums_ru' => 'Interesno',
                     'raksts_lv' => '
-J: Cik tas maksā?
-A: Pie katra pasūtījuma strādā mākslinieks- dizainris, inženieris un pats kalējs. Cenšamies reailzēt visas Jūsu idejas, lai JŪs būtu vairāk, kā apmierināts ar rezultātu. Tomēr cenu lielākoties nosaka Jūsu izvēlētais materiāls, izstrādājuma saražģītības pakāpe un pārklājums. Bet neskatoties uz roku darbu un sarežģīto izgatavošanas procesu mūsu pakalpojumu var atļauties jebkurš priātmājas īpašnieks.
+<p class="lead">J: Cik tas maksā?</p>
+<p>A: Pie katra pasūtījuma strādā mākslinieks- dizainris, inženieris un pats kalējs. Cenšamies reailzēt visas Jūsu idejas, lai JŪs būtu vairāk, kā apmierināts ar rezultātu. Tomēr cenu lielākoties nosaka Jūsu izvēlētais materiāls, izstrādājuma saražģītības pakāpe un pārklājums. Bet neskatoties uz roku darbu un sarežģīto izgatavošanas procesu mūsu pakalpojumu var atļauties jebkurš priātmājas īpašnieks.</p>
 
-J: Cik ātrā laikā varat izgatavot pasūtījumu?
-A: Izgatavošanas laiks atkarīgs no apjoma un sarežģītības, bet izgatavošanu uzsāksim 2-3 dienu laikā pēc līguma noslēgšanas.
+<p class="lead">J: Cik ātrā laikā varat izgatavot pasūtījumu?</p>
+<p>A: Izgatavošanas laiks atkarīgs no apjoma un sarežģītības, bet izgatavošanu uzsāksim 2-3 dienu laikā pēc līguma noslēgšanas.</p>
 
-J: Vai varat uzstādīt?
-A: Varam piegādāt un uzstādīt. Par izmaksām un termiņiem vienosimies pie līguma noslēgšanas.
+<p class="lead">J: Vai varat uzstādīt?</p>
+<p>A: Varam piegādāt un uzstādīt. Par izmaksām un termiņiem vienosimies pie līguma noslēgšanas.</p>
 
-J: Vai Jūs dodat garantiju?
-A: Kā jebkuram produktam dodam garantiju 2 gadi privātpersonām un 1 gads uzņēmumiem. Pēc garantijas, ja nepieciešams, veicam apkopi un remontu.
+<p class="lead">J: Vai Jūs dodat garantiju?</p>
+<p>A: Kā jebkuram produktam dodam garantiju 2 gadi privātpersonām un 1 gads uzņēmumiem. Pēc garantijas, ja nepieciešams, veicam apkopi un remontu.</p>
 
-J: No kāda mteriāla izgatavojat?
-A: Varam izgatavot no jebkura Jūsu izvēlēta metāla - melnā, krāsainā, sakausējumiem. Jāņem vērā, ka tram materiālam isr savas specifiskās īpašības. Uzklausīsim Jūsu vēlmes un kopā izvēlēsimies piemērotāko. Jūs varat izmantot savu materiālu, bet mēs dodam priekšroku jau pārbaudītiem materiālu piegādātājiem.
+<p class="lead">J: No kāda mteriāla izgatavojat?</p>
+<p>A: Varam izgatavot no jebkura Jūsu izvēlēta metāla - melnā, krāsainā, sakausējumiem. Jāņem vērā, ka tram materiālam isr savas specifiskās īpašības. Uzklausīsim Jūsu vēlmes un kopā izvēlēsimies piemērotāko. Jūs varat izmantot savu materiālu, bet mēs dodam priekšroku jau pārbaudītiem materiālu piegādātājiem.</p>
 
-J: Vai Jūs varat apzeltīt?
-A: Piedāvājam visus pēcapstrādes un pārklājuma veidus: ar smišu strūklu, pulēšanu, niķelēšanu, hromēšanu, apzeltīšanu utt. Galvenais, lai pārklājums atbilsu produktam.
+<p class="lead">J: Vai Jūs varat apzeltīt?</p>
+<p>A: Piedāvājam visus pēcapstrādes un pārklājuma veidus: ar smišu strūklu, pulēšanu, niķelēšanu, hromēšanu, apzeltīšanu utt. Galvenais, lai pārklājums atbilsu produktam.</p>
 
-J: Vai vārtus varat aprīkot ar automātiku?
-A: Protams uzstādām automātiku. Jūs varaat izvēlēties savu (atbilstošu esošai sistēmai) vai varam piedāvāt jaunu. Vārtus varam aprīkot ar piekļuves kontroli (atveramus ar pulti, ar ID karti vai ar mobilo telefonu).
+<p class="lead">J: Vai vārtus varat aprīkot ar automātiku?</p>
+<p>A: Protams uzstādām automātiku. Jūs varaat izvēlēties savu (atbilstošu esošai sistēmai) vai varam piedāvāt jaunu. Vārtus varam aprīkot ar piekļuves kontroli (atveramus ar pulti, ar ID karti vai ar mobilo telefonu).</p>
 
-J: Kas man jādara lai veiktu pasūtījumu?
-A: Vieglākais veids ir aizpildīt formu. Mūsu menedžeris sazināsies ar jums un norunās tikšanos. Jūs varēsiet ierasties pie mums vai mūsu menedžeris apmeklēs Jūsu izvēlētā vietā. Pēc līgums noslēgšanas jāiemeksā 50% priekšapmaksa. Galīgais norēķins pirms uzstādīšanas dienas.',
+<p class="lead">J: Kas man jādara lai veiktu pasūtījumu?</p>
+<p>A: Vieglākais veids ir aizpildīt formu. Mūsu menedžeris sazināsies ar jums un norunās tikšanos. Jūs varēsiet ierasties pie mums vai mūsu menedžeris apmeklēs Jūsu izvēlētā vietā. Pēc līgums noslēgšanas jāiemeksā 50% priekšapmaksa. Galīgais norēķins pirms uzstādīšanas dienas.</p>',
 
                     'raksts_en' => 'Q: How much?',
 
@@ -197,7 +197,8 @@ A: Vieglākais veids ir aizpildīt formu. Mūsu menedžeris sazināsies ar jums 
                 ],
                 [
                     'slug' => str_slug('video '),
-                    'fotoLinks' => '',
+                    'fotoLinks' => 'kontakti',
+                    'fotoThumb' => 'fotogalerija',
                     'vietaLimeni' => 1,
                     'lapa_id' => 6,
                     'nosaukums_lv' => 'Realizējam Jūsu idejas metālā!',
@@ -223,6 +224,22 @@ A: Vieglākais veids ir aizpildīt formu. Mūsu menedžeris sazināsies ar jums 
                     'raksts_lv' => 'Izstāstiet savu ideju, mēs to realizēsim!',
                     'raksts_en' => 'Izstāstiet savu ideju, mēs to realizēsim!',
                     'raksts_ru' => 'Izstāstiet savu ideju, mēs to realizēsim!',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('akcija '),
+                    'fotoLinks' => 'kontakti',
+                    'vietaLimeni' => 1,
+                    'lapa_id' => 8,
+                    'nosaukums_lv' => 'Akcija !',
+                    'nosaukums_en' => 'Action',
+                    'nosaukums_ru' => 'Akcija RU',
+                    'raksts_lv' => 'Veiciet pasūtījumu līdz Lieldienām un saņemiet visiem kalšanas darbiem atlaidi 20% apmērā!',
+                    'raksts_en' => 'EN raksts',
+                    'raksts_ru' => 'Ru raksts',
 
                     'ir_publisks' =>1,
                     'created_at' => date('Y-m-d H:i:s'),

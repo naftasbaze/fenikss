@@ -9,8 +9,8 @@
 		    <div class="navbar-header">
 		      	<!-- LOGO -->
 		      	<a class="navbar-logo" href="/">
-		      		<img id="logoOne" src="{{ asset('images/Logo4.png') }}" class="hide">
-		      		<img id="logoTwo" src="{{ asset('images/Logo4.png') }}">
+		      		<img id="logoOne" src="{{ asset('images/logo6.svg') }}" class="hide">
+		      		<img id="logoTwo" src="{{ asset('images/logo6.svg') }}">
 		      	</a>
 
 		    	<!-- NAVBAR TOGGLE -->
