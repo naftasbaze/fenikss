@@ -24,6 +24,9 @@
         @include('home.akcija')
         @elseif($lapa->tips==6) {{--jautajumi--}}
         @include('home.jautajumi')
+        @elseif($lapa->tips==7) {{--katalga lapas--}}
+        @include('home.katalogs')
+
         @endif
     @endforeach
 

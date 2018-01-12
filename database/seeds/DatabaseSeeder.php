@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(fotoSider::class);
         $this->call(roleSider::class);
         $this->call(kontaktSider::class);
+        $this->call(katalogs::class);
         $this->call(useroleSider::class);
 
     }

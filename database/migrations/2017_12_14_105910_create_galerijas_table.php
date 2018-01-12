@@ -15,6 +15,8 @@ class CreateGalerijasTable extends Migration
     {
         Schema::create('galerijas', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('path')->nullable()->default(null);
+            $table->string('thumbnail_path')->nullable()->default(null);
 
             foreach (array_keys(LaravelLocalization::getSupportedLocales()) as $lang) {
                 //add here all you translatable attributes

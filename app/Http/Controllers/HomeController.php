@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\galerija;
+use App\katalog;
 use App\kontakt;
 use App\lapa;
 use Illuminate\Http\Request;
@@ -18,11 +19,15 @@ class HomeController extends Controller
     {
 
         $galerijas=galerija::has('foto')
-            ->with('foto')
+            ->with(['foto'])
             ->get();
         //dd($galerijas);
 
-        $galerNos=lapa::where('tips',1)->first();
+        $katalogs=katalog::with(['galerja'])
+        ->where('aktivs',1)->get();
+
+        //dd($katalogs);
+        //$galerNos=lapa::where('tips',1)->first();
 
 
         $lapas=lapa::with(['rinda'=> function ($query){
@@ -35,6 +40,6 @@ class HomeController extends Controller
 
         $adrese=kontakt::firstOrFail();
 
-        return view('home.home',compact(['lapas', 'galerijas', 'galerNos', 'adrese']));
+        return view('home.home',compact(['lapas', 'galerijas', 'katalogs', 'adrese']));
     }
 }

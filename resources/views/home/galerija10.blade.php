@@ -3,41 +3,95 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('/turn/css/basic.css') }}" media="screen" />
 @endsection
+<section class="slice sct-color-1 bb">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-title-wrapper style-2 v1" id="{{$lapa->slug}}">
+                <h3 class="section-title section-title-sm left">
+                    <span>{{$lapa->nosaukums}}</span>
+                </h3>
+            </div>
 
 
-        <div class="filip">
+            <div class="filip">
             <div class="flipbook-viewport">
                 <div class="container">
                     <div class="flipbook article-image">
-                        <div style="background-image:url('{{ asset('turn/images/1.jpg') }}')">
-                            <a href="http://127.0.0.1:8000/galerijas/IM000005.jpg"
-                               class="btn btn-lg btn-base-1"
-                               style="margin-top: 30px;"
-                               data-fancybox="images-preview2">
-                               Galerija 1
+
+                        <div style="background-image:url('{{ asset('turn/images/Vaks1.jpg') }}')"></div>
+
+                        <div style="background-image:url('{{ asset('turn/images/lpp1.jpg') }}')"></div>
+                        <div style="background-image:url('{{ asset('turn/images/lpp2.jpg') }}')">
+                            <a href="http://127.0.0.1:8000/galerijas/DSC07106.JPG"
+                               class="btn btn-lg btn-b-base-1"
+                               style="top: 80%; margin-left: 57%;"
+                               data-fancybox="images-preview">
+                                Apskatīt
                             </a>
                         </div>
-                        <div style="background-image:url('{{ asset('turn/images/2.jpg') }}')">
+
+                        <div style="background-image:url('{{ asset('turn/images/lpp3.jpg') }}')">
                             <a href="http://127.0.0.1:8000/galerijas/DSC07106.JPG"
                                class="btn btn-lg btn-base-2"
-                               style="margin-top: 60px; margin-left: 60px;"
+                               style="top: 91%; margin-left: 30%;"
                                data-fancybox="images-preview">
-                                Galerija 2
+                                Apskatīt
                             </a>
                         </div>
-                        <div style="background-image:url('{{ asset('turn/images/3.jpg') }}')"></div>
-                        <div style="background-image:url('{{ asset('turn/images/4.jpg') }}')"></div>
-                        <div style="background-image:url('{{ asset('turn/images/5.jpg') }}')"></div>
-                        <div style="background-image:url('{{ asset('turn/images/6.jpg') }}')"></div>
-                        <div style="background-image:url('{{ asset('turn/images/7.jpg') }}')"></div>
-                        <div style="background-image:url('{{ asset('turn/images/8.jpg') }}')"></div>
-                        <div style="background-image:url('{{ asset('turn/images/9.jpg') }}')"></div>
-                        <div style="background-image:url('{{ asset('turn/images/10.jpg') }}')"></div>
+                        <div style="background-image:url('{{ asset('turn/images/lpp4.jpg') }}')"></div>
+                        <div style="background-image:url('{{ asset('turn/images/lpp5.jpg') }}')"></div>
+                        <div style="background-image:url('{{ asset('turn/images/lpp6.jpg') }}')">
+                            <a href="http://127.0.0.1:8000/galerijas/DSC07106.JPG"
+                               class="btn btn-lg btn-b-base-1"
+                               style="top: 80%; margin-left: 57%;"
+                               data-fancybox="images-preview">
+                                Apskatīt
+                            </a>
+                        </div>
+                        <div style="background-image:url('{{ asset('turn/images/lpp7.jpg') }}')"></div>
+                        <div style="background-image:url('{{ asset('turn/images/lpp8.jpg') }}')">
+                            <a href="http://127.0.0.1:8000/galerijas/DSC07106.JPG"
+                               class="btn btn-lg btn-b-base-1"
+                               style="top: 80%; margin-left: 57%;"
+                               data-fancybox="images-preview">
+                                Apskatīt
+                            </a>
+                        </div>
+                        <div style="background-image:url('{{ asset('turn/images/lpp9.jpg') }}')">
+                            <a href="https://youtu.be/MbQ8wjkkzPw"
+                               class="btn btn-lg btn-b-base-2"
+                               style="top: 90%; margin-left: 50%;"
+                               data-fancybox="images-preview">
+                                Apskatīt video
+                            </a>
+                        </div>
+                        <div style="background-image:url('{{ asset('turn/images/lpp10.jpg') }}')">
+                            <a href="http://127.0.0.1:8000/galerijas/DSC07106.JPG"
+                               class="btn btn-lg btn-b-base-1"
+                               style="top: 90%; margin-left: 25%;"
+                               data-fancybox="images-preview">
+                                Apskatīt
+                            </a>
+                        </div>
+
+
+
+                                <div style="background-image:url('{{ asset('turn/images/Vaks2.jpg') }}')">
+
+                                    <a class="btn" href="#kontakti" style="top: 90%; margin-left: 25%;">Adrese</a>
+                                </div>
+
+
+
                     </div>
                 </div>
             </div>
         </div>
-
+        </div>
+    </div>
+</div>
+</section>
 
 <a href="https://farm3.staticflickr.com/2859/33395734202_522f9d8efd_k_d.jpg" data-fancybox="images-preview"
    data-thumb="https://farm3.staticflickr.com/2859/33395734202_15a81c4ef3_m_d.jpg"></a>

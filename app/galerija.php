@@ -59,5 +59,10 @@ class galerija extends Model
         return $this->hasMany('App\foto')->orderBy('id', 'asc');
     }
 
+    public function katalogs()
+    {
+        return $this->hasMany('App\katalog')->orderBy('id', 'asc');
+    }
+
 
 }

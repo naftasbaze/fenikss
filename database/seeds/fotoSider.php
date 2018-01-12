@@ -80,8 +80,8 @@ class fotoSider extends Seeder
                 ],
                 [
                     'galerija_id' => 6,
-                    'path' => 'galerijas/IM000013.jpg',
-                    'thumbnail_path' => 'galerijas/IM000013_m.jpg',
+                    'path' => 'galerijas/IM000020.jpg',
+                    'thumbnail_path' => 'galerijas/IM000020_m.jpg',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                 ]
