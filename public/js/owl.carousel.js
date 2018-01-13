@@ -2813,7 +2813,7 @@
 	 */
 	Navigation.Defaults = {
 		nav: false,
-		navText: [ 'iepr', 'nāk' ],
+		navText: [ '<', '>' ],
 		navSpeed: false,
 		navElement: 'div',
 		navContainer: false,
@@ -2822,7 +2822,7 @@
 		slideBy: 1,
 		dotClass: 'owl-dot',
 		dotsClass: 'owl-dots',
-		dots: true,
+		dots: false,
 		dotsEach: false,
 		dotsData: false,
 		dotsSpeed: false,

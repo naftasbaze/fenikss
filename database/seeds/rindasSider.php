@@ -124,48 +124,6 @@ Piedāvājam foto un skiču albumus,  reklāmas video filmu.',
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'slug' => str_slug('buj '),
-                    'fotoLinks' => '',
-                    'fotoThumb' => '',
-                    'vietaLimeni' => 1,
-                    'lapa_id' => 4,
-                    'nosaukums_lv' => 'Jūs jautājat',
-                    'nosaukums_en' => 'FAQ',
-                    'nosaukums_ru' => 'Interesno',
-                    'raksts_lv' => '
-<p class="lead">J: Cik tas maksā?</p>
-<p>A: Pie katra pasūtījuma strādā mākslinieks- dizainris, inženieris un pats kalējs. Cenšamies reailzēt visas Jūsu idejas, lai JŪs būtu vairāk, kā apmierināts ar rezultātu. Tomēr cenu lielākoties nosaka Jūsu izvēlētais materiāls, izstrādājuma saražģītības pakāpe un pārklājums. Bet neskatoties uz roku darbu un sarežģīto izgatavošanas procesu mūsu pakalpojumu var atļauties jebkurš priātmājas īpašnieks.</p>
-
-<p class="lead">J: Cik ātrā laikā varat izgatavot pasūtījumu?</p>
-<p>A: Izgatavošanas laiks atkarīgs no apjoma un sarežģītības, bet izgatavošanu uzsāksim 2-3 dienu laikā pēc līguma noslēgšanas.</p>
-
-<p class="lead">J: Vai varat uzstādīt?</p>
-<p>A: Varam piegādāt un uzstādīt. Par izmaksām un termiņiem vienosimies pie līguma noslēgšanas.</p>
-
-<p class="lead">J: Vai Jūs dodat garantiju?</p>
-<p>A: Kā jebkuram produktam dodam garantiju 2 gadi privātpersonām un 1 gads uzņēmumiem. Pēc garantijas, ja nepieciešams, veicam apkopi un remontu.</p>
-
-<p class="lead">J: No kāda mteriāla izgatavojat?</p>
-<p>A: Varam izgatavot no jebkura Jūsu izvēlēta metāla - melnā, krāsainā, sakausējumiem. Jāņem vērā, ka tram materiālam isr savas specifiskās īpašības. Uzklausīsim Jūsu vēlmes un kopā izvēlēsimies piemērotāko. Jūs varat izmantot savu materiālu, bet mēs dodam priekšroku jau pārbaudītiem materiālu piegādātājiem.</p>
-
-<p class="lead">J: Vai Jūs varat apzeltīt?</p>
-<p>A: Piedāvājam visus pēcapstrādes un pārklājuma veidus: ar smišu strūklu, pulēšanu, niķelēšanu, hromēšanu, apzeltīšanu utt. Galvenais, lai pārklājums atbilsu produktam.</p>
-
-<p class="lead">J: Vai vārtus varat aprīkot ar automātiku?</p>
-<p>A: Protams uzstādām automātiku. Jūs varaat izvēlēties savu (atbilstošu esošai sistēmai) vai varam piedāvāt jaunu. Vārtus varam aprīkot ar piekļuves kontroli (atveramus ar pulti, ar ID karti vai ar mobilo telefonu).</p>
-
-<p class="lead">J: Kas man jādara lai veiktu pasūtījumu?</p>
-<p>A: Vieglākais veids ir aizpildīt formu. Mūsu menedžeris sazināsies ar jums un norunās tikšanos. Jūs varēsiet ierasties pie mums vai mūsu menedžeris apmeklēs Jūsu izvēlētā vietā. Pēc līgums noslēgšanas jāiemeksā 50% priekšapmaksa. Galīgais norēķins pirms uzstādīšanas dienas.</p>',
-
-                    'raksts_en' => 'Q: How much?',
-
-                    'raksts_ru' => 'B: Skolko?',
-
-                    'ir_publisks' =>1,
-                    'created_at' => date('Y-m-d H:i:s'),
-                    'updated_at' => date('Y-m-d H:i:s'),
-                ],
-                [
                     'slug' => str_slug('kontaktinfo '),
                     'fotoLinks' => '',
                     'fotoThumb' => '',
@@ -247,6 +205,142 @@ Piedāvājam foto un skiču albumus,  reklāmas video filmu.',
                     'raksts_lv' => 'Veiciet pasūtījumu līdz Lieldienām un saņemiet visiem kalšanas darbiem atlaidi 20% apmērā!',
                     'raksts_en' => 'EN raksts',
                     'raksts_ru' => 'Ru raksts',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('jautajums1 '),
+                    'fotoLinks' => '',
+                    'fotoThumb' => '',
+                    'vietaLimeni' => 1,
+                    'lapa_id' => 4,
+                    'nosaukums_lv' => 'Cik tas maksā?',
+                    'nosaukums_en' => 'Question1',
+                    'nosaukums_ru' => 'Vopros1',
+                    'raksts_lv' => 'Pie katra pasūtījuma strādā mākslinieks- dizainris, inženieris un pats kalējs. Cenšamies reailzēt visas Jūsu idejas, lai JŪs būtu vairāk, kā apmierināts ar rezultātu. Tomēr cenu lielākoties nosaka Jūsu izvēlētais materiāls, izstrādājuma saražģītības pakāpe un pārklājums. Bet neskatoties uz roku darbu un sarežģīto izgatavošanas procesu mūsu pakalpojumu var atļauties jebkurš priātmājas īpašnieks.',
+                    'raksts_en' => 'Answer1 EN',
+                    'raksts_ru' => 'Otvet1 Ru',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('jautajums2 '),
+                    'fotoLinks' => '',
+                    'fotoThumb' => '',
+                    'vietaLimeni' => 2,
+                    'lapa_id' => 4,
+                    'nosaukums_lv' => 'Cik ātrā laikā varat izgatavot pasūtījumu?',
+                    'nosaukums_en' => 'Question2',
+                    'nosaukums_ru' => 'Vopros2',
+                    'raksts_lv' => 'Izgatavošanas laiks atkarīgs no apjoma un sarežģītības, bet izgatavošanu uzsāksim 2-3 dienu laikā pēc līguma noslēgšanas.',
+                    'raksts_en' => 'Answer2 EN',
+                    'raksts_ru' => 'Otvet2 Ru',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('jautajums3 '),
+                    'fotoLinks' => '',
+                    'fotoThumb' => '',
+                    'vietaLimeni' => 3,
+                    'lapa_id' => 4,
+                    'nosaukums_lv' => 'Vai varat uzstādīt?',
+                    'nosaukums_en' => 'Question3',
+                    'nosaukums_ru' => 'Vopros3',
+                    'raksts_lv' => 'Varam piegādāt un uzstādīt. Par izmaksām un termiņiem vienosimies pie līguma noslēgšanas.',
+                    'raksts_en' => 'Answer3 EN',
+                    'raksts_ru' => 'Otvet3 Ru',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('jautajums4 '),
+                    'fotoLinks' => '',
+                    'fotoThumb' => '',
+                    'vietaLimeni' => 4,
+                    'lapa_id' => 4,
+                    'nosaukums_lv' => 'Vai Jūs dodat garantiju?',
+                    'nosaukums_en' => 'Question4',
+                    'nosaukums_ru' => 'Vopros4',
+                    'raksts_lv' => 'Kā jebkuram produktam dodam garantiju 2 gadi privātpersonām un 1 gads uzņēmumiem. Pēc garantijas, ja nepieciešams, veicam apkopi un remontu.',
+                    'raksts_en' => 'Answer4 EN',
+                    'raksts_ru' => 'Otvet4 Ru',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('jautajums5 '),
+                    'fotoLinks' => '',
+                    'fotoThumb' => '',
+                    'vietaLimeni' => 5,
+                    'lapa_id' => 4,
+                    'nosaukums_lv' => 'No kāda mteriāla varat izgatavot?',
+                    'nosaukums_en' => 'Question5',
+                    'nosaukums_ru' => 'Vopros5',
+                    'raksts_lv' => 'Varam izgatavot no jebkura Jūsu izvēlēta metāla - melnā, krāsainā, leģētā, vieglmetāla sakausējumiem. Jāņem vērā, ka katram materiālam ir savas specifiskās īpašības. Uzklausīsim Jūsu vēlmes un kopā izvēlēsimies piemērotāko. Jūs varat izmantot savu materiālu, bet mēs dodam priekšroku jau pārbaudītiem materiālu piegādātājiem.',
+                    'raksts_en' => 'Answer5 EN',
+                    'raksts_ru' => 'Otvet5 Ru',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('jautajums6 '),
+                    'fotoLinks' => '',
+                    'fotoThumb' => '',
+                    'vietaLimeni' => 6,
+                    'lapa_id' => 4,
+                    'nosaukums_lv' => 'Vai Jūs varat apzeltīt?',
+                    'nosaukums_en' => 'Question6',
+                    'nosaukums_ru' => 'Vopros6',
+                    'raksts_lv' => 'Piedāvājam visus pēcapstrādes un pārklājuma veidus: ar smišu strūklu, pulēšanu, niķelēšanu, hromēšanu, apzeltīšanu utt. Galvenais, lai pārklājums atbilsu produktam.',
+                    'raksts_en' => 'Answer6 EN',
+                    'raksts_ru' => 'Otvet6 Ru',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('jautajums7 '),
+                    'fotoLinks' => '',
+                    'fotoThumb' => '',
+                    'vietaLimeni' => 7,
+                    'lapa_id' => 4,
+                    'nosaukums_lv' => 'Vai vārtus varat aprīkot ar automātiku?',
+                    'nosaukums_en' => 'Question7',
+                    'nosaukums_ru' => 'Vopros7',
+                    'raksts_lv' => 'Protams uzstādām automātiku. Jūs varaat izvēlēties savu (atbilstošu esošai sistēmai) vai varam piedāvāt jaunu. Vārtus varam aprīkot ar piekļuves kontroli (atveramus ar pulti, ar ID karti vai ar mobilo telefonu).',
+                    'raksts_en' => 'Answer7 EN',
+                    'raksts_ru' => 'Otvet7 Ru',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('jautajums8 '),
+                    'fotoLinks' => '',
+                    'fotoThumb' => '',
+                    'vietaLimeni' => 8,
+                    'lapa_id' => 4,
+                    'nosaukums_lv' => 'Kas man jādara lai veiktu pasūtījumu?',
+                    'nosaukums_en' => 'Question8',
+                    'nosaukums_ru' => 'Vopros8',
+                    'raksts_lv' => 'Vieglākais veids ir aizpildīt formu. Mūsu menedžeris sazināsies ar jums un norunās tikšanos. Jūs varēsiet ierasties pie mums vai mūsu menedžeris apmeklēs Jūsu izvēlētā vietā. Pēc līgums noslēgšanas jāiemeksā 50% priekšapmaksa. Galīgais norēķins pirms uzstādīšanas dienas.',
+                    'raksts_en' => 'Answer8 EN',
+                    'raksts_ru' => 'Otvet8 Ru',
 
                     'ir_publisks' =>1,
                     'created_at' => date('Y-m-d H:i:s'),

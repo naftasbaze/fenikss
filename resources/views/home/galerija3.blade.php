@@ -4,7 +4,7 @@
             <div class="col-md-12">
                 <div class="section-title-wrapper style-2 v1" id="{{$lapa->slug}}">
                     <h3 class="section-title section-title-sm left">
-                        <span>{{$galerNos->nosaukums}}</span>
+                        <span>{{$lapa->nosaukums}}</span>
                     </h3>
                 </div>
 
@@ -21,7 +21,7 @@
                                     <div class="block-image">
                                         <div class="view view-third">
                                             <img src="{{ asset($galerijas[$k]->foto[0]->thumbnail_path) }}">
-                                            <div class="mask">
+                                            <div class="mask mask-4 v2">
                                                 <h2>{{$galerijas[$k]->nosaukums}}</h2>
                                                 <p>{{$galerijas[$k]->apaksnos}}</p>
                                                 <p>

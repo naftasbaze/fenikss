@@ -13,7 +13,7 @@
         @if($lapa->tips==0) {{--teksts--}}
         @include('home.rindina')
         @elseif($lapa->tips==1) {{--galerija--}}
-        @include('home.galerija10')
+        @include('home.galerija3')
         @elseif($lapa->tips==2) {{--paralaks--}}
         @include('home.parallax')
         @elseif($lapa->tips==3) {{--kontaktu forma--}}
@@ -55,7 +55,7 @@
         </script>
 
 
-       {{-- <script type="text/javascript">
+        <script type="text/javascript">
             $(document).ready(function(){
                 $('.owl-carousel').owlCarousel({
                     animateOut: 'slideOutDown',
@@ -78,7 +78,7 @@
                     }
                 })
             });
-        </script>--}}
+        </script>
 
         <script type="text/javascript">
             $(document).ready(function() {
