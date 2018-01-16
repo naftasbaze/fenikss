@@ -11,7 +11,7 @@
 
                 <div class="panel-body">
 
-                    <!-- Forma virsraksta labošanai-->
+                    <!-- Forma parallax teksta labošanai-->
                     <form action="{{ url('/admin/rinda') }}/{{$lapa->id}}"
                           method="POST" class="form-horizontal">
 
@@ -34,9 +34,17 @@
 
                                     <div class="tab-body">
                                         <!-- Nosaukums LV -->
-                                            <label for="nosaukums" class="control-label">Nosaukums</label>
-                                            <input type="text" name="nosaukums" id="nosaukums" class="form-control"
-                                                   value="{{ old('nosaukums', $lapa->nosaukums_lv ) }}">
+                                        <label for="titleLV" class="control-label">Nosaukums</label>
+                                        <input type="text" name="titleLV" id="titleLV" class="form-control"
+                                               value="{{ old('titleLV', $lapa->rinda[0]->nosaukums_lv ) }}">
+
+                                        {{--Raksts--}}
+                                        <label for="rakstsLV" class="control-label">Raksts</label>
+                                        <textarea class="form-control" rows="5" cols="50"
+                                                  name="rakstsLV" id="rakstsLV"
+                                                  placeholder="Apraksts (līdz 250 zīmēm)">
+                                            {{old('rakstsLV', $lapa->rinda[0]->raksts_lv)}}
+                                        </textarea>
 
                                     </div>
                                 </div>
@@ -44,43 +52,39 @@
                                 <div role="tabpanel" class="tab-pane" id="en">
 
                                     <div class="tab-body">
-                                    <!-- Nosaukums EN -->
-                                    <label for="title" class="control-label">Title</label>
-                                    <input type="text" name="title" id="title" class="form-control"
-                                           value="{{ old('title', $lapa->nosaukums_en ) }}">
+                                        <!-- Nosaukums EN -->
+                                        <label for="titleEN" class="control-label">Title</label>
+                                        <input type="text" name="titleEN" id="titleEN" class="form-control"
+                                               value="{{ old('titleEN', $lapa->rinda[0]->nosaukums_en ) }}">
+
+                                        {{--Raksts--}}
+                                        <label for="rakstsEN" class="control-label">Raksts</label>
+                                        <textarea class="form-control" rows="5" cols="50"
+                                                  name="rakstsEN" id="rakstsEN"
+                                                  placeholder="Apraksts (līdz 250 zīmēm)">
+                                            {{old('rakstsEN', $lapa->rinda[0]->raksts_en)}}
+                                        </textarea>
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="ru">
                                     <div class="tab-body">
 
-                                    <!-- Nosaukums RU -->
-                                    <label for="titleRU" class="control-label">Название</label>
-                                    <input type="text" name="titleRU" id="titleRU" class="form-control"
-                                           value="{{ old('titleRU', $lapa->nosaukums_ru ) }}">
+                                        <!-- Nosaukums RU -->
+                                        <label for="titleRU" class="control-label">Название</label>
+                                        <input type="text" name="titleRU" id="titleRU" class="form-control"
+                                               value="{{ old('titleRU', $lapa->rinda[0]->nosaukums_ru ) }}">
+
+                                        {{--Raksts--}}
+                                        <label for="rakstsRU" class="control-label">Raksts</label>
+                                        <textarea class="form-control" rows="5" cols="50"
+                                                  name="rakstsRU" id="rakstsRU"
+                                                  placeholder="Apraksts (līdz 250 zīmēm)">
+                                            {{old('rakstsRU', $lapa->rinda[0]->raksts_ru)}}
+                                        </textarea>
                                     </div>
                                 </div>
                             </div>
 
-                        </div>
-
-                        <div class="form-group">
-                            <!-- Vieta -->
-                            <div class="col-md-2">
-                                <label for="vieta" class="control-label">Vieta līmenī </label>
-                                <input type="text" name="vieta" id="vieta" class="form-control"
-                                       value="{{ old('vieta', $lapa->vietaLimeni) }}">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <!-- Publicēt  -->
-                            <div class="col-sm-3">
-                                <div class="checkbox">
-                                    <input class="form-control" type="checkbox" name="publicet" id="publicet"
-                                    @if ( old('publicet',$lapa->aktivs)) checked="checked" @endif>
-                                    <label>Publisks</label>
-                                </div>
-                            </div>
                         </div>
 
                         <!-- Add Buttons -->
@@ -103,6 +107,56 @@
 
                     </form>
 
+                    {{--Bilde--}}
+                    <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-md-offset-3">
+
+                            <label for="attels" class="control-label">Attēls</label>
+                            @if($lapa->rinda[0]->fotoLinks)
+
+                                <div class="block block-image v1">
+
+                                    <div class="block-image">
+                                        <div class="view view-first">
+                                            <img src="{{ asset($lapa->rinda[0]->fotoLinks )}}">
+                                            <div class="mask">
+                                                <h2>Attēls tiks neatgriezeniski izdzēsts!</h2>
+                                                <p>&nbsp;</p>
+
+                                                <form method="POST" action="{{ url('admin/rindafoto/' . $lapa->rinda[0]->id)}}">
+
+                                                    {{ csrf_field() }}
+                                                    {{method_field('DELETE')}}
+
+                                                    <button type="submit" class="btn btn-6 btn-6c btn-base-5">
+                                                        <i class="fa fa-btn fa-trash"></i>  Dzēst
+                                                    </button>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @else
+
+                                        <!-- Form uzlādēt teksts bildi-->
+                                <form action="{{  url('admin/rindafoto') }}/{{$lapa->rinda[0]->id}}/foto"
+                                      class="dropzone"
+                                      id="raksaBilde"
+                                      method="POST">
+
+                                    {{ csrf_field() }}
+                                    {{method_field('PATCH')}}
+                                </form>
+
+                            @endif
+
+                        </div>
+                    </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -113,5 +167,14 @@
 @section('scripts')
 
     @include('partials.flash')
+
+    <script>
+        Dropzone.options.raksaBilde = {
+            paramName: 'bilde',
+            dictDefaultMessage: 'Attēla izmēram jābūtvismaz 720x480 px',
+            acceptedFiles: '.jpg, .png, .JPG',
+            maxFiles: '1'
+        }
+    </script>
 
 @endsection

@@ -13,7 +13,7 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="cta-button">
-                            <a href="#{{$rinda->fotoLinks}}" class="btn-a btn-lg btn-1 btn-1a fa-long-arrow-right text-center">
+                            <a href="#kontakti" class="btn-a btn-lg btn-1 btn-1a fa-long-arrow-right text-center">
                                 {{ Lang::get('viskas.contact')}}
                             </a>
                         </div>

@@ -3,7 +3,7 @@
         <!-- Advanced Tables -->
         <div class="panel panel-default">
             <div class="panel-heading">
-                {{$lapa->nosaukums_lv}}
+                Kataloga lappuses
             </div>
             <div class="panel-body">
 
@@ -12,29 +12,31 @@
                         <thead>
                         <tr>
                             <th>Nr. p.k</th>
-                            <th>Nosaukums</th>
-                            <th></th>
-                            <th>Apakšnos.</th>
+                            <th>Attēls</th>
+                            <th>Statuss</th>
                             <th>Darbība</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($galerijas as $rinda)
+                        @foreach ($katalogs as $lpp)
 
                             <tr>
-                                <td>{{$rinda->id}}</td>
-                                <td>{{$rinda->nosaukums_lv}}</td>
+                                <td>{{$lpp->id}}</td>
+                                <td><img src='{{asset( $lpp->lpp_lv) }}' style='height:50px; width:50px'></td>
                                 <td>
-                                    <a href="{{{url('/admin/galerija')}}}/{{$rinda->id}}/labot" class="fa fa-btn fa-pencil btn btn-green">
-                                        {{--Labot--}}
+                                    @if($lpp->aktivs==1)
+                                        Publisks
+                                    @else
+                                        Neaktīvs
+                                    @endif
+                                </td>
+
+                                <td>
+                                    <a href="{{{url('/admin/katalogs')}}}/{{$lpp->id}}/labot" class="btn btn-info">
+                                        Labot
                                     </a>
                                 </td>
-                                <td>{{$rinda->apaksnos_lv}}</td>
 
-                                <td>
-
-                                    <a href="{{{url('/admin/albums')}}}/{{$rinda->id}}/labot" class="btn btn-info">
-                                        Foto
                         @endforeach
                         </tbody>
                     </table>

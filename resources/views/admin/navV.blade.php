@@ -10,10 +10,13 @@
                 <a href="{{ url('/admin/izvelne') }}"><i class="fa fa-dashboard"></i> Izvēlne</a>
             </li>
             <li>
-                <a href="{{ url('/admin/lapas') }}"><i class="fa fa-desktop"></i> Lapas</a>
+                <a href="{{ url('/admin/lapas') }}"><i class="fa fa-desktop"></i> Sadaļas</a>
             </li>
             <li>
                 <a href="{{ url('/admin/galerijas') }}"><i class="fa fa-exclamation"></i> Galerijas</a>
+            </li>
+            <li>
+                <a href="{{ url('/admin/uznemums') }}"><i class="fa fa-exclamation"></i> Par uzņēmumu</a>
             </li>
             {{--<li>
                 <a href="{{ url('/admin/pasts') }}"><i class="fa fa-envelope-o"></i> Izsūtne</a>

@@ -345,6 +345,23 @@ Piedāvājam foto un skiču albumus,  reklāmas video filmu.',
                     'ir_publisks' =>1,
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
+                ],
+                [
+                    'slug' => str_slug('katalogs '),
+                    'fotoLinks' => '',
+                    'fotoThumb' => '',
+                    'vietaLimeni' => 1,
+                    'lapa_id' => 9,
+                    'nosaukums_lv' => 'Digitālais katalogs',
+                    'nosaukums_en' => 'Digital catalogue',
+                    'nosaukums_ru' => 'Digitaļnij katalog',
+                    'raksts_lv' => '',
+                    'raksts_en' => '',
+                    'raksts_ru' => '',
+
+                    'ir_publisks' =>1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
                 ]
 
             ]);

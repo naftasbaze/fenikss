@@ -88,4 +88,22 @@ class kontakt extends Model
         return $this->{"dlaiknos_" . $this->translations[0]};
     }
 
+    public function getSaitsAttribute()
+    {
+        if(in_array($this->current_locale, $this->translations))
+        {
+            return $this->{"saits_" . $this->current_locale};
+        }
+        return $this->{"saits_" . $this->translations[0]};
+    }
+
+    public function getDesriptionAttribute()
+    {
+        if(in_array($this->current_locale, $this->translations))
+        {
+            return $this->{"desription_" . $this->current_locale};
+        }
+        return $this->{"desription_" . $this->translations[0]};
+    }
+
 }

@@ -43,6 +43,14 @@ class kontaktSider extends Seeder
                     'nosaukums_en' => '"FENIKSS-KO" Ltd. Hammered work and restoration workshop "Pundurīši"',
                     'nosaukums_ru' => 'OOO "FENIKSS-KO" Metālkalšanas un restaurācijas darbnīca “Pundurīši”',
                     'www' => 'http://www.fenikssko.lv',
+                    'keywords' => 'kalšana, kalēji, blacksmith, forge, hammered, art, кузнец, Ковка, ворота, metal gates, fences, fencing, construction, restoration, fittings, stairs, terraces, forging, railings, gratings',
+                    'saits_lv' => 'FENIKSS-KO Metālkalšana un restaurācija',
+                    'saits_en' => 'FENIKSS-KO  Hammered work and restoration',
+                    'saits_ru' => 'FENIKSS-KO Кованыие изделия и реставрация',
+                    'desription_lv' => 'Durvis, žogi, vārti - kalti, lieti, metināti - krāsoti un apzeltīti',
+                    'desription_en' => 'fences, vārti - kalti, lieti, metināti - krāsoti un apzeltīti',
+                    'desription_ru' => 'ворота - kalti, lieti, metināti - krāsoti un apzeltīti',
+
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                 ]

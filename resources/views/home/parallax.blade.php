@@ -8,11 +8,11 @@
            {{$rinda->raksts}}
         </p>
         <div class="text-center mt-40">
-            <a href="#" class="btn btn-xl btn-b-blue">{{ Lang::get('viskas.contact')}}</a>
+            <a href="#kontakti" class="btn btn-xl btn-b-blue">{{ Lang::get('viskas.contact')}}</a>
             <div class="visible-sm-block visible-xs-block"><br></div>
             <span class="light c-white" style="margin: 0 20px;">vai</span>
             <div class="visible-sm-block visible-xs-block"><br></div>
-            <a href="#" class="btn btn-xl btn-b-white">{{ Lang::get('viskas.skatit')}}</a>
+            <a href="#fotogalerija" class="btn btn-xl btn-b-white">{{ Lang::get('viskas.skatit')}}</a>
         </div>
     </div>
 </section>

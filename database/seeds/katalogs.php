@@ -16,7 +16,7 @@ class katalogs extends Seeder
             DB::table('katalogs')->insert([
 
                 [
-                    'galerija_id' => '100',
+                    'galerija_id' => '1',
                     'aktivs' => '1',
                     'btn_links' => '',
                     'btn_krasa' => '',
@@ -32,7 +32,7 @@ class katalogs extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'galerija_id' => '100',
+                    'galerija_id' => '1',
                     'aktivs' => '1',
                     'btn_links' => '',
                     'btn_krasa' => '',
@@ -48,9 +48,9 @@ class katalogs extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'galerija_id' => '1',
+                    'galerija_id' => '2',
                     'aktivs' => '1',
-                    'btn_links' => 'galerijas/IM000082.jpg',
+                    'btn_links' => '',
                     'btn_krasa' => 'btn-b-base-1',
                     'btn_top' => '80',
                     'btn_left' => '57',
@@ -64,9 +64,9 @@ class katalogs extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'galerija_id' => '2',
+                    'galerija_id' => '3',
                     'aktivs' => '1',
-                    'btn_links' => 'galerijas/IM000083.jpg',
+                    'btn_links' => '',
                     'btn_krasa' => 'btn-base-2',
                     'btn_top' => '91',
                     'btn_left' => '30',
@@ -80,7 +80,7 @@ class katalogs extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'galerija_id' => '100',
+                    'galerija_id' => '1',
                     'aktivs' => '1',
                     'btn_links' => '',
                     'btn_krasa' => '',
@@ -96,7 +96,7 @@ class katalogs extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'galerija_id' => '100',
+                    'galerija_id' => '1',
                     'aktivs' => '1',
                     'btn_links' => '',
                     'btn_krasa' => '',
@@ -112,9 +112,9 @@ class katalogs extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'galerija_id' => '3',
+                    'galerija_id' => '4',
                     'aktivs' => '1',
-                    'btn_links' => 'galerijas/IM000084.jpg',
+                    'btn_links' => '',
                     'btn_krasa' => 'btn-b-base-1',
                     'btn_top' => '80',
                     'btn_left' => '57',
@@ -128,7 +128,7 @@ class katalogs extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'galerija_id' => '100',
+                    'galerija_id' => '1',
                     'aktivs' => '1',
                     'btn_links' => '',
                     'btn_krasa' => '',
@@ -144,9 +144,9 @@ class katalogs extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'galerija_id' => '4',
+                    'galerija_id' => '5',
                     'aktivs' => '1',
-                    'btn_links' => 'galerijas/IM000084.jpg',
+                    'btn_links' => '',
                     'btn_krasa' => 'btn-b-base-1',
                     'btn_top' => '80',
                     'btn_left' => '57',
@@ -160,7 +160,7 @@ class katalogs extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'galerija_id' => '5',
+                    'galerija_id' => '6',
                     'aktivs' => '1',
                     'btn_links' => 'https://youtu.be/MbQ8wjkkzPw',
                     'btn_krasa' => 'btn-b-base-2',
@@ -176,9 +176,9 @@ class katalogs extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'galerija_id' => '6',
+                    'galerija_id' => '7',
                     'aktivs' => '1',
-                    'btn_links' => 'galerijas/IM000095.jpg',
+                    'btn_links' => '',
                     'btn_krasa' => 'btn-b-base-1',
                     'btn_top' => '90',
                     'btn_left' => '25',
@@ -192,9 +192,9 @@ class katalogs extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'galerija_id' => '100',
+                    'galerija_id' => '1',
                     'aktivs' => '1',
-                    'btn_links' => '#kontakti',
+                    'btn_links' => '',
                     'btn_krasa' => 'btn-b-base-1',
                     'btn_top' => '70',
                     'btn_left' => '32',

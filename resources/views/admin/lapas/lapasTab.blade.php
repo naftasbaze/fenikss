@@ -13,8 +13,9 @@
                         <tr>
                             <th>Nr. p.k</th>
                             <th>Nosaukums</th>
+                            <th></th>
                             <th>Statuss</th>
-                            <th>Tips</th>
+                            {{--<th>Tips</th>--}}
                             <th>Darbība</th>
                         </tr>
                         </thead>
@@ -25,18 +26,24 @@
                                 <td>{{$lapa->vietaLimeni}}</td>
                                 <td>{{$lapa->nosaukums_lv}}</td>
                                 <td>
+                                    <a href="{{{url('/admin/lapas')}}}/{{$lapa->id}}/labot" class="fa fa-btn fa-pencil btn btn-green">
+                                        {{--Labot--}}
+                                    </a></td>
+                                <td>
                                     @if($lapa->aktivs==1)
                                         Publisks
                                     @else
                                         Neaktīvs
                                     @endif
                                 </td>
-                                <td>{{$lapa->tips}}</td>
+                                {{--<td>{{$lapa->tips}}</td>--}}
 
                                 <td>
                                     <a href="{{{url('/admin/lapas')}}}/{{$lapa->id}}/rindas" class="btn btn-info">
-                                        Labot
+                                        Skatīt
                                     </a>
+
+
                                 </td>
 
                         @endforeach

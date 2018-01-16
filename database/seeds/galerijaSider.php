@@ -16,7 +16,7 @@ class galerijaSider extends Seeder
             DB::table('galerijas')->insert([
 
                 [
-                    'id' => '1',
+                    'id' => '2',
                     'path' => 'galerijas/IM000082.jpg',
                     'thumbnail_path' => 'galerijas/IM000082_m.jpg',
                     'nosaukums_lv' => 'Mākslas muzejs',
@@ -32,7 +32,7 @@ class galerijaSider extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'id' => '2',
+                    'id' => '3',
                     'path' => 'galerijas/IM000083.jpg',
                     'thumbnail_path' => 'galerijas/IM000083_m.jpg',
                     'nosaukums_lv' => 'Mūsu māja LV',
@@ -48,7 +48,7 @@ class galerijaSider extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'id' => '3',
+                    'id' => '4',
                     'path' => 'galerijas/IM000084.jpg',
                     'thumbnail_path' => 'galerijas/IM000084_m.jpg',
                     'nosaukums_lv' => 'Vācu vēstniecība LV',
@@ -64,7 +64,7 @@ class galerijaSider extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'id' => '4',
+                    'id' => '5',
                     'path' => 'galerijas/IM000085.jpg',
                     'thumbnail_path' => 'galerijas/IM000085_m.jpg',
                     'nosaukums_lv' => 'Skices LV',
@@ -80,7 +80,7 @@ class galerijaSider extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'id' => '5',
+                    'id' => '6',
                     'path' => 'galerijas/IM000094.jpg',
                     'thumbnail_path' => 'galerijas/IM000094_m.jpg',
                     'nosaukums_lv' => 'Vārtiņi LV',
@@ -96,7 +96,7 @@ class galerijaSider extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'id' => '6',
+                    'id' => '7',
                     'path' => 'galerijas/IM000095.jpg',
                     'thumbnail_path' => 'galerijas/IM000095_m.jpg',
                     'nosaukums_lv' => 'Lustras LV',
@@ -112,7 +112,7 @@ class galerijaSider extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'id' => '7',
+                    'id' => '8',
                     'path' => 'galerijas/IM000097.jpg',
                     'thumbnail_path' => 'galerijas/IM000097_m.jpg',
                     'nosaukums_lv' => 'Rokturi LV',
@@ -128,7 +128,7 @@ class galerijaSider extends Seeder
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
                 [
-                    'id' => '100',
+                    'id' => '1',
                     'path' => '',
                     'thumbnail_path' => '',
                     'nosaukums_lv' => 'Tukšs',

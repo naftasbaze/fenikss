@@ -7,6 +7,7 @@ use App\katalog;
 use App\kontakt;
 use App\lapa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class HomeController extends Controller
 {
@@ -18,17 +19,19 @@ class HomeController extends Controller
     public function index()
     {
 
+        //$loc=App::getLocale();
+        //dd($loc);
+
         $galerijas=galerija::has('foto')
             ->with(['foto'])
             ->get();
         //dd($galerijas);
 
         $katalogs=katalog::with(['galerja'])
+            ->with(['galerja.foto'])
         ->where('aktivs',1)->get();
 
         //dd($katalogs);
-        //$galerNos=lapa::where('tips',1)->first();
-
 
         $lapas=lapa::with(['rinda'=> function ($query){
             $query->where('ir_publisks', 1);

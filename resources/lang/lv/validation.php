@@ -68,7 +68,7 @@ return [
     'numeric'              => 'The :attribute must be a number.',
     'present'              => 'The :attribute field must be present.',
     'regex'                => 'The :attribute format is invalid.',
-    'required'             => 'The :attribute field is required.',
+    'required'             => 'Lauciņš :attribute ir obligāti jāaizpilda.',
     'required_if'          => 'The :attribute field is required when :other is :value.',
     'required_unless'      => 'The :attribute field is required unless :other is in :values.',
     'required_with'        => 'The :attribute field is required when :values is present.',
@@ -113,7 +113,7 @@ return [
     | The following language lines are used to swap attribute place-holders
     | with something more reader friendly such as E-Mail Address instead
     | of "email". This simply helps us make messages a little cleaner.
-    |
+    | Veiciet pasūtījumu līdz Lieldienām un saņemiet visiem kalšanas darbiem atlaidi 20% apmērā!
     */
 
     'attributes' => ['password' => 'Parole',
@@ -128,6 +128,15 @@ return [
         'inputName' => 'Vārds',
         'inputUzva' => 'Uzvārds',
         'inputEpasts' => 'e-pasts',
-        'inputTXT' => 'Ziņa'],
+        'inputTXT' => 'Ziņa',
+        'titleRU' => 'Название',
+        'titleEN' => 'Title',
+        'titleLV' => 'Nosaukums',
+        'vietaLimeni' => 'Kārtas Nr.',
+        'poga1' => 'Pogas saite',
+        'poga2' => 'Pogas saite',
+        'rakstsLV' => 'Apraksts',
+        'rakstsEN' => 'Apraksts',
+        'rakstsRU' => 'Apraksts',]
 
 ];

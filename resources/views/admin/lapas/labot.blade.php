@@ -6,13 +6,13 @@
 
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    <h3>{{$lapa->nosaukums_lv}} - labošana</h3>
+                    <h3>Sadaļas - {{$vienaLapa->nosaukums_lv}} - labošana</h3>
             </div>
 
                 <div class="panel-body">
 
-                    <!-- Forma virsraksta labošanai-->
-                    <form action="{{ url('/admin/akcija') }}/{{$lapa->rinda[0]->id}}"
+                    <!-- Forma lapas labošanai-->
+                    <form action="{{ url('/admin/lapas') }}/{{$vienaLapa->id}}"
                           method="POST" class="form-horizontal">
 
                         {{method_field('PATCH')}}
@@ -36,14 +36,7 @@
                                         <!-- Nosaukums LV -->
                                             <label for="titleLV" class="control-label">Nosaukums</label>
                                             <input type="text" name="titleLV" id="titleLV" class="form-control"
-                                                   value="{{ old('titleLV', $lapa->rinda[0]->nosaukums_lv ) }}">
-
-                                        {{--Raksts--}}
-                                        <label for="rakstsLV" class="control-label">Apraksts</label>
-                                        <textarea class="form-control" rows="5" cols="50"
-                                                  name="rakstsLV" id="rakstsLV"
-                                                  placeholder="Apraksts (līdz 250 zīmēm)">{{old('rakstsLV', $lapa->rinda[0]->raksts_lv)}}
-                                        </textarea>
+                                                   value="{{ old('titleLV', $vienaLapa->nosaukums_lv ) }}">
 
                                     </div>
                                 </div>
@@ -54,14 +47,7 @@
                                     <!-- Nosaukums EN -->
                                     <label for="titleEN" class="control-label">Title</label>
                                     <input type="text" name="titleEN" id="titleEN" class="form-control"
-                                           value="{{ old('titleEN', $lapa->rinda[0]->nosaukums_en ) }}">
-
-                                        {{--Raksts--}}
-                                        <label for="rakstsEN" class="control-label">Apraksts</label>
-                                        <textarea class="form-control" rows="5" cols="50"
-                                                  name="rakstsEN" id="rakstsEN"
-                                                  placeholder="Apraksts (līdz 250 zīmēm)">{{old('rakstsEN', $lapa->rinda[0]->raksts_en)}}
-                                        </textarea>
+                                           value="{{ old('titleEN', $vienaLapa->nosaukums_en ) }}">
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="ru">
@@ -70,18 +56,47 @@
                                     <!-- Nosaukums RU -->
                                     <label for="titleRU" class="control-label">Название</label>
                                     <input type="text" name="titleRU" id="titleRU" class="form-control"
-                                           value="{{ old('titleRU', $lapa->rinda[0]->nosaukums_ru ) }}">
-
-                                        {{--Raksts--}}
-                                        <label for="rakstsRU" class="control-label">Apraksts</label>
-                                        <textarea class="form-control" rows="5" cols="50"
-                                                  name="rakstsRU" id="rakstsRU"
-                                                  placeholder="Apraksts (līdz 250 zīmēm)">{{old('rakstsRU', $lapa->rinda[0]->raksts_ru)}}
-                                        </textarea>
+                                           value="{{ old('titleRU', $vienaLapa->nosaukums_ru ) }}">
                                     </div>
                                 </div>
                             </div>
 
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Vieta -->
+                            <div class="col-md-2">
+                                <label for="vietaLimeni" class="control-label">Kārtas Nr.</label>
+                                <input type="text" name="vietaLimeni" id="vietaLimeni" class="form-control"
+                                       value="{{ old('vietaLimeni', $vienaLapa->vietaLimeni) }}">
+                            </div>
+
+                            {{--Tips--}}
+                            <div class="col-md-2">
+                            <label>Sadaļas tips</label>
+                            <select class="form-control" name="tips">
+                                <option value="0" @if($vienaLapa->tips == 0) selected="selected" @endif >Raksts</option>
+                                <option value="1"  @if($vienaLapa->tips == 1) selected="selected" @endif >Galerija</option>
+                                <option value="2"  @if($vienaLapa->tips == 2) selected="selected" @endif >Parallax</option>
+                                <option value="3"  @if($vienaLapa->tips == 3) selected="selected" @endif > Rekvizīti</option>
+                                <option value="4"  @if($vienaLapa->tips == 4) selected="selected" @endif > Video</option>
+                                <option value="5"  @if($vienaLapa->tips == 5) selected="selected" @endif > Akcija</option>
+                                <option value="6"  @if($vienaLapa->tips == 6) selected="selected" @endif > BUJ</option>
+                                <option value="7"  @if($vienaLapa->tips == 7) selected="selected" @endif > Katalogs</option>
+                            </select>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Publicēt  -->
+                            <div class="col-sm-3">
+                                <div class="checkbox">
+                                    <input class="form-control" type="checkbox" name="aktivs" id="aktivs"
+                                    @if ( old('publicet',$vienaLapa->aktivs)) checked="checked" @endif>
+                                    <label>Publisks</label>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Add Buttons -->

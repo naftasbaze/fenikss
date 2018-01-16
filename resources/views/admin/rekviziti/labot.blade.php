@@ -6,13 +6,13 @@
 
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    <h3>Galerijas - {{$galerija->nosaukums_lv}} - labošana</h3>
+                    <h3>Uzņēmuma rekvizīti</h3>
             </div>
 
                 <div class="panel-body">
 
-                    <!-- Forma virsraksta labošanai-->
-                    <form action="{{ url('/admin/galerija') }}/{{$galerija->id}}"
+                    <!-- Forma rekvizītu labošanai-->
+                    <form action="{{ url('/admin/uznemums') }}/{{$rekvizi->id}}"
                           method="POST" class="form-horizontal">
 
                         {{method_field('PATCH')}}
@@ -36,8 +36,12 @@
                                         <!-- Nosaukums LV -->
                                             <label for="nosaukums" class="control-label">Nosaukums</label>
                                             <input type="text" name="nosaukums" id="nosaukums" class="form-control"
-                                                   value="{{ old('nosaukums', $galerija->nosaukums_lv ) }}">
+                                                   value="{{ old('nosaukums', $rekvizi->nosaukums_lv ) }}">
 
+                                        <!-- Nosaukums LV -->
+                                        <label for="nosaukums" class="control-label">Nosaukums</label>
+                                        <input type="text" name="nosaukums" id="nosaukums" class="form-control"
+                                               value="{{ old('nosaukums', $rekvizi->nosaukums_lv ) }}">
                                     </div>
                                 </div>
 
@@ -47,20 +51,45 @@
                                     <!-- Nosaukums EN -->
                                     <label for="title" class="control-label">Title</label>
                                     <input type="text" name="title" id="title" class="form-control"
-                                           value="{{ old('title', $galerija->nosaukums_en ) }}">
+                                           value="{{ old('title', $rekvizi->nosaukums_en ) }}">
                                     </div>
                                 </div>
+
                                 <div role="tabpanel" class="tab-pane" id="ru">
                                     <div class="tab-body">
 
                                     <!-- Nosaukums RU -->
                                     <label for="titleRU" class="control-label">Название</label>
                                     <input type="text" name="titleRU" id="titleRU" class="form-control"
-                                           value="{{ old('titleRU', $galerija->nosaukums_ru ) }}">
+                                           value="{{ old('titleRU', $rekvizi->nosaukums_ru ) }}">
                                     </div>
                                 </div>
                             </div>
 
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Vieta -->
+                            <div class="col-md-2">
+                                <label for="vieta" class="control-label">Vieta līmenī </label>
+                                <input type="text" name="vieta" id="vieta" class="form-control"
+                                       value="{{ old('vieta', $rekvizi->vietaLimeni) }}">
+                            </div>
+                            <!-- Tel 1 LV -->
+                            <label for="tel1" class="control-label">Tālrunis 1</label>
+                            <input type="text" name="tel1" id="tel1" class="form-control"
+                                   value="{{ old('tel1', $rekvizi->tel1 ) }}">
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Publicēt  -->
+                            <div class="col-sm-3">
+                                <div class="checkbox">
+                                    <input class="form-control" type="checkbox" name="publicet" id="publicet"
+                                    @if ( old('publicet',$rekvizi->aktivs)) checked="checked" @endif>
+                                    <label>Publisks</label>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Add Buttons -->
@@ -73,7 +102,7 @@
                             </div>
 
                             <div class="col-sm-offset-1 col-sm-3">
-                                <a href="{{url('/admin/lapas')}}" class="btn btn-default"><i
+                                <a href="{{{url('/admin/lapas')}}}" class="btn btn-default"><i
                                             class="fa fa-btn fa-undo"> Atpakaļ </i></a>
                             </div>
 

@@ -24,6 +24,7 @@ class CreateKontaktsTable extends Migration
             $table->string('vienotaisNr');
             $table->string('kontaNr');
             $table->string('www');
+            $table->string('keywords');
 
             foreach (array_keys(LaravelLocalization::getSupportedLocales()) as $lang) {
                 //add here all you translatable attributes
@@ -34,6 +35,8 @@ class CreateKontaktsTable extends Migration
                 $table->string('banknos_'.$lang)->nullable()->default(null);
                 $table->string('dlaiks_'.$lang)->nullable()->default(null);
                 $table->string('dlaiknos_'.$lang)->nullable()->default(null);
+                $table->string('saits_'.$lang)->nullable()->default(null);
+                $table->string('desription_'.$lang)->nullable()->default(null);
 
             }
             $table->string('languages',30)->default(json_encode(LaravelLocalization::getSupportedLanguagesKeys()));

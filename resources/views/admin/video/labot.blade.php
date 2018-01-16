@@ -6,13 +6,13 @@
 
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    <h3>{{$lapa->nosaukums_lv}} labošana</h3>
+                    <h3>Sadaļas - {{$lapa->nosaukums}} - satura labošana</h3>
             </div>
 
                 <div class="panel-body">
 
                     <!-- Forma virsraksta labošanai-->
-                    <form action="{{ url('/admin/rinda') }}/{{$lapa->id}}"
+                    <form action="{{ url('/admin/video') }}/{{$lapa->rinda[0]->id}}"
                           method="POST" class="form-horizontal">
 
                         {{method_field('PATCH')}}
@@ -34,10 +34,15 @@
 
                                     <div class="tab-body">
                                         <!-- Nosaukums LV -->
-                                            <label for="nosaukums" class="control-label">Nosaukums</label>
-                                            <input type="text" name="nosaukums" id="nosaukums" class="form-control"
-                                                   value="{{ old('nosaukums', $lapa->rinda[0]->nosaukums_lv ) }}">
+                                        <label for="titleLV" class="control-label">Nosaukums</label>
+                                        <input type="text" name="titleLV" id="titleLV" class="form-control"
+                                               value="{{ old('titleLV', $lapa->rinda[0]->nosaukums_lv ) }}">
 
+
+                                        {{--Raksts--}}
+                                        <label for="rakstsLV" class="control-label">Apakšvirrsraksts</label>
+                                        <input type="text" name="rakstsLV" id="rakstsLV" class="form-control"
+                                               value="{{ old('rakstsLV', $lapa->rinda[0]->raksts_lv ) }}">
                                     </div>
                                 </div>
 
@@ -45,9 +50,14 @@
 
                                     <div class="tab-body">
                                     <!-- Nosaukums EN -->
-                                    <label for="title" class="control-label">Title</label>
-                                    <input type="text" name="title" id="title" class="form-control"
-                                           value="{{ old('title', $lapa->nosaukums_en ) }}">
+                                    <label for="titleEN" class="control-label">Title</label>
+                                    <input type="text" name="titleEN" id="titleEN" class="form-control"
+                                           value="{{ old('titleEN', $lapa->rinda[0]->nosaukums_en ) }}">
+
+                                        {{--Raksts EN--}}
+                                        <label for="rakstsEN" class="control-label">Apakšvirrsraksts</label>
+                                        <input type="text" name="rakstsEN" id="rakstsEN" class="form-control"
+                                               value="{{ old('rakstsEN', $lapa->rinda[0]->raksts_en ) }}">
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="ru">
@@ -56,30 +66,30 @@
                                     <!-- Nosaukums RU -->
                                     <label for="titleRU" class="control-label">Название</label>
                                     <input type="text" name="titleRU" id="titleRU" class="form-control"
-                                           value="{{ old('titleRU', $lapa->nosaukums_ru ) }}">
+                                           value="{{ old('titleRU', $lapa->rinda[0]->nosaukums_ru ) }}">
+
+                                        {{--Raksts RU--}}
+                                        <label for="rakstsRU" class="control-label">Apakšvirrsraksts</label>
+                                        <input type="text" name="rakstsRU" id="rakstsRU" class="form-control"
+                                               value="{{ old('rakstsRU', $lapa->rinda[0]->raksts_ru ) }}">
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-
                         <div class="form-group">
-                            <!-- Vieta -->
-                            <div class="col-md-2">
-                                <label for="vieta" class="control-label">Vieta līmenī </label>
-                                <input type="text" name="vieta" id="vieta" class="form-control"
-                                       value="{{ old('vieta', $lapa->vietaLimeni) }}">
+                            <div class="col-md-4 col-sm-4">
+                                {{--Poga 1--}}
+                                <label for="poga1" class="control-label">Poga 1 saite</label>
+                                <input type="text" name="poga1" id="poga1" class="form-control"
+                                       value="{{ old('poga1', $lapa->rinda[0]->fotoLinks ) }}">
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <!-- Publicēt  -->
-                            <div class="col-sm-3">
-                                <div class="checkbox">
-                                    <input class="form-control" type="checkbox" name="publicet" id="publicet"
-                                    @if ( old('publicet',$lapa->aktivs)) checked="checked" @endif>
-                                    <label>Publisks</label>
-                                </div>
+                            <div class="col-md-4 col-sm-4">
+                                {{--Poga 2--}}
+                                <label for="poga2" class="control-label">Poga 2 saite</label>
+                                <input type="text" name="poga2" id="poga2" class="form-control"
+                                       value="{{ old('poga2', $lapa->rinda[0]->fotoThumb ) }}">
                             </div>
                         </div>
 
@@ -98,8 +108,6 @@
                             </div>
 
                         </div>
-
-
 
                     </form>
 

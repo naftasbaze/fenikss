@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content=" @yield('lapasapraksts', ' Fenikss un KO mājas lapa')" />
-    <meta name="keywords" content="@yield('lapaskeywordi', 'Stopiņu novads, Sprīdīši')"/>
+    <meta name="description" content=" @yield('lapasapraksts', 'Fenikss un KO mājas lapa')" />
+    <meta name="keywords" content="@yield('lapaskeywordi', 'žogi, Stopiņu novads, Sprīdīši')"/>
     <meta name="robots" content="index, follow">
 
     <!-- CSRF Token -->
@@ -15,7 +15,8 @@
     <!-- FAVICON -->
     <link href="{{ asset('images/favicon.svg') }}" rel="icon" type="image/png">
 
-    <title>{{ config('app.name', 'Fenikss un KO') }}</title>
+    {{--<title>{{ config('app.name', 'Fenikss un KO') }}</title>--}}
+    <title>@yield('saits', 'Fenikss un KO')</title>
 
     <!-- Styles -->
     @include('partials.cssmain')

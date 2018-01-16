@@ -13,7 +13,7 @@
         @if($lapa->tips==0) {{--teksts--}}
         @include('home.rindina')
         @elseif($lapa->tips==1) {{--galerija--}}
-        @include('home.galerija3')
+        @include('home.galerija11')
         @elseif($lapa->tips==2) {{--paralaks--}}
         @include('home.parallax')
         @elseif($lapa->tips==3) {{--kontaktu forma--}}
@@ -153,3 +153,9 @@
 
 @endsection
 
+
+@section('lapasapraksts'){{$adrese->desription}}@endsection
+
+@section('lapaskeywordi'){{$adrese->keywords}}@endsection
+
+@section('saits'){{$adrese->saits}}@endsection

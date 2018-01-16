@@ -6,7 +6,7 @@
 
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    <h3>{{$rinda->nosaukums_lv}} labošana</h3>
+                    <h3>Jautājuma -  {{str_limit( $rinda->nosaukums_lv, 50, '...')}} - labošana</h3>
             </div>
 
                 <div class="panel-body">
@@ -34,9 +34,17 @@
 
                                     <div class="tab-body">
                                         <!-- Nosaukums LV -->
-                                            <label for="nosaukums" class="control-label">Nosaukums</label>
-                                            <input type="text" name="nosaukums" id="nosaukums" class="form-control"
-                                                   value="{{ old('nosaukums', $rinda->nosaukums_lv ) }}">
+                                        <label for="titleLV" class="control-label">Virsraksts</label>
+                                        <input type="text" name="titleLV" id="titleLV" class="form-control"
+                                               value="{{ old('titleLV', $rinda->nosaukums_lv ) }}">
+
+
+                                        {{--Raksts--}}
+                                        <label for="rakstsLV" class="control-label">Raksts</label>
+                                        <textarea class="form-control" rows="10" cols="50"
+                                                  name="rakstsLV" id="rakstsLV"
+                                                  placeholder="Apraksts (līdz 250 zīmēm)">{{old('rakstsLV',$rinda->raksts_lv)}}
+                                        </textarea>
 
                                     </div>
                                 </div>
@@ -44,19 +52,35 @@
                                 <div role="tabpanel" class="tab-pane" id="en">
 
                                     <div class="tab-body">
-                                    <!-- Nosaukums EN -->
-                                    <label for="title" class="control-label">Title</label>
-                                    <input type="text" name="title" id="title" class="form-control"
-                                           value="{{ old('title', $rinda->nosaukums_en ) }}">
+                                        <!-- Nosaukums EN -->
+                                        <label for="titleEN" class="control-label">Virsraksts</label>
+                                        <input type="text" name="titleEN" id="titleEN" class="form-control"
+                                               value="{{ old('titleEN', $rinda->nosaukums_en ) }}">
+
+
+                                        {{--Raksts--}}
+                                        <label for="rakstsEN" class="control-label">Raksts</label>
+                                        <textarea class="form-control" rows="10" cols="50"
+                                                  name="rakstsEN" id="rakstsEN"
+                                                  placeholder="Apraksts (līdz 250 zīmēm)">{{old('rakstsEN',$rinda->raksts_en)}}
+                                        </textarea>
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="ru">
                                     <div class="tab-body">
 
-                                    <!-- Nosaukums RU -->
-                                    <label for="titleRU" class="control-label">Название</label>
-                                    <input type="text" name="titleRU" id="titleRU" class="form-control"
-                                           value="{{ old('titleRU', $rinda->nosaukums_ru ) }}">
+                                        <!-- Nosaukums RU -->
+                                        <label for="titleRU" class="control-label">Virsraksts</label>
+                                        <input type="text" name="titleRU" id="titleRU" class="form-control"
+                                               value="{{ old('titleRU', $rinda->nosaukums_ru ) }}">
+
+
+                                        {{--Raksts--}}
+                                        <label for="rakstsRU" class="control-label">Raksts</label>
+                                        <textarea class="form-control" rows="10" cols="50"
+                                                  name="rakstsRU" id="rakstsRU"
+                                                  placeholder="Apraksts (līdz 250 zīmēm)">{{old('rakstsRU',$rinda->raksts_ru)}}
+                                        </textarea>
                                     </div>
                                 </div>
                             </div>
@@ -66,9 +90,9 @@
                         <div class="form-group">
                             <!-- Vieta -->
                             <div class="col-md-2">
-                                <label for="vieta" class="control-label">Vieta līmenī </label>
-                                <input type="text" name="vieta" id="vieta" class="form-control"
-                                       value="{{ old('vieta', $rinda->vietaLimeni) }}">
+                                <label for="vietaLimeni" class="control-label">Kārtas Nr. </label>
+                                <input type="text" name="vietaLimeni" id="vietaLimeni" class="form-control"
+                                       value="{{ old('vietaLimeni', $rinda->vietaLimeni) }}">
                             </div>
                         </div>
 
@@ -76,8 +100,8 @@
                             <!-- Publicēt  -->
                             <div class="col-sm-3">
                                 <div class="checkbox">
-                                    <input class="form-control" type="checkbox" name="publicet" id="publicet"
-                                    @if ( old('publicet',$rinda->aktivs)) checked="checked" @endif>
+                                    <input class="form-control" type="checkbox" name="ir_publisks" id="ir_publisks"
+                                    @if ( old('ir_publisks',$rinda->ir_publisks)) checked="checked" @endif>
                                     <label>Publisks</label>
                                 </div>
                             </div>
