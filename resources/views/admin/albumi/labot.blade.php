@@ -6,17 +6,17 @@
         <div class="col-md-12 col-sm-12 ">{{--col-md-offset-1--}}
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    <h3>Galerijas - {{$galerija->nosaukums}} - labošana</h3>
+                    <h3>Galerijas - {{$galerija->nosaukums_lv}} - labošana</h3>
                 </div>
 
                 <div class="panel-body">
 
 
 
-                        @foreach( $galerija->foto->chunk(4) as $set)
+                        @foreach( $galerija->foto->chunk(3) as $set)
                             <div class="row">
                                 @foreach($set as $photo)
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
 
                                         <div class="block block-image v1">
 

@@ -17,7 +17,7 @@ class rindasSider extends Seeder
 
                 [
                     'slug' => str_slug('SIA "Fenikss-KO" '),
-                    'fotoLinks' => 'images/bildes/IM000098.jpg',
+                    'fotoLinks' => '',
                     'fotoThumb' => '',
                     'vietaLimeni' => 1,
                     'lapa_id' => 1,
@@ -51,7 +51,7 @@ Our works can be seen in many cities and villages in Latvia as well as abroad in
                 ],
                 [
                     'slug' => str_slug('Sadarbojamies ar daudzām" '),
-                    'fotoLinks' => 'images/bildes/IM000099.jpg',
+                    'fotoLinks' => '',
                     'fotoThumb' => '',
                     'vietaLimeni' => 2,
                     'lapa_id' => 1,
@@ -83,7 +83,7 @@ Franču vēstniecība Rīgā,  viesnīca “Ļatvija”, “Bergs”, uzņēmums
                 ],
                 [
                     'slug' => str_slug('musu pakalpojumi'),
-                    'fotoLinks' => 'images/bildes/IM000078.jpg',
+                    'fotoLinks' => '',
                     'fotoThumb' => '',
                     'vietaLimeni' => 1,
                     'lapa_id' => 2,
@@ -149,9 +149,9 @@ Piedāvājam foto un skiču albumus,  reklāmas video filmu.',
                     'vietaLimeni' => 1,
                     'lapa_id' => 3,
                     'nosaukums_lv' => 'Mūsu darbi',
-                    'nosaukums_en' => 'Masterpieces',
-                    'nosaukums_ru' => 'Dostežeņija',
-                    'raksts_lv' => '',
+                    'nosaukums_en' => 'Our results',
+                    'nosaukums_ru' => 'Наши результаты',
+                    'raksts_lv' => 'No skices līdz gatavam produktam ... Neliels ieskats mūsu realizētajos projektos. Gadu gaitā mums ir uzkrājušās simtiem skiču un ideju tās visas varat apskatīt mūsu birojā!',
                     'raksts_en' => '',
                     'raksts_ru' => '',
 
@@ -178,7 +178,7 @@ Piedāvājam foto un skiču albumus,  reklāmas video filmu.',
                 ],
                 [
                     'slug' => str_slug('parallax '),
-                    'fotoLinks' => 'images/bildes/parallax.jpg',
+                    'fotoLinks' => '',
                     'fotoThumb' => '',
                     'vietaLimeni' => 1,
                     'lapa_id' => 7,

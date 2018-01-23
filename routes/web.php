@@ -48,7 +48,7 @@ Route::get('/welc', function () {
 Route::group(['middleware'=>['admin']], function(){
 
 
-    App::setLocale('lv');
+    /*App::setLocale('lv');*/
 
     Route::get('/admin', 'AdminController@index');
 
@@ -69,6 +69,7 @@ Route::group(['middleware'=>['admin']], function(){
     Route::get('/admin/lapas/{id}/rindas', 'AdminLapaController@rindas');       //Labot/apskatīt lapas rindas
     Route::get('/admin/rinda/{id}/labot', 'AdminLapaController@editRinda');       //Labot/apskatīt  vienu rindu
     Route::patch('/admin/rinda/{id}', 'AdminLapaController@updateRinda');         //Saglabā izmaiņas
+    Route::post('/admin/rinda', 'AdminLapaController@store');                  //Saglabā jaunu rindu
 
     /*Kontakti*/
     Route::get('/admin/kontakti/{id}/labot', 'AdminLapaController@editKontakti');       //Labot/
@@ -81,6 +82,7 @@ Route::group(['middleware'=>['admin']], function(){
     /*Katalogs nosaukums*/
     Route::get('/admin/katalogs/{id}/labot', 'AdminLapaController@editKatalogs');       //Labot/
     Route::patch('/admin/katalogs/{id}', 'AdminLapaController@updateKatalogs');         //Saglabā izmaiņas
+    Route::post('/admin/katalogs', 'AdminLapaController@storeKatalogs');                  //Saglabā jaunu rindu
 
     /*Rekvizīti*/
     /*Route::get('/admin/uznemums', 'AdminLapaController@rekviziti');*/
@@ -91,22 +93,33 @@ Route::group(['middleware'=>['admin']], function(){
     Route::get('/admin/galerija/{id}/labot', 'AdminLapaController@editGalerija');       //Labot/
     Route::patch('/admin/galerija/{id}', 'AdminLapaController@updateGalerija');         //Saglabā izmaiņas
 
+    /*Galerija rindas apraksts*/
+    Route::patch('/admin/fotorinda/{id}', 'AdminLapaController@updateFotoRinda');         //Saglabā izmaiņas
+    Route::post('/admin/fotorinda', 'AdminLapaController@storeFotoRinda');                  //Saglabā jaunu galeriju
+
     /*Galerija saturs - bildes*/
     Route::get('/admin/albums/{id}/labot', 'AdminGaleraController@editAlbums');     //Viena albuma labošana
-    Route::delete('/admin/foto/{id}', 'AdminGaleraController@destroy');               //Viena foto dzēšana
-    Route::post('/admin/foto/{foto}/add', 'GalerijaController@addPhoto');            //Augšuplādē vienu foto
+    Route::delete('/admin/foto/{id}', 'AdminGaleraController@destroy1foto');               //Viena foto dzēšana
+    Route::post('/admin/foto/{galerija}/add', 'AdminGaleraController@addPhoto');            //Augšuplādē vienu foto
 
     /*Video*/
     Route::patch('/admin/video/{id}', 'AdminLapaController@updateVideo');              //Video labošana
+
+    /*Parallax*/
+    Route::patch('/admin/parallax/{id}', 'AdminLapaController@updateParallax');              //Paralaxx labošana
 
     /*Akcija*/
     Route::patch('/admin/akcija/{id}', 'AdminLapaController@updateAkcija');              //Video labošana
 
     /* Rindas foto*/
-    Route::patch('/admin/rindafoto/{rinda}/foto', 'AdminLapaController@rindaFoto');     //Pielikt foto pie rindas
-    Route::delete('/admin/rindafoto/{rinda}', 'AdminLapaController@delRindaFoto');      //Dzest foto pie rindas
+    Route::patch('/admin/rindafoto/{rinda}/foto', 'AdminGaleraController@rindaFoto');     //Pielikt foto pie rindas
+    Route::delete('/admin/rindafoto/{rinda}', 'AdminGaleraController@delRindaFoto');      //Dzest foto pie rindas
 
     /* Kataloga foto*/
-    Route::patch('/admin/katafoto/{katalog}/foto', 'AdminLapaController@kataFoto');     //Pielikt foto pie rindas
-    Route::delete('/admin/katafoto/{katalog}', 'AdminLapaController@delKataFoto');      //Dzest foto pie rindas
+    Route::patch('/admin/katafoto/{katalog}/foto', 'AdminGaleraController@kataFoto');     //Pielikt foto pie rindas
+    Route::delete('/admin/katafoto/{katalog}', 'AdminGaleraController@delKataFoto');      //Dzest foto pie rindas
+
+    /* Parallax foto*/
+    Route::patch('/admin/parafoto/{rinda}/foto', 'AdminGaleraController@paraFoto');     //Pielikt foto pie rindas
+
 });

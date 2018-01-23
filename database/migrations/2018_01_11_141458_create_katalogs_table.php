@@ -17,6 +17,7 @@ class CreateKatalogsTable extends Migration
             $table->increments('id');
             $table->integer('galerija_id')->nullable()->unsigned();
             $table->integer('aktivs');
+            $table->tinyInteger('vietaLimeni')->nullable()->index();
             $table->string('btn_links');
             $table->string('btn_krasa');
             $table->string('btn_top');

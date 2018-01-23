@@ -12,10 +12,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    @include('partials.analityc')
+
     <!-- FAVICON -->
     <link href="{{ asset('images/favicon.svg') }}" rel="icon" type="image/png">
 
-    {{--<title>{{ config('app.name', 'Fenikss un KO') }}</title>--}}
     <title>@yield('saits', 'Fenikss un KO')</title>
 
     <!-- Styles -->
@@ -29,11 +30,6 @@
 
     <!-- 2. Sākas st-container -->
     <div id="st-container" class="st-container">
-
-        <!-- 3. Sākas vertikālā navigācija -->
-        {{-- <nav class="st-menu st-effect-1" id="menu-1">
-             @include('partials.navigacija')
-        </nav>     <!-- 3. Beidzas vertikālā navigācija -->--}}
 
         <!-- 3. Sākas st-pusher -->
         <div class="st-pusher">

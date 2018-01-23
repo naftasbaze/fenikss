@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(rindasSider::class);
         $this->call(kategorsSider::class);
         $this->call(galerijaSider::class);
-        $this->call(fotoSider::class);
+        /*$this->call(fotoSider::class);*/
         $this->call(roleSider::class);
         $this->call(kontaktSider::class);
         $this->call(katalogs::class);

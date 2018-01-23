@@ -29,7 +29,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <p>
-                                            {{$rinda->raksts}}
+                                            {!!$rinda->raksts!!}
                                         </p>
                                     </div>
                                 </div>

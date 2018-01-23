@@ -7,9 +7,195 @@
             <div class="panel panel-success">
                 <div class="panel-heading">
                     <h3>Kataloga lpp Nr. {{$katalogs->id}} - labošana</h3>
-            </div>
+                </div>
 
                 <div class="panel-body">
+
+
+                    <div class="tabs-style-1" role="tabpanel">
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#lv" aria-controls="lv" role="tab" data-toggle="tab">Latviski</a></li>
+                            <li role="presentation"><a href="#en" aria-controls="lv" role="tab" data-toggle="tab">Angliski</a></li>
+                            <li role="presentation"><a href="#ru" aria-controls="ru" role="tab" data-toggle="tab">Krieviski</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="lv">
+
+                                <div class="tab-body">
+                                    {{--Bilde LV--}}
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-md-offset-3">
+
+                                                <label for="attels" class="control-label">Attēls</label>
+                                                @if($katalogs->lpp_lv)
+
+                                                    <div class="block block-image v1">
+
+                                                        <div class="block-image">
+                                                            <div class="view view-first">
+                                                                <img src="{{ asset($katalogs->lpp_lv )}}">
+                                                                <div class="mask">
+                                                                    <h2>Attēls tiks neatgriezeniski izdzēsts!</h2>
+                                                                    <p>&nbsp;</p>
+
+                                                                    <form method="POST" action="{{ url('admin/katafoto/' . $katalogs->id)}}" id="lv" name="lv">
+
+                                                                        {{ csrf_field() }}
+                                                                        {{method_field('DELETE')}}
+
+                                                                        <button type="submit" class="btn btn-6 btn-6c btn-base-5" id="BTNlv" name="BTNlv" value="1">
+                                                                            <i class="fa fa-btn fa-trash"></i>  Dzēst
+                                                                        </button>
+
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    @else
+
+                                                            <!-- Form uzlādēt teksts bildi-->
+                                                    <form action="{{  url('admin/katafoto') }}/{{$katalogs->id}}/foto"
+                                                          class="dropzone"
+                                                          id="kataFotoLV"
+                                                          method="POST">
+
+                                                        {{ csrf_field() }}
+                                                        {{method_field('PATCH')}}
+                                                    </form>
+
+                                                @endif
+
+                                            </div>
+                                        </div>
+                                    </div> {{--Bilde--}}
+
+
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane" id="en">
+
+                                <div class="tab-body">
+                                    {{--Bilde LV--}}
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-md-offset-3">
+
+                                                <label for="attels" class="control-label">Attēls</label>
+                                                @if($katalogs->lpp_en)
+
+                                                    <div class="block block-image v1">
+
+                                                        <div class="block-image">
+                                                            <div class="view view-first">
+                                                                <img src="{{ asset($katalogs->lpp_en )}}">
+                                                                <div class="mask">
+                                                                    <h2>Attēls tiks neatgriezeniski izdzēsts!</h2>
+                                                                    <p>&nbsp;</p>
+
+                                                                    <form method="POST" action="{{ url('admin/katafoto/' . $katalogs->id)}}" id="en" name="en">
+
+                                                                        {{ csrf_field() }}
+                                                                        {{method_field('DELETE')}}
+
+                                                                        <button type="submit" class="btn btn-6 btn-6c btn-base-5" id="BTNen" name="BTNen" value="1">
+                                                                            <i class="fa fa-btn fa-trash"></i>  Dzēst
+                                                                        </button>
+
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    @else
+
+                                                            <!-- Form uzlādēt teksts bildi-->
+                                                    <form action="{{  url('admin/katafoto') }}/{{$katalogs->id}}/foto"
+                                                          class="dropzone"
+                                                          id="kataFotoEN"
+                                                          method="POST">
+
+                                                        {{ csrf_field() }}
+                                                        {{method_field('PATCH')}}
+                                                    </form>
+
+                                                @endif
+
+                                            </div>
+                                        </div>
+                                    </div> {{--Bilde--}}
+
+
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="ru">
+                                <div class="tab-body">
+                                    {{--Bilde LV--}}
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-md-offset-3">
+
+                                                <label for="attels" class="control-label">Attēls</label>
+                                                @if($katalogs->lpp_ru)
+
+                                                    <div class="block block-image v1">
+
+                                                        <div class="block-image">
+                                                            <div class="view view-first">
+                                                                <img src="{{ asset($katalogs->lpp_ru )}}">
+                                                                <div class="mask">
+                                                                    <h2>Attēls tiks neatgriezeniski izdzēsts!</h2>
+                                                                    <p>&nbsp;</p>
+
+                                                                    <form method="POST" action="{{ url('admin/katafoto/' . $katalogs->id)}}" id="ru" name="ru">
+
+                                                                        {{ csrf_field() }}
+                                                                        {{method_field('DELETE')}}
+
+                                                                        <button type="submit" class="btn btn-6 btn-6c btn-base-5" id="BTNru" name="BTNru" value="1">
+                                                                            <i class="fa fa-btn fa-trash"></i>  Dzēst
+                                                                        </button>
+
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    @else
+
+                                                            <!-- Form uzlādēt teksts bildi-->
+                                                    <form action="{{  url('admin/katafoto') }}/{{$katalogs->id}}/foto"
+                                                          class="dropzone"
+                                                          id="kataFotoRU"
+                                                          method="POST">
+
+                                                        {{ csrf_field() }}
+                                                        {{method_field('PATCH')}}
+                                                    </form>
+
+                                                @endif
+
+                                            </div>
+                                        </div>
+                                    </div> {{--Bilde--}}
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
 
                     <!-- Forma lapas labošanai-->
                     <form action="{{ url('/admin/katalogs') }}/{{$katalogs->id}}"
@@ -19,196 +205,12 @@
 
                         {{ csrf_field() }}
 
-                        <div class="tabs-style-1" role="tabpanel">
-
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#lv" aria-controls="lv" role="tab" data-toggle="tab">Latviski</a></li>
-                                <li role="presentation"><a href="#en" aria-controls="lv" role="tab" data-toggle="tab">Angliski</a></li>
-                                <li role="presentation"><a href="#ru" aria-controls="ru" role="tab" data-toggle="tab">Krieviski</a></li>
-                            </ul>
-
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="lv">
-
-                                    <div class="tab-body">
-                                        {{--Bilde LV--}}
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-6 col-md-offset-3">
-
-                                                    <label for="attels" class="control-label">Attēls</label>
-                                                    @if($katalogs->lpp_lv)
-
-                                                        <div class="block block-image v1">
-
-                                                            <div class="block-image">
-                                                                <div class="view view-first">
-                                                                    <img src="{{ asset($katalogs->lpp_lv )}}">
-                                                                    <div class="mask">
-                                                                        <h2>Attēls tiks neatgriezeniski izdzēsts!</h2>
-                                                                        <p>&nbsp;</p>
-
-                                                                        <form method="POST" action="{{ url('admin/katafoto/' . $katalogs->id)}}">
-
-                                                                            {{ csrf_field() }}
-                                                                            {{method_field('DELETE')}}
-
-                                                                            <button type="submit" class="btn btn-6 btn-6c btn-base-5">
-                                                                                <i class="fa fa-btn fa-trash"></i>  Dzēst
-                                                                            </button>
-
-                                                                        </form>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        @else
-
-                                                                <!-- Form uzlādēt teksts bildi-->
-                                                        <form action="{{  url('admin/katafoto') }}/{{$katalogs->id}}/foto"
-                                                              class="dropzone"
-                                                              id="kataFotoLV"
-                                                              method="POST">
-
-                                                            {{ csrf_field() }}
-                                                            {{method_field('PATCH')}}
-                                                        </form>
-
-                                                    @endif
-
-                                                </div>
-                                            </div>
-                                        </div> {{--Bilde--}}
-
-
-                                    </div>
-                                </div>
-
-                                <div role="tabpanel" class="tab-pane" id="en">
-
-                                    <div class="tab-body">
-                                        {{--Bilde LV--}}
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-6 col-md-offset-3">
-
-                                                    <label for="attels" class="control-label">Attēls</label>
-                                                    @if($katalogs->lpp_en)
-
-                                                        <div class="block block-image v1">
-
-                                                            <div class="block-image">
-                                                                <div class="view view-first">
-                                                                    <img src="{{ asset($katalogs->lpp_en )}}">
-                                                                    <div class="mask">
-                                                                        <h2>Attēls tiks neatgriezeniski izdzēsts!</h2>
-                                                                        <p>&nbsp;</p>
-
-                                                                        <form method="POST" action="{{ url('admin/katafoto/' . $katalogs->id)}}">
-
-                                                                            {{ csrf_field() }}
-                                                                            {{method_field('DELETE')}}
-
-                                                                            <button type="submit" class="btn btn-6 btn-6c btn-base-5">
-                                                                                <i class="fa fa-btn fa-trash"></i>  Dzēst
-                                                                            </button>
-
-                                                                        </form>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        @else
-
-                                                                <!-- Form uzlādēt teksts bildi-->
-                                                        <form action="{{  url('admin/katafoto') }}/{{$katalogs->id}}/foto"
-                                                              class="dropzone"
-                                                              id="kataFotoEN"
-                                                              method="POST">
-
-                                                            {{ csrf_field() }}
-                                                            {{method_field('PATCH')}}
-                                                        </form>
-
-                                                    @endif
-
-                                                </div>
-                                            </div>
-                                        </div> {{--Bilde--}}
-
-
-                                    </div>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="ru">
-                                    <div class="tab-body">
-                                        {{--Bilde LV--}}
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-6 col-md-offset-3">
-
-                                                    <label for="attels" class="control-label">Attēls</label>
-                                                    @if($katalogs->lpp_ru)
-
-                                                        <div class="block block-image v1">
-
-                                                            <div class="block-image">
-                                                                <div class="view view-first">
-                                                                    <img src="{{ asset($katalogs->lpp_ru )}}">
-                                                                    <div class="mask">
-                                                                        <h2>Attēls tiks neatgriezeniski izdzēsts!</h2>
-                                                                        <p>&nbsp;</p>
-
-                                                                        <form method="POST" action="{{ url('admin/katafoto/' . $katalogs->id)}}">
-
-                                                                            {{ csrf_field() }}
-                                                                            {{method_field('DELETE')}}
-
-                                                                            <button type="submit" class="btn btn-6 btn-6c btn-base-5">
-                                                                                <i class="fa fa-btn fa-trash"></i>  Dzēst
-                                                                            </button>
-
-                                                                        </form>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        @else
-
-                                                                <!-- Form uzlādēt teksts bildi-->
-                                                        <form action="{{  url('admin/katafoto') }}/{{$katalogs->id}}/foto"
-                                                              class="dropzone"
-                                                              id="kataFotoRU"
-                                                              method="POST">
-
-                                                            {{ csrf_field() }}
-                                                            {{method_field('PATCH')}}
-                                                        </form>
-
-                                                    @endif
-
-                                                </div>
-                                            </div>
-                                        </div> {{--Bilde--}}
-
-
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
                         <div class="form-group">
                             <!-- Vieta -->
                             <div class="col-md-4">
-                                <label for="vieta" class="control-label">Lpp Nr.</label>
-                                <input type="text" name="vieta" id="vieta" class="form-control"
-                                       value="{{ old('vieta', $katalogs->id) }}">
+                                <label for="vietaLimeni" class="control-label">Lpp Nr.</label>
+                                <input type="text" name="vietaLimeni" id="vietaLimeni" class="form-control"
+                                       value="{{ old('vietaLimeni', $katalogs->vietaLimeni) }}">
                             </div>
 
                             <!-- Saite uz galeriju -->
@@ -264,7 +266,7 @@
         </div>
     </div>
 
-                @endsection
+@endsection
 
 @section('scripts')
 
@@ -272,8 +274,8 @@
 
     <script>
         Dropzone.options.kataFotoLV = {
-            paramName: 'bilde',
-            dictDefaultMessage: 'Attēla izmēram jābūtvismaz 720x480 px',
+            paramName: 'bildeLV',
+            dictDefaultMessage: 'Attēla izmēram jābūtvismaz 960x1080 px',
             acceptedFiles: '.jpg, .png, .JPG',
             maxFiles: '1'
         }
@@ -281,8 +283,8 @@
 
     <script>
         Dropzone.options.kataFotoEN = {
-            paramName: 'bilde',
-            dictDefaultMessage: 'Attēla izmēram jābūtvismaz 720x480 px',
+            paramName: 'bildeEN',
+            dictDefaultMessage: 'Attēla izmēram jābūtvismaz 960x1080 px',
             acceptedFiles: '.jpg, .png, .JPG',
             maxFiles: '1'
         }
@@ -290,8 +292,8 @@
 
     <script>
         Dropzone.options.kataFotoRU = {
-            paramName: 'bilde',
-            dictDefaultMessage: 'Attēla izmēram jābūtvismaz 720x480 px',
+            paramName: 'bildeRU',
+            dictDefaultMessage: 'Attēla izmēram jābūtvismaz 960x1080 px',
             acceptedFiles: '.jpg, .png, .JPG',
             maxFiles: '1'
         }

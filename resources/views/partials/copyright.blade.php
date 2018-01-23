@@ -34,7 +34,7 @@
                         <a href="https://twitter.com/fenikssko.lv" class="twitter">
                             <i class="fa fa-twitter "></i>
                         </a>
-                        <a href="https://www.youtube.com/user/fenikssko.lv" class="google-plus">
+                        <a href="https://www.youtube.com/channel/UCz9zELqJEwSbWzZkVeZquOw" class="google-plus">
                             <i class="fa fa-youtube "></i>
                         </a>
                     </div>

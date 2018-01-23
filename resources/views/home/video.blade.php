@@ -11,7 +11,7 @@
             {!!$rinda->raksts!!}
         </p>
 
-        <div class="text-center" style="width: 100%; position: relative; top: 40%;">
+        <div class="hidden-xs hidden-sm text-center" style="width: 100%; position: relative; top: 40%;">
             <a href="#{{$rinda->fotoLinks}}" class="btn btn-xl btn-b-blue mr-20">
                 {{ Lang::get('viskas.contact')}}
             </a>

@@ -34,9 +34,14 @@
 
                                     <div class="tab-body">
                                         <!-- Nosaukums LV -->
-                                            <label for="nosaukums" class="control-label">Nosaukums</label>
-                                            <input type="text" name="nosaukums" id="nosaukums" class="form-control"
-                                                   value="{{ old('nosaukums', $galerija->nosaukums_lv ) }}">
+                                        <label for="nosaukums_lv" class="control-label">Nosaukums</label>
+                                        <input type="text" name="nosaukums_lv" id="nosaukums_lv" class="form-control"
+                                               value="{{ old('nosaukums_lv', $galerija->nosaukums_lv ) }}">
+                                        <!-- Apraksts LV -->
+                                        <label for="apaksnos_lv" class="control-label">Apraksts</label>
+                                        <input type="text" name="apaksnos_lv" id="apaksnos_lv" class="form-control"
+                                               value="{{ old('apaksnos_lv', $galerija->apaksnos_lv ) }}">
+
 
                                     </div>
                                 </div>
@@ -44,19 +49,30 @@
                                 <div role="tabpanel" class="tab-pane" id="en">
 
                                     <div class="tab-body">
-                                    <!-- Nosaukums EN -->
-                                    <label for="title" class="control-label">Title</label>
-                                    <input type="text" name="title" id="title" class="form-control"
-                                           value="{{ old('title', $galerija->nosaukums_en ) }}">
+                                        <!-- Nosaukums EN -->
+                                        <label for="nosaukums_en" class="control-label">Title</label>
+                                        <input type="text" name="nosaukums_en" id="nosaukums_en" class="form-control"
+                                               value="{{ old('nosaukums_en', $galerija->nosaukums_en ) }}">
+
+                                        <!-- Apraksts EN -->
+                                        <label for="apaksnos_en" class="control-label">Apraksts</label>
+                                        <input type="text" name="apaksnos_en" id="apaksnos_en" class="form-control"
+                                               value="{{ old('apaksnos_en', $galerija->apaksnos_en ) }}">
                                     </div>
                                 </div>
+
                                 <div role="tabpanel" class="tab-pane" id="ru">
                                     <div class="tab-body">
 
-                                    <!-- Nosaukums RU -->
-                                    <label for="titleRU" class="control-label">Название</label>
-                                    <input type="text" name="titleRU" id="titleRU" class="form-control"
-                                           value="{{ old('titleRU', $galerija->nosaukums_ru ) }}">
+                                        <!-- Nosaukums RU -->
+                                        <label for="nosaukums_ru" class="control-label">Название</label>
+                                        <input type="text" name="nosaukums_ru" id="nosaukums_ru" class="form-control"
+                                               value="{{ old('nosaukums_ru', $galerija->nosaukums_ru ) }}">
+
+                                        <!-- Apraksts LV -->
+                                        <label for="apaksnos_ru" class="control-label">Apraksts</label>
+                                        <input type="text" name="apaksnos_ru" id="apaksnos_ru" class="form-control"
+                                               value="{{ old('apaksnos_ru', $galerija->apaksnos_ru ) }}">
                                     </div>
                                 </div>
                             </div>

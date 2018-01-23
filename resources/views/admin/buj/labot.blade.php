@@ -138,4 +138,16 @@
 
     @include('partials.flash')
 
+    <script>
+        CKEDITOR.replace( 'rakstsLV' );
+    </script>
+
+    <script>
+        CKEDITOR.replace( 'rakstsEN' );
+    </script>
+
+    <script>
+        CKEDITOR.replace( 'rakstsRU' );
+    </script>
+
 @endsection

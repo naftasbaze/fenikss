@@ -12,7 +12,7 @@
                 <div class="panel-body">
 
                     <!-- Forma virsraksta labošanai-->
-                    <form action="{{ url('/admin/izvelne') }}/{{$submenu->id}}"
+                    <form action="{{ url('/admin/submenu') }}/{{$submenu->id}}"
                           method="POST" class="form-horizontal">
 
                         {{method_field('PATCH')}}
@@ -34,9 +34,9 @@
 
                                     <div class="tab-body">
                                         <!-- Nosaukums LV -->
-                                            <label for="nosaukums" class="control-label">Nosaukums</label>
-                                            <input type="text" name="nosaukums" id="nosaukums" class="form-control"
-                                                   value="{{ old('nosaukums', $submenu->nosaukums_lv ) }}">
+                                            <label for="nosaukums_lv" class="control-label">Nosaukums</label>
+                                            <input type="text" name="nosaukums_lv" id="nosaukums_lv" class="form-control"
+                                                   value="{{ old('nosaukums_lv', $submenu->nosaukums_lv ) }}">
 
                                     </div>
                                 </div>
@@ -45,18 +45,18 @@
 
                                     <div class="tab-body">
                                     <!-- Nosaukums EN -->
-                                    <label for="title" class="control-label">Title</label>
-                                    <input type="text" name="title" id="title" class="form-control"
-                                           value="{{ old('title', $submenu->nosaukums_en ) }}">
+                                    <label for="nosaukums_en" class="control-label">Title</label>
+                                    <input type="text" name="nosaukums_en" id="nosaukums_en" class="form-control"
+                                           value="{{ old('nosaukums_en', $submenu->nosaukums_en ) }}">
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="ru">
                                     <div class="tab-body">
 
                                     <!-- Nosaukums RU -->
-                                    <label for="titleRU" class="control-label">Название</label>
-                                    <input type="text" name="titleRU" id="titleRU" class="form-control"
-                                           value="{{ old('titleRU', $submenu->nosaukums_ru ) }}">
+                                    <label for="nosaukums_ru" class="control-label">Название</label>
+                                    <input type="text" name="nosaukums_ru" id="nosaukums_ru" class="form-control"
+                                           value="{{ old('nosaukums_ru', $submenu->nosaukums_ru ) }}">
                                     </div>
                                 </div>
                             </div>
@@ -66,16 +66,24 @@
                         <div class="form-group">
                             <!-- Vieta -->
                             <div class="col-md-2">
-                                <label for="vieta" class="control-label">Vieta līmenī </label>
-                                <input type="text" name="vieta" id="vieta" class="form-control"
-                                       value="{{ old('vieta', $submenu->vietaLimeni) }}">
+                                <label for="vietaLimeni" class="control-label">Vieta līmenī </label>
+                                <input type="text" name="vietaLimeni" id="vietaLimeni" class="form-control"
+                                       value="{{ old('vietaLimeni', $submenu->vietaLimeni) }}">
                             </div>
 
                             <!-- Links -->
-                            <div class="col-md-2">
-                                <label for="links" class="control-label">Saite uz... </label>
-                                <input type="text" name="links" id="links" class="form-control"
-                                       value="{{ old('links', $submenu->slug) }}">
+                            <div class="col-md-4">
+                                <label>Zem izvēlnes ...</label>
+                                <select class="form-control" name="topmenu_id">
+
+                                    @foreach($topmenu as $viena)
+                                        <option value="{{$viena->id}}"
+                                        @if($viena->id==$submenu->topmenu_id)
+                                                selected="selected"
+                                                @endif
+                                                >{{$viena->nosaukums_lv}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
 
@@ -83,8 +91,8 @@
                             <!-- Publicēt  -->
                             <div class="col-sm-3">
                                 <div class="checkbox">
-                                    <input class="form-control" type="checkbox" name="publicet" id="publicet"
-                                    @if ( old('publicet',$submenu->aktivs)) checked="checked" @endif>
+                                    <input class="form-control" type="checkbox" name="aktivs" id="aktivs"
+                                    @if ( old('aktivs',$submenu->aktivs)) checked="checked" @endif>
                                     <label>Publisks</label>
                                 </div>
                             </div>

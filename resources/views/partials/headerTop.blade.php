@@ -2,8 +2,8 @@
 <div class="top-header">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-            	<span class="aux-text hidden-xs">
+            <div class="col-md-12 col-sm-6">
+            	<span class="aux-text hidden-sm">
 
                     <ul class="meta-info-cells v4 float-wrapper">
                         <li>

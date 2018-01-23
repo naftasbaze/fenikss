@@ -48,7 +48,7 @@ License URI: http://wrapbootstrap.com
 .navbar-main .navbar-nav > li > a {
   color: #333;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
   padding: 16px 30px 16px 20px;
   margin: 15px 0;
   font-weight: 500;
@@ -1163,7 +1163,7 @@ fieldset[disabled] .navbar-main .btn-link:focus {
 .top-header .aux-text ul li a,
 .top-header .aux-text ul li a span {
   font-size: 11px !important;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: "Trocchi", sans-serif !important;
 }
 .top-header .top-header-menu {
   float: right;
@@ -1812,7 +1812,7 @@ section.slice-xl {
 }
 .sort-list-wrapper .cbp-l-caption-title {
   color: #FFF;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
   font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
@@ -1843,7 +1843,7 @@ section.slice-xl {
 .sort-list-wrapper .cbp-l-grid-work-title {
   font-size: 15px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
   color: #607D8B;
   text-align: center;
   text-transform: uppercase;
@@ -1853,7 +1853,7 @@ section.slice-xl {
   background: #ef7f1a;
 }
 .cbp-l-grid-projects-title {
-  font: 700 14px/18px "Roboto", sans-serif;
+  font: 700 14px/18px "Trocchi", sans-serif;
 }
 .cbp-l-grid-work-title:hover {
   color: #365D67;
@@ -1868,7 +1868,7 @@ section.slice-xl {
   margin-top: 15px;
   text-transform: uppercase;
   font-size: 15px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
   font-weight: 600;
   color: #282d33;
   text-align: center;
@@ -2145,6 +2145,49 @@ section.slice-xl {
   font-family: 'DroidSans';
   src: url(/fonts/DroidSans.ttf?d8c764234801aa57ad44a96b95af8bed);
   src: url(/fonts/DroidSans.ttf?d8c764234801aa57ad44a96b95af8bed) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(/fonts/Roboto-Regular.ttf?3e1af3ef546b9e6ecef9f3ba197bf7d2);
+  src: url(/fonts/Roboto-Regular.ttf?3e1af3ef546b9e6ecef9f3ba197bf7d2) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url(/fonts/OpenSans-Bold.ttf?f5331cb6372b6c0d8baf2dd7e200498c);
+  src: url(/fonts/OpenSans-Bold.ttf?f5331cb6372b6c0d8baf2dd7e200498c) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url(/fonts/Raleway-Regular.ttf?580d0778ad254335be45bf58bb449f43);
+  src: url(/fonts/Raleway-Regular.ttf?580d0778ad254335be45bf58bb449f43) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Tillana';
+  src: url(/fonts/Tillana-Regular.ttf?0e4cd03c412febbe0c55a585ebccfe90);
+  src: url(/fonts/Tillana-Regular.ttf?0e4cd03c412febbe0c55a585ebccfe90) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sue Ellen Francisco';
+  src: url('/fonts/Sue Ellen Francisco.ttf?c44788607363e7ed0ed17bb7cf6faf97');
+  src: url('/fonts/Sue Ellen Francisco.ttf?c44788607363e7ed0ed17bb7cf6faf97') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*Vairāk vai mazāk*/
+@font-face {
+  font-family: 'Trocchi';
+  src: url(/fonts/Trocchi-Regular.ttf?fcba430607b8c2869a4d2098c555e15f);
+  src: url(/fonts/Trocchi-Regular.ttf?fcba430607b8c2869a4d2098c555e15f) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -3174,7 +3217,7 @@ ul.meta-info-cells.v4 li {
   font-size: 1em;
   color: #999999;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
 }
 ul.meta-info-cells.v4 li a {
   color: #999999;
@@ -4165,81 +4208,10 @@ body,
 .st-effect-1.st-menu::after {
   display: none;
 }
-/* TIME CIRCLES */
-.timing-circles-wrapper {
-  position: relative;
-}
-.time_circles {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.time_circles > div {
-  position: absolute;
-  text-align: center;
-}
-.time_circles > div > h4 {
-  margin: 0px;
-  padding: 0px;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-}
-.time-circles-wrapper.style-1 .time_circles > div > h4 {
-  color: #ef7f1a;
-}
-.time-circles-wrapper.style-2 .time_circles > div > h4 {
-  color: #282b28;
-}
-.time-circles-wrapper.style-3 .time_circles > div > h4 {
-  color: #d3d0cb;
-}
-.time-circles-wrapper.style-4 .time_circles > div > h4 {
-  color: #587B7F;
-}
-.time-circles-wrapper.style-5 .time_circles > div > h4 {
-  color: #FFF;
-}
-.time-circles-wrapper.style-6 .time_circles > div > h4 {
-  color: #FFF;
-}
-.time-circles-wrapper.style-7 .time_circles > div > h4 {
-  color: #0f0f0f;
-}
-.time_circles > div > span {
-  display: block;
-  width: 100%;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 300%;
-  margin-top: 0.4em;
-  font-weight: bold;
-}
-.time-circles-wrapper.style-1 .time_circles > div > span {
-  color: #ef7f1a;
-}
-.time-circles-wrapper.style-2 .time_circles > div > span {
-  color: #282b28;
-}
-.time-circles-wrapper.style-3 .time_circles > div > span {
-  color: #d3d0cb;
-}
-.time-circles-wrapper.style-4 .time_circles > div > span {
-  color: #587B7F;
-}
-.time-circles-wrapper.style-5 .time_circles > div > span {
-  color: #FFF;
-}
-.time-circles-wrapper.style-6 .time_circles > div > span {
-  color: #FFF;
-}
-.time-circles-wrapper.style-7 .time_circles > div > span {
-  color: #0f0f0f;
-}
 /* DEFAULT TIPOGRAPHY STYLES */
 body {
   font-size: 15px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Trocchi", sans-serif;
 }
 h1,
 h2,
@@ -4256,7 +4228,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
   text-transform: none;
 }
 h1,
@@ -4354,7 +4326,7 @@ hr.hr-sm {
   padding: 0;
   font-size: 16px;
   text-transform: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Trocchi", sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -4426,7 +4398,7 @@ hr.hr-sm {
   font-weight: 400;
   line-height: 30px;
   margin: 0px 5px 0 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
 }
 .dropcap.style-1 {
   padding: 0 12px;
@@ -4459,45 +4431,6 @@ hr {
   margin: 40px 0;
 }
 /* MODES */
-/* BLOCK CARDS */
-[data-template-mode='cards'] .block-card-wrapper .block-card-section {
-  padding: 20px;
-  margin-bottom: 20px;
-  background: #FFF;
-  border-radius: 2px;
-}
-/* BLOCKS */
-[data-template-mode='cards'] .block-card-wrapper .block {
-  border: 0;
-}
-/* SECTIONS */
-[data-template-mode='cards'] .sct-color-1 {
-  background-color: #fcfcfc;
-}
-[data-template-mode='cards'] .sct-color-2 {
-  background-color: #fcfcfc;
-}
-[data-template-mode='cards'] .sct-color-3 {
-  background-color: #282d33;
-}
-[data-template-mode='cards'] .sct-color-4 {
-  background-color: #7f8c8d;
-}
-[data-template-mode='cards'] .sct-color-5 {
-  background-color: #ef7f1a;
-}
-/* POST ITEM */
-[data-template-mode='cards'] .post-item .post-title {
-  margin-top: 10px;
-}
-[data-template-mode='cards'] .post-prev-next {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-[data-template-mode='cards'] .comment-list {
-  padding: 0;
-}
 /* HOVER EFFECTS */
 /* GENERAL STYLING */
 .a-grid {
@@ -6146,7 +6079,7 @@ figure.effect-chico:hover p {
   margin: 0;
   padding: 0;
   font-size: 12px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Trocchi", sans-serif;
 }
 .block.article .video-title a {
   font-size: 12px;
@@ -8388,8 +8321,8 @@ hr.style-2 {
   width: 100%;
 }
 .carousel-animated .carousel-fixed-height .item {
-  min-height: 600px;
-  max-height: 650px;
+  min-height: 400px;
+  max-height: 450px;
   width: 100%;
 }
 .carousel-animated .carousel-caption {
@@ -8685,7 +8618,7 @@ hr.style-2 {
 }
 .mask.mask-4.v2 {
   background: #282b28;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .mask.mask-5 {
   background: url('/images/patterns/cream-pixels.png');
@@ -9805,7 +9738,7 @@ hr.style-2 {
 .section-title {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
@@ -10002,7 +9935,7 @@ hr.style-2 {
   font-size: 30px;
 }
 .section-title-wrapper.style-3 .section-title.center .section-subtitle {
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
   display: block;
   font-size: 15px;
   font-weight: 400;
@@ -10016,7 +9949,7 @@ hr.style-2 {
   color: #f3f3f3;
 }
 .section-title-wrapper.style-3 .section-title-text {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Trocchi", sans-serif;
 }
 /* COMMON SECTION TITLE STYLES */
 .section-title-wrapper.v1 .section-title {
@@ -10255,7 +10188,7 @@ hr.style-2 {
   color: #333;
   padding: 0;
   font-size: 18px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
 }
 .tabs-style-2 > .nav-tabs > li > a > i {
   color: #a6a6a6;
@@ -10314,7 +10247,7 @@ hr.style-2 {
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
   background-color: #f5f5f5;
   color: #e7e5e1;
   border: 1px solid #dcdcdc;
@@ -10767,7 +10700,7 @@ body {
   line-height: 44px;
   font-weight: 700;
   text-transform: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
 }
 .slider-wrapper .title-xs {
   font-size: 24px;
@@ -10985,7 +10918,7 @@ body {
 }
 .milestone-counter .milestone-count {
   font-size: 72px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
   padding: 0;
   margin: 0;
   font-weight: 700;
@@ -10993,7 +10926,7 @@ body {
   text-align: center;
 }
 .milestone-counter h4.milestone-info {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Trocchi", sans-serif;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -12081,7 +12014,7 @@ body {
   padding: 0;
   color: #333;
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trocchi", sans-serif;
   text-transform: none;
 }
 .navbar-main .dropdown-demos-menu .demo-title > a {

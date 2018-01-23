@@ -64,5 +64,11 @@ class galerija extends Model
         return $this->hasMany('App\katalog')->orderBy('id', 'asc');
     }
 
+    //Pievienot foto
+    public function pievienoFoto($foto)
+    {
+        return $this->foto()->create(['path'=>$foto->path, 'thumbnail_path'=>$foto->thumbnail_path]);
+    }
+
 
 }

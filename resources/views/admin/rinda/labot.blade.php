@@ -191,7 +191,6 @@
                                         {{ csrf_field() }}
                                         {{method_field('PATCH')}}
                                     </form>
-
                                 @endif
 
                             </div>
@@ -213,10 +212,23 @@
     <script>
         Dropzone.options.raksaBilde = {
             paramName: 'bilde',
-            dictDefaultMessage: 'Attēla izmēram jābūtvismaz 720x480 px',
+            dictDefaultMessage: 'Attēla izmēram jābūtvismaz 600x800 px',
+            dictResponseError:'Faila izmērs neatbilst!',
             acceptedFiles: '.jpg, .png, .JPG',
             maxFiles: '1'
         }
+    </script>
+
+    <script>
+        CKEDITOR.replace( 'rakstsLV' );
+    </script>
+
+    <script>
+        CKEDITOR.replace( 'rakstsEN' );
+    </script>
+
+    <script>
+        CKEDITOR.replace( 'rakstsRU' );
     </script>
 
 @endsection

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\topmenu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class AdminController extends Controller
 {
@@ -16,21 +16,4 @@ class AdminController extends Controller
         return view('admin.home');
     }
 
-
-
-
-
-
-    /**
-     * Admin foto galerijas
-     */
-    public function galerijas()
-    {
-
-        /*        $statLitotaji=$this->getLiet();
-                $statKomenti=$this->getKomt();
-                $statSkola=$this->getSchool();*/
-
-        return view('admin.home',compact([]));
-    }
 }

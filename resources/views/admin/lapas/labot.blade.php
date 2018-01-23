@@ -72,7 +72,7 @@
                             </div>
 
                             {{--Tips--}}
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                             <label>Sadaļas tips</label>
                             <select class="form-control" name="tips">
                                 <option value="0" @if($vienaLapa->tips == 0) selected="selected" @endif >Raksts</option>

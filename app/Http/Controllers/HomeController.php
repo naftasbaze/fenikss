@@ -20,7 +20,7 @@ class HomeController extends Controller
     {
 
         //$loc=App::getLocale();
-        //dd($loc);
+        //dd($loc); push(['path'=>'public/images/1001.jpg']);
 
         $galerijas=galerija::has('foto')
             ->with(['foto'])
@@ -29,8 +29,7 @@ class HomeController extends Controller
 
         $katalogs=katalog::with(['galerja'])
             ->with(['galerja.foto'])
-        ->where('aktivs',1)->get();
-
+        ->where('aktivs',1)->orderBy('vietaLimeni', 'asc')->get();
         //dd($katalogs);
 
         $lapas=lapa::with(['rinda'=> function ($query){

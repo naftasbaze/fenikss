@@ -12,7 +12,7 @@
                 <div class="panel-body">
 
                     <!-- Forma parallax teksta labošanai-->
-                    <form action="{{ url('/admin/rinda') }}/{{$lapa->id}}"
+                    <form action="{{ url('/admin/parallax') }}/{{$lapa->rinda[0]->id}}"
                           method="POST" class="form-horizontal">
 
                         {{method_field('PATCH')}}
@@ -42,8 +42,7 @@
                                         <label for="rakstsLV" class="control-label">Raksts</label>
                                         <textarea class="form-control" rows="5" cols="50"
                                                   name="rakstsLV" id="rakstsLV"
-                                                  placeholder="Apraksts (līdz 250 zīmēm)">
-                                            {{old('rakstsLV', $lapa->rinda[0]->raksts_lv)}}
+                                                  placeholder="Apraksts (līdz 250 zīmēm)">{{old('rakstsLV', $lapa->rinda[0]->raksts_lv)}}
                                         </textarea>
 
                                     </div>
@@ -61,8 +60,7 @@
                                         <label for="rakstsEN" class="control-label">Raksts</label>
                                         <textarea class="form-control" rows="5" cols="50"
                                                   name="rakstsEN" id="rakstsEN"
-                                                  placeholder="Apraksts (līdz 250 zīmēm)">
-                                            {{old('rakstsEN', $lapa->rinda[0]->raksts_en)}}
+                                                  placeholder="Apraksts (līdz 250 zīmēm)">{{old('rakstsEN', $lapa->rinda[0]->raksts_en)}}
                                         </textarea>
                                     </div>
                                 </div>
@@ -78,14 +76,14 @@
                                         <label for="rakstsRU" class="control-label">Raksts</label>
                                         <textarea class="form-control" rows="5" cols="50"
                                                   name="rakstsRU" id="rakstsRU"
-                                                  placeholder="Apraksts (līdz 250 zīmēm)">
-                                            {{old('rakstsRU', $lapa->rinda[0]->raksts_ru)}}
+                                                  placeholder="Apraksts (līdz 250 zīmēm)">{{old('rakstsRU', $lapa->rinda[0]->raksts_ru)}}
                                         </textarea>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
+
 
                         <!-- Add Buttons -->
                         <div class="form-group">
@@ -142,7 +140,7 @@
                                 @else
 
                                         <!-- Form uzlādēt teksts bildi-->
-                                <form action="{{  url('admin/rindafoto') }}/{{$lapa->rinda[0]->id}}/foto"
+                                <form action="{{  url('admin/parafoto') }}/{{$lapa->rinda[0]->id}}/foto"
                                       class="dropzone"
                                       id="raksaBilde"
                                       method="POST">
@@ -171,7 +169,7 @@
     <script>
         Dropzone.options.raksaBilde = {
             paramName: 'bilde',
-            dictDefaultMessage: 'Attēla izmēram jābūtvismaz 720x480 px',
+            dictDefaultMessage: 'Attēla izmēram jābūtvismaz 1920x1080 px',
             acceptedFiles: '.jpg, .png, .JPG',
             maxFiles: '1'
         }

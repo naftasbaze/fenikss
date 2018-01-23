@@ -25,13 +25,7 @@
                                        {{-- {{$lappuse->galerja->path}}--}}
                                         @if($lappuse->galerija_id <> 1)
 
-                                            <a href="
-                                            @if($lappuse->btn_links)
-                                            {{$lappuse->btn_links}}
-                                            @else
-                                            {{$lappuse->galerja->foto[$lappuse->galerja->foto->count()-1]->path}}
-                                            @endif
-                                            "
+                                            <a href="@if($lappuse->btn_links){{$lappuse->btn_links}}@else{{$lappuse->galerja->foto[$lappuse->galerja->foto->count()-1]->path}}@endif"
                                                class="btn btn-lg {{$lappuse->btn_krasa}}"
                                                style="top: {{str_finish($lappuse->btn_top,'%')}}; margin-left: {{str_finish($lappuse->btn_left,'%')}};"
                                                data-fancybox="galerijaID-{{$lappuse->galerja->id}}">
@@ -58,9 +52,8 @@
 @foreach ($galerijas as $galerija)
     @foreach ($galerija->foto as $grafija)
         @if(! $loop->last)
-            <a href="{{ asset($grafija->path) }}" data-fancybox="galerijaID-{{$galerija->id}}"
-               data-thumb="{{ asset($grafija->thumbnail_path) }}">
-            </a>
+            <a href="{{ asset($grafija->path) }}" data-fancybox="galerijaID-{{$galerija->id}}" data-thumb="{{ asset($grafija->thumbnail_path) }}"></a>
         @endif
     @endforeach
+    <a href="{{asset('images/1001.jpg')}}" data-fancybox="galerijaID-{{$galerija->id}}" data-thumb="{{asset('images/1001.jpg')}}"></a>
 @endforeach

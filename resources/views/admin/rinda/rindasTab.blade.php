@@ -3,7 +3,9 @@
         <!-- Advanced Tables -->
         <div class="panel panel-default">
             <div class="panel-heading">
-                Rindas
+                Izveidot jaunu rindkopu
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#jaunaRinda"><i class="fa fa-btn fa-plus"></i>  Jauns</button>
             </div>
             <div class="panel-body">
 
@@ -59,27 +61,24 @@
 
 
 {{--Modal--}}
-<div class="modal fade" id="uzvardsModal" tabindex="-1" role="dialog" >
+<div class="modal fade" id="jaunaRinda" tabindex="-1" role="dialog" >
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Ieraksti jaunā audzēkņa vārdu un uzvārdu</h4>
+                <h4 class="modal-title" id="exampleModalLabel">Ieraksti jaunās rindkopas nosaukumu (LV)</h4>
             </div>
             <div class="modal-body">
-                <form  action="{{ url('/admin/audzekni') }}" method="POST" >
+                <form  action="{{ url('/admin/rinda') }}" method="POST" >
                     {{ csrf_field() }}
 
                     <div class="form-group">
-                        <label for="vards" class="control-label">Vārds:</label>
-                        <input type="text" class="form-control" id="vards" name="vards"
-                               placeholder="Vārds">
-                    </div>
-                    <div class="form-group">
-                        <label for="uzvards" class="control-label">Uzvārds:</label>
-                        <input type="text" class="form-control" id="uzvards" name="uzvards"
-                               placeholder="Uzvārds">
+                        <label for="vards" class="control-label">Nosaukums:</label>
+                        <input type="text" class="form-control" id="nosaukums_lv" name="nosaukums_lv"
+                               placeholder="Nosaukums LV">
+
+                        <input type="text" hidden id="lapaID" name="lapaID" value="{{$lapa->id}}">
                     </div>
 
                     <button type="button" class="btn btn-default" data-dismiss="modal">Atcelt</button>

@@ -31,9 +31,6 @@
 
 @endif
 
-
-
-
 @if (count($errors) > 0)
     <!-- Form Error List -->
     <script>

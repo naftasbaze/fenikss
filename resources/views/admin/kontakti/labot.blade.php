@@ -71,7 +71,9 @@
                                                 <input type="text" name="dlaiknos_lv" id="dlaiknos_lv" class="form-control"
                                                        value="{{ old('dlaiknos_lv', $kontakti->dlaiknos_lv  ) }}">
                                             </div>
-                                            <div class="col-md-8">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12">
 
                                                 <!-- Darba laiks nos LV -->
                                                 <label for="dlaiks_lv" class="control-label">Darbalaiks virsraksts</label>
@@ -139,7 +141,9 @@
                                                 <input type="text" name="dlaiknos_en" id="dlaiknos_en" class="form-control"
                                                        value="{{ old('dlaiknos_en', $kontakti->dlaiknos_en  ) }}">
                                             </div>
-                                            <div class="col-md-8">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12">
 
                                                 <!-- Darba laiks nos EN -->
                                                 <label for="dlaiks_en" class="control-label">Darbalaiks virsraksts</label>
@@ -203,7 +207,9 @@
                                                 <input type="text" name="dlaiknos_ru" id="dlaiknos_ru" class="form-control"
                                                        value="{{ old('dlaiknos_ru', $kontakti->dlaiknos_ru  ) }}">
                                             </div>
-                                            <div class="col-md-8">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12">
 
                                                 <!-- Darba laiks nos EN -->
                                                 <label for="dlaiks_ru" class="control-label">Darbalaiks virsraksts</label>
@@ -267,14 +273,14 @@
                             </div>
 
                             <div class="col-sm-offset-1 col-sm-3">
-                                <label for="vienotaisNr" class="control-label">Vienotais reģistra Nr.</label>
+                                <label for="vienotaisNr" class="control-label">Vienotais reģ. Nr.</label>
                                 <input type="text" name="vienotaisNr" id="vienotaisNr" class="form-control"
                                        value="{{ old('vienotaisNr', $kontakti->vienotaisNr ) }}">
 
                             </div>
 
                             <div class="col-sm-offset-1 col-sm-3">
-                                <label for="pvnNr" class="control-label">PVN maksātāja kods</label>
+                                <label for="pvnNr" class="control-label">PVN kods</label>
                                 <input type="text" name="pvnNr" id="pvnNr" class="form-control"
                                        value="{{ old('pvnNr', $kontakti->pvnNr ) }}">
 
@@ -337,5 +343,17 @@
 @section('scripts')
 
     @include('partials.flash')
+
+    <script>
+        CKEDITOR.replace( 'dlaiks_lv' );
+    </script>
+
+    <script>
+        CKEDITOR.replace( 'dlaiks_en' );
+    </script>
+
+    <script>
+        CKEDITOR.replace( 'dlaiks_ru' );
+    </script>
 
 @endsection

@@ -23,8 +23,6 @@ class CreateLapasTable extends Migration
             foreach (array_keys(LaravelLocalization::getSupportedLocales()) as $lang) {
                 //add here all you translatable attributes
                 $table->string('nosaukums_'.$lang)->nullable()->default(null);
-                $table->string('keywords_'.$lang)->nullable()->default(null);
-                $table->string('desription_'.$lang)->nullable()->default(null);
                 $table->string('virsraksts_'.$lang)->nullable()->default(null);
 
             }

@@ -4,6 +4,8 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 Kataloga lappuses
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#jaunaKataLapa"><i class="fa fa-btn fa-plus"></i>  </button>
             </div>
             <div class="panel-body">
 
@@ -21,7 +23,7 @@
                         @foreach ($katalogs as $lpp)
 
                             <tr>
-                                <td>{{$lpp->id}}</td>
+                                <td>{{$lpp->vietaLimeni}}</td>
                                 <td><img src='{{asset( $lpp->lpp_lv) }}' style='height:50px; width:50px'></td>
                                 <td>
                                     @if($lpp->aktivs==1)
@@ -50,33 +52,22 @@
 <!-- /. ROW  -->
 
 
-{{--Modal--}}
-<div class="modal fade" id="uzvardsModal" tabindex="-1" role="dialog" >
+{{--Modal JAUNS--}}
+<div class="modal fade" id="jaunaKataLapa" tabindex="-2" role="dialog" >
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Ieraksti jaunā audzēkņa vārdu un uzvārdu</h4>
+                <h4 class="modal-title" id="exampleModalLabel">Vai izveidot jaunu kataloga lappusi?</h4>
             </div>
             <div class="modal-body">
-                <form  action="{{ url('/admin/audzekni') }}" method="POST" >
+                <form  action="{{ url('/admin/katalogs') }}" method="POST" >
                     {{ csrf_field() }}
-
-                    <div class="form-group">
-                        <label for="vards" class="control-label">Vārds:</label>
-                        <input type="text" class="form-control" id="vards" name="vards"
-                               placeholder="Vārds">
-                    </div>
-                    <div class="form-group">
-                        <label for="uzvards" class="control-label">Uzvārds:</label>
-                        <input type="text" class="form-control" id="uzvards" name="uzvards"
-                               placeholder="Uzvārds">
-                    </div>
 
                     <button type="button" class="btn btn-default" data-dismiss="modal">Atcelt</button>
                     <button type="submit" class="btn btn-primary">
-                        <i class="fa fa-btn fa-floppy-o"></i>  Saglabāt
+                        <i class="fa fa-btn fa-floppy-o"></i>  Izveidot
                     </button>
                 </form>
             </div>

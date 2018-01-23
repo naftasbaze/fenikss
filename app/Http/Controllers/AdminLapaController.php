@@ -78,9 +78,9 @@ class AdminLapaController extends Controller
         }elseif($lapa->tips == 7){
 
             //katalogs
-            $katalogs= katalog::get();
+            $katalogs= katalog::orderBy('vietaLimeni', 'asc')->get();
             return view('admin.katalogs.kat',compact(['lapa','katalogs']));
-
+        //dd($katalogs);
         }
 
     }
@@ -101,7 +101,9 @@ class AdminLapaController extends Controller
     /* Sglabā izmaiņas RINDA*/
     public function updateRinda(Request $request, $id)
     {
-
+        App::setLocale('lv');
+        //$locale = App::getLocale();
+       // dd($locale);
         $this->validate($request, [
            /* 'titleLV' => 'required',
             'titleEN' => 'required',
@@ -147,6 +149,8 @@ class AdminLapaController extends Controller
     /*Sglabā izmaiņas KONTAKTI*/
     public function updateKontakti(Request $request, $id)
     {
+
+        App::setLocale('lv');
 
         $this->validate($request, [
             'tel1' => 'required',
@@ -243,6 +247,8 @@ class AdminLapaController extends Controller
     public function updateBUJ(Request $request, $id)
     {
 
+        App::setLocale('lv');
+
         $this->validate($request, [
              'titleLV' => 'required',
              'titleEN' => 'required',
@@ -272,7 +278,7 @@ class AdminLapaController extends Controller
     }
 
     /**
-     * Admin labot BUJ
+     * Admin labot Galeriju
      */
     public function editGalerija($id)
     {
@@ -284,22 +290,31 @@ class AdminLapaController extends Controller
         return view('admin.galerija.labot',compact(['galerija']));
     }
 
-    /*Sglabā izmaiņas BUJ*/
+    /*Sglabā izmaiņas GALERIJĀ*/
     public function updateGalerija(Request $request, $id)
     {
 
-        /*$this->validate($request, [
-            'vards' => 'required',
-            'uzvards' => 'required'
-        ]);*/
+        App::setLocale('lv');
 
-        /*$audzeknis= audzekni::findOrFail($id);
+        $this->validate($request, [
+            'nosaukums_lv' => 'required',
+            'nosaukums_en' => 'required',
+            'nosaukums_ru' => 'required',
+            'apaksnos_lv' => 'required',
+            'apaksnos_en' => 'required',
+            'apaksnos_ru' => 'required',
+        ]);
 
-        $audzeknis->vards=$request->vards;
-        $audzeknis->uzvards=$request->uzvards;
-        $audzeknis->turpmak=$request->turpmak;
+        $galerija = galerija::findOrFail($id);
 
-        $audzeknis->update();*/
+        $galerija->nosaukums_lv=$request->nosaukums_lv;
+        $galerija->nosaukums_en=$request->nosaukums_en;
+        $galerija->nosaukums_ru=$request->nosaukums_ru;
+        $galerija->apaksnos_lv=$request->apaksnos_lv;
+        $galerija->apaksnos_en=$request->apaksnos_en;
+        $galerija->apaksnos_ru=$request->apaksnos_ru;
+
+        $galerija->update();
 
         return \Redirect::back()->withSuccess( 'Izmaiņas saglabātas!' );
 
@@ -322,7 +337,8 @@ class AdminLapaController extends Controller
     /*Sglabā izmaiņas LAPĀ*/
     public function updateLapa(Request $request, $id)
     {
-        //dd(App::getLocale());
+        App::setLocale('lv');
+
         $this->validate($request, [
             'titleLV' => 'required',
             'titleEN' => 'required',
@@ -355,7 +371,7 @@ class AdminLapaController extends Controller
             ->firstOrFail();
 
         $galerijas = galerija::select('id', 'nosaukums_lv')->get();
-//dd($galerijas);
+            //dd($galerijas);
         return view('admin.katalogs.labot',compact(['katalogs', 'galerijas']));
     }
 
@@ -368,18 +384,44 @@ class AdminLapaController extends Controller
             'uzvards' => 'required'
         ]);*/
 
-        /*$audzeknis= audzekni::findOrFail($id);
+        $katalogs = katalog::where('id',$id)
+            ->findOrFail($id);
 
-        $audzeknis->vards=$request->vards;
-        $audzeknis->uzvards=$request->uzvards;
-        $audzeknis->turpmak=$request->turpmak;
+        $katalogs->vietaLimeni=$request->vietaLimeni;
+        $katalogs->galerija_id=$request->galerija_id;
+        $katalogs->aktivs=isset($request->aktivs);
 
-        $audzeknis->update();*/
+        $katalogs->update();
 
         return \Redirect::back()->withSuccess( 'Izmaiņas saglabātas!' );
 
     }
 
+    /**
+     * Saglabā jaunu Kataloga atvērumu
+     */
+    public function storeKatalogs(Request $request)
+    {
+
+        App::setLocale('lv');
+
+        $katalogs= new katalog;
+
+        $katalogs->galerija_id=1;
+        $katalogs->aktivs=0;
+        $katalogs->btn_krasa='btn-b-base-1';
+        $katalogs->btn_top=90;
+        $katalogs->btn_left=57;
+        $katalogs->btnlabel_en='Click';
+        $katalogs->btnlabel_lv='Apskatīt';
+        $katalogs->btnlabel_ru='Посмотрите';
+        $katalogs->btn_links='';
+
+        $katalogs->save();
+
+        //dd($katalogs->id);
+        return redirect('/admin/katalogs/'.$katalogs->id .'/labot')->withSuccess( 'Kataloga lappuse veiksmīgi izveidots!' );
+    }
 
     /**
      * Admin labot Rekvizītus
@@ -418,12 +460,14 @@ class AdminLapaController extends Controller
     public function updateVideo(Request $request, $id)
     {
 
+        App::setLocale('lv');
+
         $this->validate($request, [
             'titleLV' => 'required',
             'titleEN' => 'required',
             'titleRU' => 'required',
-            'poga1' => 'required',
-            'poga2' => 'required',
+            /*'poga1' => 'required',
+            'poga2' => 'required',*/
         ]);
 
         $rinda = rinda::where('id',$id)
@@ -447,7 +491,8 @@ class AdminLapaController extends Controller
     /*Sglabā izmaiņas Akcija*/
     public function updateAkcija(Request $request, $id)
     {
-//dd($request);
+        App::setLocale('lv');
+
         $this->validate($request, [
             'titleLV' => 'required',
             'titleEN' => 'required',
@@ -471,6 +516,117 @@ class AdminLapaController extends Controller
 
         return \Redirect::back()->withSuccess( 'Izmaiņas saglabātas!' );
 
+    }
+
+    /*Sglabā izmaiņas VIDEO*/
+    public function updateParallax(Request $request, $id)
+    {
+
+        App::setLocale('lv');
+
+        $this->validate($request, [
+            'titleLV' => 'required',
+            'titleEN' => 'required',
+            'titleRU' => 'required',
+        ]);
+
+        $rinda = rinda::where('id',$id)
+            ->firstOrFail();
+
+        $rinda->nosaukums_lv=$request->titleLV;
+        $rinda->nosaukums_en=$request->titleEN;
+        $rinda->nosaukums_ru=$request->titleRU;
+        $rinda->raksts_lv=$request->rakstsLV;
+        $rinda->raksts_en=$request->rakstsEN;
+        $rinda->raksts_ru=$request->rakstsRU;
+
+        $rinda->update();
+
+        return \Redirect::back()->withSuccess( 'Izmaiņas saglabātas!' );
+
+    }
+
+    /**
+     * Saglabā jaunu virsrakstu
+     */
+    public function store(Request $request)
+    {
+
+        App::setLocale('lv');
+
+        $this->validate($request, [
+            'nosaukums_lv' => 'required|min:5',
+
+        ]);
+
+         //dd($request);
+        $rinda= new rinda;
+        $rinda->nosaukums_lv=trim($request->nosaukums_lv);
+        $rinda->slug=str_slug($request->nosaukums_lv);
+        $rinda->lapa_id=$request->lapaID;
+        $rinda->save();
+
+        //dd($rinda->id);
+        return redirect('/admin/lapas/'.$rinda->id .'/labot')->withSuccess( 'Ieraksts veiksmīgi saglabāts!' );
+    }
+
+    /* Sglabā izmaiņas RINDA*/
+    public function updateFotoRinda(Request $request, $id)
+    {
+        App::setLocale('lv');
+        //$locale = App::getLocale();
+        // dd($locale);
+        $this->validate($request, [
+            'nosaukums_lv' => 'required',
+            'nosaukums_en' => 'required',
+            'nosaukums_ru' => 'required',
+
+        ]);
+
+        $rinda = rinda::where('id',$id)
+            ->firstOrFail();
+
+        $rinda->nosaukums_lv=$request->nosaukums_lv;
+        $rinda->nosaukums_en=$request->nosaukums_en;
+        $rinda->nosaukums_ru=$request->nosaukums_ru;
+        $rinda->raksts_lv=$request->raksts_lv;
+        $rinda->raksts_en=$request->raksts_en;
+        $rinda->raksts_ru=$request->raksts_ru;
+
+        $rinda->update();
+
+        return \Redirect::back()->withSuccess( 'Izmaiņas saglabātas!' );
+
+    }
+
+    /**
+     * Saglabā jaunu Galeriju
+     */
+    public function storeFotoRinda(Request $request)
+    {
+
+        App::setLocale('lv');
+
+        $this->validate($request, [
+            'nosaukums_lv2' => 'required',
+            'nosaukums_en2' => 'required',
+            'nosaukums_ru2' => 'required',
+
+        ]);
+
+        $galerija= new galerija;
+
+        $galerija->nosaukums_lv=$request->nosaukums_lv2;
+        $galerija->nosaukums_en=$request->nosaukums_en2;
+        $galerija->nosaukums_ru=$request->nosaukums_ru2;
+        $galerija->apaksnos_lv=$request->raksts_lv2;
+        $galerija->apaksnos_en=$request->raksts_en2;
+        $galerija->apaksnos_ru=$request->raksts_ru2;
+
+        $galerija->save();
+
+        //dd($galerija->id);
+        return redirect('/admin/albums/'.$galerija->id .'/labot')->withSuccess( 'Galerija veiksmīgi saglabāta!' );
     }
 
 }
