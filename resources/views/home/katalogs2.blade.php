@@ -4,7 +4,7 @@
 @endsection
 
 
-<section class="hidden-xs slice sct-color-1 bb">
+<section class="slice sct-color-1 bb">
     <div class="container">
         @foreach ($lapa->rinda as $rinda)
         <div class="row">
@@ -15,10 +15,10 @@
                     </h3>
                 </div>
 
-                <div class="filip">
+                <div class="filip" id="filips">
                     <div class="flipbook-viewport">
-                        <div class="container">
-                            <div class="flipbook article-image">
+                        <div class="containerF">
+                            <div class="flipbook">
 
                                 @foreach ($katalogs as $lappuse)
                                     <div style="background-image:url('{{ asset($lappuse->lpp) }}')">

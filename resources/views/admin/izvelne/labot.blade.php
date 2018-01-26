@@ -65,10 +65,26 @@
 
                         <div class="form-group">
                             <!-- Vieta -->
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <label for="vietaLimeni" class="control-label">Vieta līmenī </label>
                                 <input type="text" name="vietaLimeni" id="vietaLimeni" class="form-control"
                                        value="{{ old('vietaLimeni', $topmenu->vietaLimeni) }}">
+                            </div>
+
+                            <!-- Saite uz galeriju -->
+                            <div class="col-md-4">
+                                <label>Saite uz sadaļu</label>
+                                <select class="form-control" name="slug">
+
+                                    @foreach($lapas as $viena)
+                                        <option value="{{$viena->slug}}"
+                                        @if($viena->slug==$topmenu->slug)
+                                                selected="selected"
+                                                @endif
+                                                >{{$viena->nosaukums_lv}}</option>
+                                    @endforeach
+                                </select>
+
                             </div>
                         </div>
 

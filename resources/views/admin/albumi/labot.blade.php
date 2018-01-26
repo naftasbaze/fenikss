@@ -83,7 +83,15 @@
         Dropzone.options.galerijafoto = {
             paramName: 'photo',
             dictDefaultMessage: 'Nomet failus te!',
-            acceptedFiles: '.jpg, .png, .JPG'
+            acceptedFiles: '.jpg, .png, .JPG',
+            init: function() {
+                this.on("error", function(file, response) {
+                    // do stuff here.
+                    alert(response);
+
+                });
+
+            }
         }
     </script>
 @endsection

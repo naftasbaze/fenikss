@@ -84,7 +84,7 @@ return [
     ],
     'string'               => 'The :attribute must be a string.',
     'timezone'             => 'The :attribute must be a valid zone.',
-    'unique'               => 'The :attribute has already been taken.',
+    'unique'               => 'Vērtība lauciņā :attribute jau ir izmantota citur.',
     'uploaded'             => 'The :attribute failed to upload.',
     'url'                  => 'The :attribute format is invalid.',
 
@@ -146,6 +146,7 @@ return [
         'titleRU' => 'Название',
         'apaksnos_lv' => 'Apraksts',
         'apaksnos_en' => 'Description',
-        'apaksnos_ru' => 'Oписание',]
+        'apaksnos_ru' => 'Oписание',
+        'slug' => 'saite',]
 
 ];

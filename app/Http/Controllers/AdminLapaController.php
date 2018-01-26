@@ -390,6 +390,12 @@ class AdminLapaController extends Controller
         $katalogs->vietaLimeni=$request->vietaLimeni;
         $katalogs->galerija_id=$request->galerija_id;
         $katalogs->aktivs=isset($request->aktivs);
+        $katalogs->btn_krasa=$request->btn_krasa;
+        $katalogs->btn_top=$request->btn_top;
+        $katalogs->btn_left=$request->btn_left;
+        $katalogs->btnlabel_lv=$request->btnlabel_lv;
+        $katalogs->btnlabel_en=$request->btnlabel_en;
+        $katalogs->btnlabel_ru=$request->btnlabel_ru;
 
         $katalogs->update();
 

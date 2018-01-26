@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\submenu;
 use App\topmenu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 
 class AdminMenuController extends Controller
 {
@@ -28,27 +30,33 @@ class AdminMenuController extends Controller
 
         $topmenu=topmenu::where('id',$id)->firstOrFail();
         //dd($topmenu);
-        return view('admin.izvelne.labot',compact(['topmenu']));
+        $lapas = db::table('lapas')
+            ->orderBy('vietaLimeni', 'asc')
+            ->get();
+
+        return view('admin.izvelne.labot',compact(['topmenu', 'lapas']));
     }
 
     public function updateMenu(Request $request, $id)
     {
+        App::setLocale('lv');
+
+        $topmenu = topmenu::where('id',$id)
+            ->firstOrFail();
+
         $this->validate($request, [
              'nosaukums_lv' => 'required',
              'nosaukums_en' => 'required',
              'nosaukums_ru' => 'required',
             'vietaLimeni' => 'required',
+            'slug' => 'unique:topmenus,slug,'.$topmenu->id,
         ]);
-
-        $topmenu = topmenu::where('id',$id)
-            ->firstOrFail();
-
 
         $topmenu->nosaukums_lv=$request->nosaukums_lv;
         $topmenu->nosaukums_en=$request->nosaukums_en;
         $topmenu->nosaukums_ru=$request->nosaukums_ru;
         $topmenu->vietaLimeni=$request->vietaLimeni;
-        $topmenu->slug=str_slug($request->nosaukums_lv,"-");
+        $topmenu->slug=$request->slug;
         $topmenu->aktivs=isset($request->aktivs);
 
         $topmenu->update();

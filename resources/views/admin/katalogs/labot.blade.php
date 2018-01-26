@@ -230,6 +230,50 @@
                             </div>
                         </div>
 
+
+
+                        <div class="form-group">
+                            <!-- Poga krāsa -->
+                            <div class="col-md-4">
+                                <label for="btn_krasa" class="control-label">Pogas krāsas kods</label>
+                                <input type="text" name="btn_krasa" id="btn_krasa" class="form-control"
+                                       value="{{ old('btn_krasa', $katalogs->btn_krasa) }}">
+                            </div>
+                            <!-- From top -->
+                            <div class="col-md-4">
+                                <label for="btn_top" class="control-label">No augšas, %</label>
+                                <input type="text" name="btn_top" id="btn_top" class="form-control"
+                                       value="{{ old('btn_top', $katalogs->btn_top) }}">
+                            </div>
+                            <!-- From left -->
+                            <div class="col-md-4">
+                                <label for="btn_left" class="control-label">No kreisās, %</label>
+                                <input type="text" name="btn_left" id="btn_left" class="form-control"
+                                       value="{{ old('btn_left', $katalogs->btn_left) }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Poga label LV -->
+                            <div class="col-md-4">
+                                <label for="btnlabel_lv" class="control-label">Poga LV</label>
+                                <input type="text" name="btnlabel_lv" id="btnlabel_lv" class="form-control"
+                                       value="{{ old('btnlabel_lv', $katalogs->btnlabel_lv) }}">
+                            </div>
+                            <!-- Poga label EN -->
+                            <div class="col-md-4">
+                                <label for="btnlabel_en" class="control-label">Poga EN</label>
+                                <input type="text" name="btnlabel_en" id="btnlabel_en" class="form-control"
+                                       value="{{ old('btnlabel_en', $katalogs->btnlabel_en) }}">
+                            </div>
+                            <!-- Poga label RU -->
+                            <div class="col-md-4">
+                                <label for="btnlabel_ru" class="control-label">Poga RU</label>
+                                <input type="text" name="btnlabel_ru" id="btnlabel_ru" class="form-control"
+                                       value="{{ old('btnlabel_ru', $katalogs->btnlabel_ru) }}">
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <!-- Publicēt  -->
                             <div class="col-sm-4">

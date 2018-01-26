@@ -99,10 +99,10 @@ class foto extends Model
                 $constraint->aspectRatio();
             });
         }
-        $bilde ->text($teksts, 20 , 20, function($font) {
+        $bilde ->text($teksts, 40 , 40, function($font) {
             $font->color('#EF7F1A');
             $font->file('fonts/DroidSans.ttf');
-            $font->size(12);
+            $font->size(36);
         })
             ->save($this->path);
         return $this;

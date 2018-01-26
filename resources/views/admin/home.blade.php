@@ -25,7 +25,10 @@
     {{--Apmeklējumi--}}
     <div class="row">
         <h1 >
-            Apmeklējumu statistika <small>(Google dati)</small>
+            Apmeklējumu statistika <small>
+                <a href="https://analytics.google.com/analytics/web/#embed/report-home/a112613755w167812294p168007295/">
+                    (Google dati)
+                </a> </small>
         </h1>
 
 
