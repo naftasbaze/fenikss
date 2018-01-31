@@ -77,21 +77,42 @@
                             </div>
 
                         </div>
+
                         <div class="form-group">
-                            <div class="col-md-4 col-sm-4">
-                                {{--Poga 1--}}
-                                <label for="poga1" class="control-label">Poga 1 saite</label>
-                                <input type="text" name="poga1" id="poga1" class="form-control"
-                                       value="{{ old('poga1', $lapa->rinda[0]->fotoLinks ) }}">
+
+                            <!-- Pogas 1 Saite -->
+                            <div class="col-sm-offset-1 col-md-4">
+                                <label>Poga 1 uz sadaļu</label>
+                                <select class="form-control" name="poga1">
+
+                                    @foreach($pogas as $viena)
+                                        <option value="{{$viena->id}}"
+                                        @if($viena->id==$lapa->rinda[0]->poga1_id)
+                                                selected="selected"
+                                                @endif
+                                                >{{$viena->nosaukums_lv}}</option>
+                                    @endforeach
+                                </select>
+
                             </div>
 
-                            <div class="col-md-4 col-sm-4">
-                                {{--Poga 2--}}
-                                <label for="poga2" class="control-label">Poga 2 saite</label>
-                                <input type="text" name="poga2" id="poga2" class="form-control"
-                                       value="{{ old('poga2', $lapa->rinda[0]->fotoThumb ) }}">
+                            <!-- Pogas 2 Saite -->
+                            <div class="col-sm-offset-1 col-md-4">
+                                <label>Poga 2 uz sadaļu</label>
+                                <select class="form-control" name="poga2">
+
+                                    @foreach($pogas as $viena)
+                                        <option value="{{$viena->id}}"
+                                        @if($viena->id==$lapa->rinda[0]->poga2_id)
+                                                selected="selected"
+                                                @endif
+                                                >{{$viena->nosaukums_lv}}</option>
+                                    @endforeach
+                                </select>
+
                             </div>
                         </div>
+
 
                         <!-- Add Buttons -->
                         <div class="form-group">

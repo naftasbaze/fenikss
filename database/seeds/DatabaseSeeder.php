@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(kontaktSider::class);
         $this->call(katalogs::class);
         $this->call(useroleSider::class);
+        $this->call(poga::class);
 
     }
 }

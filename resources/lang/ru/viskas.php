@@ -13,17 +13,13 @@ return [
     |
     */
 
-    'findOut' => 'Uzznaj boļše',
-    'click'   => 'Klikņi tut',
-    'all'     => 'Vse',
-    'skatit'  => 'Smotret foto',
-    'load'=> 'Zagruzit jesco',
-    'loading'=> 'Zagruaju...',
-    'noMore'=> 'Bolse net',
-    'aktuali'=> 'AKTUAĻNO',
-    'interesanti'=> 'INTERESNO',
-    'galerija'=> 'Gaļerija',
-    'toCatalogue'=> 'V kataloge',
-    'contact' => 'Zvonite'
+    'findOut' => 'Узнайте больше',
+    'click'   => 'Нажмите здесь',
+    'all'     => 'все',
+    'or' => 'или',
+    'skatit'  => 'Посмотреть фото',
+    'galerija'=> 'Фото галерия',
+    'toCatalogue'=> 'Каталог',
+    'contact' => 'Контакты'
 
 ];

@@ -84,6 +84,41 @@
 
                         </div>
 
+                        <div class="form-group">
+
+                            <!-- Pogas 1 Saite -->
+                            <div class="col-sm-offset-1 col-md-4">
+                                <label>Saite uz sadaļu</label>
+                                <select class="form-control" name="poga1">
+
+                                    @foreach($pogas as $viena)
+                                        <option value="{{$viena->id}}"
+                                        @if($viena->id==$lapa->rinda[0]->poga1_id)
+                                                selected="selected"
+                                                @endif
+                                                >{{$viena->nosaukums_lv}}</option>
+                                    @endforeach
+                                </select>
+
+                            </div>
+
+                            <!-- Pogas 2 Saite -->
+                            {{--<div class="col-sm-offset-1 col-md-4">
+                                <label>Saite uz sadaļu</label>
+                                <select class="form-control" name="poga2">
+
+                                    @foreach($pogas as $viena)
+                                        <option value="{{$viena->id}}"
+                                        @if($viena->id==$lapa->rinda[0]->poga2_id)
+                                                selected="selected"
+                                                @endif
+                                                >{{$viena->nosaukums_lv}}</option>
+                                    @endforeach
+                                </select>
+
+                            </div>--}}
+                        </div>
+
                         <!-- Add Buttons -->
                         <div class="form-group">
 

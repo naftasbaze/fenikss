@@ -52,7 +52,8 @@ class AdminLapaController extends Controller
         }elseif($lapa->tips == 2){
 
             //parallax
-            return view('admin.parallax.labot',compact(['lapa']));
+            $pogas= db::table('pogas')->get();
+            return view('admin.parallax.labot',compact(['lapa', 'pogas']));
 
         }elseif($lapa->tips == 3){
 
@@ -63,12 +64,14 @@ class AdminLapaController extends Controller
         }elseif($lapa->tips == 4){
 
             //video
-            return view('admin.video.labot',compact(['lapa']));
+            $pogas= db::table('pogas')->get();
+            return view('admin.video.labot',compact(['lapa', 'pogas']));
 
         }elseif($lapa->tips == 5){
 
             //akcija
-            return view('admin.akcija.labot',compact(['lapa']));
+            $pogas= db::table('pogas')->get();
+            return view('admin.akcija.labot',compact(['lapa', 'pogas']));
 
         }elseif($lapa->tips == 6){
 
@@ -485,8 +488,8 @@ class AdminLapaController extends Controller
         $rinda->raksts_lv=$request->rakstsLV;
         $rinda->raksts_en=$request->rakstsEN;
         $rinda->raksts_ru=$request->rakstsRU;
-        $rinda->fotoLinks=$request->poga1;
-        $rinda->fotoThumb=$request->poga2;
+        $rinda->poga1_id=$request->poga1;
+        $rinda->poga2_id=$request->poga2;
 
         $rinda->update();
 
@@ -517,6 +520,7 @@ class AdminLapaController extends Controller
         $rinda->raksts_lv=$request->rakstsLV;
         $rinda->raksts_en=$request->rakstsEN;
         $rinda->raksts_ru=$request->rakstsRU;
+        $rinda->poga1_id=$request->poga1;
 
         $rinda->update();
 
@@ -545,6 +549,8 @@ class AdminLapaController extends Controller
         $rinda->raksts_lv=$request->rakstsLV;
         $rinda->raksts_en=$request->rakstsEN;
         $rinda->raksts_ru=$request->rakstsRU;
+        $rinda->poga1_id=$request->poga1;
+        $rinda->poga2_id=$request->poga2;
 
         $rinda->update();
 

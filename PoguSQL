@@ -1,0 +1,3 @@
+UPDATE `rindas` SET `poga1_id` = '1', `poga2_id` = '2' WHERE `rindas`.`id` = 6;
+UPDATE `rindas` SET `poga1_id` = '1' WHERE `rindas`.`id` = 8;
+UPDATE `rindas` SET `poga1_id` = '1', `poga2_id` = '3' WHERE `rindas`.`id` = 7;

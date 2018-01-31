@@ -25,6 +25,8 @@ class CreateRindasTable extends Migration
             $table->date('datums')->nullable();
             $table->tinyInteger('ir_publisks')->unsigned()->default(0);
             $table->tinyInteger('galerija_id')->unsigned()->nullable()->default(null);
+            $table->tinyInteger('poga1_id')->unsigned()->nullable()->default(null);
+            $table->tinyInteger('poga2_id')->unsigned()->nullable()->default(null);
             $table->integer('lapa_id')->unsigned();
             $table->foreign('lapa_id')->references('id')->on('lapas');
 

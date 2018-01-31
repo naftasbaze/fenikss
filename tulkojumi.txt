@@ -1,0 +1,27 @@
+'findOut' => 'Uzzini vairāk',
+    'click'   => 'Klikšķini šeit',
+    'all'     => 'Viss',
+    'or' => 'vai',
+    'skatit'  => 'Apskatiet darbus',
+    'galerija'=> 'Attēlu galerija',
+    'toCatalogue'=> 'Skatīt katalogā',
+    'contact' => 'Sazinieties ar mums'
+
+ 'findOut' => 'Find out more',
+    'click'   => 'Click',
+    'all'     => 'All',
+    'or' => 'or',
+    'skatit'  => 'View photo',
+    'galerija'=> 'Image gallery',
+    'toCatalogue'=> 'Catalogue',
+    'contact' => 'Contact us'
+
+
+    'findOut' => 'Узнайте больше',
+    'click'   => 'Нажмите здесь',
+    'all'     => 'все',
+    'or' => 'или',
+    'skatit'  => 'Посмотреть фото',
+    'galerija'=> 'Фото галерия',
+    'toCatalogue'=> 'Каталог',
+    'contact' => 'Контакты'

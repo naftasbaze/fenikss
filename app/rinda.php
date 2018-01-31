@@ -61,6 +61,19 @@ class rinda extends Model
         return $this->hasMany('App\galerija')->orderBy('id', 'asc');
     }
 
+    public function poga1()
+    {
+        return $this->hasMany('App\poga', 'id', 'poga1_id');
+    }
+
+    public function poga2()
+    {
+        return $this->hasMany('App\poga', 'id', 'poga2_id');
+    }
+
+
+
+
     /*Foto*/
     public function delete()
     {

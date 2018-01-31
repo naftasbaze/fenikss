@@ -16,12 +16,8 @@ return [
     'findOut' => 'Find out more',
     'click'   => 'Click',
     'all'     => 'All',
+    'or' => 'or',
     'skatit'  => 'View photo',
-    'load'=> 'LOAD MORE',
-    'loading'=> 'LOADING...',
-    'noMore'=> 'NO MORE',
-    'aktuali'=> 'NEWS',
-    'interesanti'=> 'INTERSTING',
     'galerija'=> 'Image gallery',
     'toCatalogue'=> 'Catalogue',
     'contact' => 'Contact us'

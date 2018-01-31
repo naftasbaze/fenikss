@@ -8,12 +8,27 @@
                 {{$rinda->raksts}}
             </p>
             <div class="hidden-xs hidden-sm text-center mt-40">
-                <a href="#kontakti" class="btn btn-xl btn-b-blue">{{ Lang::get('viskas.contact')}}</a>
+
+                @if($rinda->poga1->count() > 0)
+                <a href="#{{$rinda->poga1[0]->BtnLinks}}" class="btn btn-xl btn-b-blue">{{ $rinda->poga1[0]->nosaukums}}</a>
+                @endif
+
+                @if($rinda->poga2->count() > 0)
                 <div class="visible-sm-block visible-xs-block"><br></div>
-                <span class="light c-white" style="margin: 0 20px;">vai</span>
+                <span class="light c-white" style="margin: 0 20px;">{{ Lang::get('viskas.or')}}</span>
                 <div class="visible-sm-block visible-xs-block"><br></div>
-                <a href="#fotogalerija" class="btn btn-xl btn-b-white">{{ Lang::get('viskas.skatit')}}</a>
+                <a href="#{{$rinda->poga2[0]->BtnLinks}}" class="btn btn-xl btn-b-white">{{$rinda->poga2[0]->nosaukums}}</a>
+                    @endif
             </div>
         </div>
     </section>
 @endforeach
+
+@if($lapa->id == 10)
+    <a href="{{asset('images/bildes/akreditacija2017.jpg')}}" data-fancybox="albums-akreditacija"
+       data-thumb="{{asset('images/bildes/akreditacija2017.jpg')}}">
+    </a>
+    <a href="{{asset('images/bildes/amatniecibasKamera.jpg')}}" data-fancybox="albums-akreditacija"
+       data-thumb="{{asset('images/bildes/amatniecibasKamera.jpg')}}">
+    </a>
+@endif

@@ -12,17 +12,22 @@
         </p>
 
         <div class="hidden-xs hidden-sm text-center" style="width: 100%; position: relative; top: 40%;">
-            <a href="#{{$rinda->fotoLinks}}" class="btn btn-xl btn-b-blue mr-20">
-                {{ Lang::get('viskas.contact')}}
+            @if($rinda->poga1->count() > 0)
+            <a href="#{{$rinda->poga1[0]->BtnLinks}}" class="btn btn-xl btn-b-blue mr-20">
+                {{ $rinda->poga1[0]->nosaukums}}
             </a>
+            @endif
 
+
+                @if($rinda->poga2->count() > 0)
             <div class="visible-sm-block visible-xs-block"><br></div>
-            <span class="light c-white" style="margin: 0 20px;">vai</span>
+            <span class="light c-white" style="margin: 0 20px;">{{ Lang::get('viskas.or')}}</span>
             <div class="visible-sm-block visible-xs-block"><br></div>
 
-            <a href="#{{$rinda->fotoThumb}}" class="btn btn-xl btn-b-base-1 scroll-me">
-                {{ Lang::get('viskas.skatit')}}
+            <a href="#{{$rinda->poga2[0]->BtnLinks}}" class="btn btn-xl btn-b-base-1 scroll-me">
+                {{$rinda->poga2[0]->nosaukums}}
             </a>
+                @endif
         </div>
     </section>
 @endforeach

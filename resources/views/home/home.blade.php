@@ -36,8 +36,8 @@
             $(document).ready(function(){
                 $(".video-cover").vide({
                     mp4: "{{ asset('images/videos/kaleji.mp4') }}",
-                    webm: "{{ asset('images/videos/kaleji.webm') }}",
                     ogv: "{{ asset('images/videos/kaleji.ogv') }}",
+                    webm: "{{ asset('images/videos/kaleji.webm') }}",
                     poster: "{{ asset('images/videos/kaleji.png') }}"
                 }, {
                     muted: true,
@@ -45,7 +45,6 @@
                     autoplay: true,
                     resizing: true
                 });
-
             });
         </script>
 
@@ -82,10 +81,10 @@
             });
         </script>
 
-        <script src="{{ asset('turn/lib/turn.js') }}"></script>
+        {{--<script src="{{ asset('turn/lib/turn.js') }}"></script>--}}
 
 
-        <script type="text/javascript">
+       {{-- <script type="text/javascript">
             $(document).ready(function() {
 
                 $('.flipbook').turn({
@@ -93,7 +92,7 @@
                 });
 
             });
-        </script>
+        </script>--}}
 
 @endsection
 

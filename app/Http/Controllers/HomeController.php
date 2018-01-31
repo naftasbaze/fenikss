@@ -35,6 +35,8 @@ class HomeController extends Controller
         $lapas=lapa::with(['rinda'=> function ($query){
             $query->where('ir_publisks', 1);
         }])
+            ->with(['rinda.poga1'])
+            ->with(['rinda.poga2'])
             ->where('aktivs',1)
             ->orderBy('vietaLimeni', 'asc')
             ->get();
