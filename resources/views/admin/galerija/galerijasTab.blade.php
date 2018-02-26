@@ -41,6 +41,7 @@
 
                                     <a href="{{{url('/admin/albums')}}}/{{$rinda->id}}/labot" class="btn btn-info">
                                         Foto
+                                    </a>
                         @endforeach
                         </tbody>
                     </table>

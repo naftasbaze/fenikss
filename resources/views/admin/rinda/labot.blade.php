@@ -108,6 +108,13 @@
                                 </select>
                             </div>
 
+                            <!-- Saite uz video -->
+                            <div class="col-md-7">
+                                <label for="vietaLimeni" class="control-label">Saite uz video <small>(https://www.youtube.com/embed/)</small> </label>
+                                <input type="text" name="fotoKat" id="fotoKat" class="form-control"
+                                       value="{{ old('fotoKat', $rinda->fotoKat) }}">
+                            </div>
+
                         </div>
 
                         <div class="form-group">

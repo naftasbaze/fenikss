@@ -26,7 +26,7 @@
                         @guest
 
                         <li><a href="{{ url('/login') }}">Pieteikties</a></li>
-                        <li><a href="{{ url('/register') }}">Reģistrēties</a></li>
+                        {{--<li><a href="{{ url('/register') }}">Reģistrēties</a></li>--}}
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

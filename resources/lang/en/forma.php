@@ -19,5 +19,6 @@ return [
     'email' => 'Email',
     'tekst' => 'Additional info',
     'poga' => 'Send message',
+    'paldies' => 'Thank you! The message is sent!  We will contact you in the near future!',
 
 ];

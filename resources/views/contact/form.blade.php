@@ -1,3 +1,4 @@
+@include('partials.errors')
 
 <form class="mt-20" action="{{ action('ContactController@getContactUsForm') }}" method="post">
 

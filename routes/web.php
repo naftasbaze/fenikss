@@ -28,18 +28,18 @@ Route::group(
         Route::get('/home', 'HomeController@index');
         Route::post('/','ContactController@getContactUsForm');        //Kotakti POST
 
-        Route::get('/test', function()
+        /*Route::get('/test', function()
         {
             return View::make('test');
-        });
+        });*/
 
     });
 
 /** OTHER PAGES THAT SHOULD NOT BE LOCALIZED **/
 
-Route::get('/welc', function () {
+/*Route::get('/welc', function () {
     return view('welcome');
-});
+});*/
 
 
 
@@ -78,6 +78,7 @@ Route::group(['middleware'=>['admin']], function(){
     /*Jautājumi*/
     Route::get('/admin/buj/{id}/labot', 'AdminLapaController@editBUJ');       //Labot/
     Route::patch('/admin/buj/{id}', 'AdminLapaController@updateBUJ');         //Saglabā izmaiņas
+    Route::post('/admin/bujAdd', 'AdminLapaController@storeBUJ');                  //Saglabā jaunu galeriju
 
     /*Katalogs nosaukums*/
     Route::get('/admin/katalogs/{id}/labot', 'AdminLapaController@editKatalogs');       //Labot/

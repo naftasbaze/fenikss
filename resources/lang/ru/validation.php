@@ -38,7 +38,7 @@ return [
     'digits_between'       => 'The :attribute must be between :min and :max digits.',
     'dimensions'           => 'The :attribute has invalid image dimensions.',
     'distinct'             => 'The :attribute field has a duplicate value.',
-    'email'                => 'The :attribute must be a valid email address.',
+    'email'                => 'Поле :attribute должен быть действительным адресом электронной почты.',
     'exists'               => 'The selected :attribute is invalid.',
     'file'                 => 'The :attribute must be a file.',
     'filled'               => 'The :attribute field must have a value.',
@@ -68,7 +68,7 @@ return [
     'numeric'              => 'The :attribute must be a number.',
     'present'              => 'The :attribute field must be present.',
     'regex'                => 'The :attribute format is invalid.',
-    'required'             => 'The :attribute field is required.',
+    'required'             => 'Поле :attribute обязательное для заполнения.',
     'required_if'          => 'The :attribute field is required when :other is :value.',
     'required_unless'      => 'The :attribute field is required unless :other is in :values.',
     'required_with'        => 'The :attribute field is required when :values is present.',
@@ -121,15 +121,11 @@ return [
         'name' => 'Vārds',
         'email' => 'e-pasts',
         'nosaukums' => 'Virsrksts',
-        'raksts' => 'Raksts',
-        'foto' => 'Foto',
-        'videocels' => 'Faila adrese',
-        'afisaLidz' => 'Afisas publicēšanas datums',
-        'sak' => 'Iestājās',
-        'inputName' => 'Vārds',
-        'inputUzva' => 'Uzvārds',
-        'inputEpasts' => 'e-pasts',
-        'inputTXT' => 'Ziņa'
+
+        'inputName' => 'Имя',
+        'inputUzva' => 'Фамилия',
+        'inputEpasts' => 'Email',
+        'inputTXT' => 'Сообщение'
     ],
 
 ];

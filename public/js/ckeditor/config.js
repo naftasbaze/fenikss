@@ -13,6 +13,7 @@ CKEDITOR.editorConfig = function( config ) {
         { name: 'clipboard',   groups: [ 'clipboard'] },
         { name: 'editing',     groups: [ 'find', 'selection'] },
         { name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
+        { name: 'links' },
         { name: 'others' },
         '/',
         { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },

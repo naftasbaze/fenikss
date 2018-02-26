@@ -3,7 +3,7 @@
     <section class="parallax-section parallax-section-1" style="background-image: url('{{ asset($rinda->fotoLinks) }}');">
         <div class="mask mask-1"></div>
         <div class="parallax-content">
-            <h1 class="parallax-title white">{{$rinda->nosaukums}}</h1>
+            <h2 class="parallax-title white">{{$rinda->nosaukums}}</h2>
             <p class="c-white">
                 {{$rinda->raksts}}
             </p>

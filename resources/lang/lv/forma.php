@@ -19,5 +19,6 @@ return [
     'email' => 'e Pasts',
     'tekst' => 'Ziņa',
     'poga' => 'Nosūtīt',
+    'paldies' => 'Paldies! Ziņa tika nosūtīta!  Sazināsimies ar Jums tuvākajā laikā!',
 
 ];

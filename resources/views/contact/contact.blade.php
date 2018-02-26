@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <div class="section-title-wrapper style-1 v1">
+                <div class="section-title-wrapper style-1 v1" id="{{$rinda->slug}}">
                     <h3 class="section-title left">
                         <span>{{$rinda->nosaukums}}</span>
                     </h3>

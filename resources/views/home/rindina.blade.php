@@ -4,10 +4,10 @@
     <div class="one-page-slice">
         <div class="container">
             <div class="section-title-wrapper style-1 v1" id="{{$lapa->slug}}">
-                <h3 class="section-title center arLinku">
+                <h1 class="section-title center arLinku">
                     {{--<a><img src="{{asset('images/favicon3.svg')}}"</a>--}}
                     <span> {{$lapa->nosaukums}} </span>
-                </h3>
+                </h1>
             </div>
             <!-- Rinda -->
             @foreach ($lapa->rinda as $rinda)
@@ -17,7 +17,15 @@
 
                             @if($rinda->izkartojums==1) {{--bilde pa kreisi--}}
 
-                            @if ($rinda->fotoLinks)
+                            @if ($rinda->fotoKat)
+                                <div class="article-image">
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="{{$rinda->fotoKat}}"
+                                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                                    </iframe>
+                                </div>
+                                </div>
+                            @elseif ($rinda->fotoLinks)
                                 <div class="article-image">
                                     <img src="{{ asset($rinda->fotoLinks) }}">
                                 </div>
@@ -45,8 +53,16 @@
                                     </p>
 
                                 </div>
-                                @if ($rinda->fotoLinks)
 
+                                @if ($rinda->fotoKat)
+                                    <div class="article-image">
+                                    <div class="embed-responsive embed-responsive-4by3">
+                                        <iframe class="embed-responsive-item" src="{{$rinda->fotoKat}}"
+                                                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    </div>
+                                @elseif ($rinda->fotoLinks)
                                     <div class="article-image">
                                         <img src="{{ asset($rinda->fotoLinks) }}">
                                     </div>

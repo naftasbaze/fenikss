@@ -59,7 +59,7 @@ class AdminLapaController extends Controller
 
             //kontakti
             $kontakti= kontakt::where('id',1)->firstOrFail();
-            return view('admin.kontakti.labot',compact(['kontakti']));
+            return view('admin.kontakti.labot',compact(['lapa', 'kontakti']));
 
         }elseif($lapa->tips == 4){
 
@@ -128,6 +128,7 @@ class AdminLapaController extends Controller
         $rinda->raksts_ru=$request->rakstsRU;
         $rinda->vietaLimeni=$request->vietaLimeni;
         $rinda->izkartojums=$request->izkartojums;
+        $rinda->fotoKat=$request->fotoKat;
         $rinda->ir_publisks=isset($request->ir_publisks);
 
         $rinda->update();
@@ -279,6 +280,41 @@ class AdminLapaController extends Controller
         return \Redirect::back()->withSuccess( 'Izmaiņas saglabātas!' );
 
     }
+
+
+
+    /**
+     * Saglabā jaunu Jautājumu
+     */
+    public function storeBUJ(Request $request)
+    {
+
+        App::setLocale('lv');
+
+        $this->validate($request, [
+            'nosaukums_lv2' => 'required',
+            'nosaukums_en2' => 'required',
+            'nosaukums_ru2' => 'required',
+
+        ]);
+
+        $rinda= new rinda;
+
+        $rinda->nosaukums_lv=$request->nosaukums_lv2;
+        $rinda->nosaukums_en=$request->nosaukums_en2;
+        $rinda->nosaukums_ru=$request->nosaukums_ru2;
+        $rinda->raksts_lv=$request->raksts_lv2;
+        $rinda->raksts_en=$request->raksts_en2;
+        $rinda->raksts_ru=$request->raksts_ru2;
+        $rinda->slug=str_slug($request->nosaukums_lv2);
+        $rinda->lapa_id=$request->lapaID;
+
+        $rinda->save();
+
+        //dd($galerija->id);
+        return redirect('/admin/lapas/'.$rinda->lapa_id .'/rindas')->withSuccess( 'Jautājums veiksmīgi saglabāts!' );
+    }
+
 
     /**
      * Admin labot Galeriju
@@ -435,35 +471,16 @@ class AdminLapaController extends Controller
     /**
      * Admin labot Rekvizītus
      */
-    public function editRekviziti()
+/*    public function editRekviziti()
     {
 
         $rekvizi = kontakt::where('id',1)
             ->firstOrFail();
 //dd($lapa);
         return view('admin.rekviziti.labot',compact(['rekvizi']));
-    }
+    }*/
 
-    /*Sglabā izmaiņas Katalogā*/
-    public function updateRekviziti(Request $request, $id)
-    {
 
-        /*$this->validate($request, [
-            'vards' => 'required',
-            'uzvards' => 'required'
-        ]);*/
-
-        /*$audzeknis= audzekni::findOrFail($id);
-
-        $audzeknis->vards=$request->vards;
-        $audzeknis->uzvards=$request->uzvards;
-        $audzeknis->turpmak=$request->turpmak;
-
-        $audzeknis->update();*/
-
-        return \Redirect::back()->withSuccess( 'Izmaiņas saglabātas!' );
-
-    }
 
     /*Sglabā izmaiņas VIDEO*/
     public function updateVideo(Request $request, $id)

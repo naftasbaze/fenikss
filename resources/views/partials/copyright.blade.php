@@ -31,9 +31,9 @@
                         <a href="https://www.facebook.com/fenikssko.lv" class="facebook">
                             <i class="fa fa-facebook "></i>
                         </a>
-                        <a href="https://twitter.com/fenikssko.lv" class="twitter">
+                        {{--<a href="https://twitter.com/fenikssko.lv" class="twitter">
                             <i class="fa fa-twitter "></i>
-                        </a>
+                        </a>--}}
                         <a href="https://www.youtube.com/channel/UCz9zELqJEwSbWzZkVeZquOw" class="google-plus">
                             <i class="fa fa-youtube "></i>
                         </a>

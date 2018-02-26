@@ -13,11 +13,12 @@ return [
     |
     */
 
-    'vards' => 'Imja',
-    'uzvards' => 'Famiļija',
-    'phone' => 'Telefon',
+    'vards' => 'Имя',
+    'uzvards' => 'Фамилия',
+    'phone' => 'Телефон',
     'email' => 'Email',
-    'tekst' => 'Inforacija',
-    'poga' => 'Otpravit',
+    'tekst' => 'Сообщение',
+    'poga' => 'Отправить',
+    'paldies' => 'Cпасибо! Сообщение отправлено!  Мы свяжемся с вами как можно скорее!',
 
 ];

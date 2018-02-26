@@ -42,6 +42,30 @@
     <script src="{{ asset('js/respond.min.js') }}"></script>
 <![endif]-->
 
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "LocalBusiness",
+  "name" : "Fenikss-ko, SIA",
+  "telephone" : "(+371) 29236361",
+  "email" : "info@fenikssko.lv",
+  "image": [
+		"http://www.fenikssko.lv/galerijas/1518011827-dsc-6626.JPG",
+		"http://www.fenikssko.lv/galerijas/1518101935-scan0004.jpg",
+		"http://www.fenikssko.lv/galerijas/1518442917-20180212-122158.jpg"
+		],
+  "address" : {
+    "@type" : "PostalAddress",
+    "streetAddress" : "Acones iela 16",
+    "addressLocality" : "Ulbroka",
+    "addressRegion" : "Stopiņu reg.",
+    "postalCode" : "LV-2130"
+  },
+    "priceRange": "Pēc vienošanās",
+  "url" : "http://www.fenikssko.lv/"
+}
+</script>
+
 @yield('jscits')
 
 
